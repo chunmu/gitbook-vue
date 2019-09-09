@@ -1,0 +1,28 @@
+{
+  "title": "Blankj's Glory",
+  "author": "Blankj",
+  "description": "select * from learn",
+  "language": "zh-hans",
+  "gitbook": "3.2.3",
+  "styles": {
+    "website": "./styles/website.css"
+  },
+  "structure": {
+    "readme": "README.md"
+  },
+  "plugins": [
+    "expandable-chapters",
+    "favicon"
+  ],
+  "pluginsConfig": {
+    "favicon":{
+      "shortcut": "./source/images/favicon.jpg",
+      "bookmark": "./source/images/favicon.jpg",
+      "appleTouch": "./source/images/apple-touch-icon.jpg",
+      "appleTouchMore": {
+        "120x120": "./source/images/apple-touch-icon.jpg",
+        "180x180": "./source/images/apple-touch-icon.jpg"
+      }
+    }
+  }
+}
