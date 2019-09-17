@@ -2,51 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7b10eb9-a1c3-429d-9fb6-ece302b3bc1d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book/_book/compiler/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/book/_book/compiler/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book/_book/compiler/parser/html-parser.html" beforeDir="false" afterPath="$PROJECT_DIR$/book/_book/compiler/parser/html-parser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book/_book/compiler/parser/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/book/_book/compiler/parser/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book/_book/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/book/_book/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book/_book/search_index.json" beforeDir="false" afterPath="$PROJECT_DIR$/book/_book/search_index.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book/compiler/parser/html-parser.md" beforeDir="false" afterPath="$PROJECT_DIR$/book/compiler/parser/html-parser.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/compiler/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/compiler/parser/html-parser.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/compiler/parser/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/fonts/fontawesome/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/fonts/fontawesome/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/fonts/fontawesome/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/fonts/fontawesome/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/fonts/fontawesome/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/fonts/fontawesome/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-fontsettings/fontsettings.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-fontsettings/website.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-highlight/ebook.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-highlight/website.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-lunr/lunr.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-lunr/search-lunr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-search/lunr.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-search/search-engine.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-search/search.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-search/search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook-plugin-sharing/buttons.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/gitbook.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/images/apple-touch-icon-precomposed-152.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/images/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/gitbook/theme.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_book/search_index.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/compiler/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/compiler/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/compiler/parser/html-parser.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/compiler/parser/html-parser.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/compiler/parser/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/compiler/parser/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/search_index.json" beforeDir="false" afterPath="$PROJECT_DIR$/docs/search_index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue2.6.0-release/examples/todomvc/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue2.6.0-release/examples/todomvc/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue2.6.0-release/examples/todomvc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vue2.6.0-release/examples/todomvc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue2.6.0-release/src/compiler/parser/html-parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue2.6.0-release/src/compiler/parser/html-parser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue2.6.0-release/src/compiler/parser/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue2.6.0-release/src/compiler/parser/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -84,8 +40,8 @@
         <entry file="file://$PROJECT_DIR$/book/compiler/parser/html-parser.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="300">
-                <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <first_editor relative-caret-position="255">
+                <caret line="17" column="74" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
               </first_editor>
               <second_editor />
             </state>
@@ -251,19 +207,6 @@
             <path>
               <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
               <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="book" type="462c0819:PsiDirectoryNode" />
-              <item name="compiler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="book" type="462c0819:PsiDirectoryNode" />
-              <item name="compiler" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -374,12 +317,12 @@
       <workItem from="1568017819774" duration="9462000" />
       <workItem from="1568270546605" duration="8900000" />
       <workItem from="1568616174128" duration="13351000" />
-      <workItem from="1568719007805" duration="1992000" />
+      <workItem from="1568719007805" duration="2549000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33705000" />
+    <option name="totallyTimeSpent" value="34262000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2" y="23" width="1440" height="836" extended-state="6" />
@@ -493,13 +436,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/examples/todomvc/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/parser/html-parser.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="37">
@@ -507,11 +443,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/examples/todomvc/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/book/compiler/parser/html-parser.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="300">
-            <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <first_editor relative-caret-position="255">
+            <caret line="17" column="74" selection-start-line="17" selection-start-column="74" selection-end-line="17" selection-end-column="74" />
           </first_editor>
           <second_editor />
         </state>

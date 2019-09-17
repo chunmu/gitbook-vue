@@ -15,7 +15,7 @@
 
 ## 流程图 
 
-![编译html的流程图](https://github.com/chunmu/gitbook-vue/blob/master/assets/pictures/compiler-parser-html-parser.jpg "编译html的流程图")
+![编译html的流程图](https://chunmu.github.io/gitbook-vue/assets/pictures/compiler-parser-html-parser.jpg "编译html的流程图")
 
 ### attribute
 
