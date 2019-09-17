@@ -211,10 +211,12 @@
                                 <h1 id="html-parser">html-parser</h1>
 <p><br>
 &#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x70B9;</p>
-<ul>
-<li>&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x66FF;&#x6362;&#x6389;&lt;  &#x81EA;&#x52A8;&#x8F6C;&#x8BD1;&#x8BE5;&#x7C7B;&#x5B57;&#x7B26;  &lt; &#x4F1A;&#x88AB;&#x66FF;&#x6362;&#x6210;&lt;</li>
-</ul>
+<pre><code class="lang-javascript">
+&#x6D4F;&#x89C8;&#x5668;&#x4F1A;&#x66FF;&#x6362;&#x6389;&lt;  &#x81EA;&#x52A8;&#x8F6C;&#x8BD1;&#x8BE5;&#x7C7B;&#x5B57;&#x7B26;  &lt; &#x4F1A;&#x88AB;&#x66FF;&#x6362;&#x6210;&amp;lt;
+</code></pre>
 <p><br></p>
+<h2 id="&#x6D41;&#x7A0B;&#x56FE;">&#x6D41;&#x7A0B;&#x56FE;</h2>
+<p><img src="https://github.com/chunmu/gitbook-vue/blob/master/assets/pictures/compiler-parser-html-parser.jpg" alt="&#x7F16;&#x8BD1;html&#x7684;&#x6D41;&#x7A0B;&#x56FE;" title="&#x7F16;&#x8BD1;html&#x7684;&#x6D41;&#x7A0B;&#x56FE;"></p>
 <h3 id="attribute">attribute</h3>
 <blockquote>
 <p>&#x6B63;&#x5219;attribute&#x5206;&#x6790;</p>
@@ -252,15 +254,41 @@
 </blockquote>
 <pre><code class="lang-javascript">
 <span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">parseHTML</span> (<span class="hljs-params">html, options</span>) </span>{
-  <span class="hljs-comment">// stack&#x7684;&#x7528;&#x6CD5;   &lt;div1&gt;&lt;div2&gt;&lt;div3&gt;&lt;/div3&gt;&lt;/div&gt;&lt;/div&gt;</span>
+  <span class="hljs-comment">/**
+  *  stack&#x7684;&#x7528;&#x6CD5;   &lt;div1&gt;&lt;div2&gt;&lt;img /&gt;&lt;/div2&gt;&lt;/div1&gt;   &#x8FD9;&#x662F;&#x6B63;&#x5E38;&#x60C5;&#x51B5;
+  * 1. stack.push(div1) stack = [&apos;div1&apos;] 2. stack.push(div2) stack = [&apos;div1&apos;, &apos;div2&apos;] img&#x4E3A;&#x81EA;&#x95ED;&#x5408;&#x6807;&#x7B7E; &#x4E0D;&#x653E;&#x5165;stack  
+  * 3. parseEndTag&#x65F6;   stack.pop()
+  * */</span>
+
+  <span class="hljs-comment">/**
+  * &#x7B2C;&#x4E00;&#x79CD;&#x5F02;&#x5E38;&#x60C5;&#x51B5;
+  * stack&#x7684;&#x7528;&#x6CD5;   &lt;div 1&gt;&lt;div 2&gt;&lt;div 3&gt;&lt;img /&gt;&lt;/div 2&gt;&lt;/div 1&gt;   
+  * 1. stack.push(div 1) stack = [&apos;div 1&apos;] 
+  * 2. stack.push(div 2) stack = [&apos;div 2&apos;] 
+  * 3. stack.push(div 3) stack = [&apos;div 3&apos;] 
+  * 4. &#x5339;&#x914D;&#x5230;&lt;/div2&gt; &lt;/div3&gt; parseEndTag(&apos;div1, div2&apos;)&#x4E4B;&#x540E; stack = [&apos;div1&apos;]
+  * 5. &#x5728;parseHtml&#x6700;&#x540E; &#x6267;&#x884C;&#x4E00;&#x6B21;&#x65E0;&#x53C2;parseEndTag()  &#x5B9A;&#x4F4D;&#x6807;&#x8BB0;pos = 0 &#x5982;&#x679C;stack&#x8FD8;&#x6709;&#x6570;&#x636E; &#x94C1;&#x5B9A;&#x6709;&#x5339;&#x914D;&#x4E0D;&#x5230;&#x7684;  &#x62A5;&#x9519;
+  * */</span>
+
+  <span class="hljs-comment">/**
+  * &#x7B2C;&#x4E8C;&#x79CD;&#x5F02;&#x5E38;&#x60C5;&#x51B5;
+  * stack&#x7684;&#x7528;&#x6CD5;   &lt;div 1&gt;&lt;div 2&gt;&lt;img /&gt;&lt;/div 3&gt;&lt;/div 2&gt;&lt;/div 1&gt;   
+  * 1. stack.push(div 1) stack = [&apos;div 1&apos;] 
+  * 2. stack.push(div 2) stack = [&apos;div 2&apos;] 
+  * 3. &lt;/div 3&gt; =&gt; &lt;div 2&gt;      &lt;/div 2&gt; =&gt; &lt;div 1&gt;     &lt;/div 1&gt; &#x627E;&#x4E0D;&#x5230;&#x5339;&#x914D;&#x7684;&#x6807;&#x7B7E;   
+  * 4. pos = -1   &#x8DF3;&#x8FC7;&#x5904;&#x7406;   &#x5728;&#x5FAA;&#x73AF;&#x672B;&#x5C3E;&#x5904;&#x7406;&#x4E3A; pos = 0   stack.length = 0 &#x6E05;&#x7A7A;&#x5806;&#x6808;
+  * */</span>
   <span class="hljs-keyword">const</span> stack = []
   <span class="hljs-keyword">const</span> expectHTML = options.expectHTML
   <span class="hljs-comment">//  &lt;img /&gt;  &#x8FD9;&#x6837;&#x7684;&#x81EA;&#x95ED;&#x5408;&#x6807;&#x7B7E;</span>
   <span class="hljs-keyword">const</span> isUnaryTag = options.isUnaryTag || no
   <span class="hljs-comment">// &#x53EF;&#x4EE5;&#x7701;&#x7565;&#x95ED;&#x5408;&#x6807;&#x7B7E;&#x7684;&#x6807;&#x7B7E;  &lt;p&gt;&lt;/p&gt;  &#x5982;&#x679C;&#x975E;&#x81EA;&#x95ED;&#x5408;&#x6807;&#x7B7E; &#x5219;&#x4F1A;&#x63D0;&#x793A;&#x672A;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x6807;&#x7B7E;&#x7684;&#x7ED3;&#x675F;tag</span>
   <span class="hljs-keyword">const</span> canBeLeftOpenTag = options.canBeLeftOpenTag || no
-  <span class="hljs-keyword">let</span> index = <span class="hljs-number">0</span> <span class="hljs-comment">// &#x6E38;&#x6807;</span>
-  <span class="hljs-keyword">let</span> last, lastTag
+  <span class="hljs-keyword">let</span> index = <span class="hljs-number">0</span> <span class="hljs-comment">// &#x6E38;&#x6807; &#x8BB0;&#x5F55;&#x5F53;&#x524D;&#x7D22;&#x5F15;&#x4F4D;&#x7F6E;</span>
+  <span class="hljs-keyword">let</span> last, lastTag <span class="hljs-comment">// lastTag&#x8868;&#x793A;&#x6700;&#x6DF1;&#x5C42;&#x6B21;&#x7684;&#x6807;&#x7B7E;   </span>
+  <span class="hljs-comment">/**
+  * eg. &lt;div&gt;&lt;div&gt;&lt;img /&gt;&lt;/div&gt;&lt;/div&gt;
+  * */</span>
   <span class="hljs-comment">// &#x5FAA;&#x73AF;&#x5904;&#x7406;html&#x5185;&#x5BB9; &#x6BCF;&#x8FDB;&#x884C;&#x4E00;&#x4EFD;&#x5185;&#x5BB9;&#x7684;&#x5904;&#x7406; &#x8C03;&#x7528;advance&#x5411;&#x524D;&#x79FB;&#x52A8;&#x7D22;&#x5F15; &#x622A;&#x53D6;&#x5269;&#x4F59;html html = html.substring(index)</span>
   <span class="hljs-keyword">while</span> (html) {
     <span class="hljs-comment">// last&#x8868;&#x793A;&#x4E0A;&#x4E00;&#x6B21;&#x6240;&#x5907;&#x4EFD;&#x7684;string</span>
@@ -454,8 +482,10 @@
     <span class="hljs-comment">// &#x4E2A;&#x4EBA;&#x731C;&#x6D4B;&#x8FD9;&#x4E2A;&#x53D8;&#x91CF;&#x7684;&#x610F;&#x601D;&#x662F;&#x662F;&#x5426;&#x9700;&#x8981;&#x540C;&#x6B65;html&#x7684;&#x884C;&#x4E3A;&#x8868;&#x73B0; &#x6BD4;&#x5982;p&#x6807;&#x7B7E;&#x6CA1;&#x6709;&#x8D77;&#x59CB;&#x6807;&#x7B7E;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;</span>
     <span class="hljs-comment">// isNonPhrasingTag</span>
 
-    <span class="hljs-keyword">if</span> (expectHTML &amp;&amp; switch005) {
+    <span class="hljs-keyword">if</span> (expectHTML) {
       <span class="hljs-comment">// expectHTML &#x662F;&#x5426;&#x4E0E;&#x6D4F;&#x89C8;&#x5668;&#x4FDD;&#x6301;&#x884C;&#x4E3A;&#x4E00;&#x81F4;   &#x6BD4;&#x5982;&lt;p&gt;&#x6807;&#x7B7E;&#x5185;&#x90E8;&#x662F;&#x5426;&#x5141;&#x8BB8;&#x5D4C;&#x5957;&#x5757;&#x6807;&#x7B7E;  &lt;p&gt;&lt;div&gt;&lt;/div&gt;&lt;/p&gt;</span>
+      <span class="hljs-comment">// &lt;p&gt;pp&lt;div&gt;div&lt;/div&gt;&lt;/p&gt;   &#x6D4F;&#x89C8;&#x5668;&#x548C;vue&#x7684;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x4E3A;  &lt;p&gt;pp&lt;/p&gt;&lt;div&gt;div&lt;/div&gt;&lt;p&gt;&lt;/p&gt;  </span>
+      <span class="hljs-comment">// &#x6D4F;&#x89C8;&#x5668;&#x81EA;&#x5E26;&#x4F18;&#x5316;&#x673A;&#x5236;  &#x4F1A;&#x586B;&#x5145;&#x81F3;&#x6B63;&#x786E;&#x683C;&#x5F0F;  &#x8981;&#x8BBE;&#x7F6E;&#x8FD9;&#x4E2A;&#x573A;&#x666F;&#x7684;&#x8BDD;  &#x91CD;&#x5199;html &#x53EF;&#x4EE5;&#x53D1;&#x73B0;vue&#x8868;&#x73B0;&#x548C;&#x6D4F;&#x89C8;&#x5668;&#x4E00;&#x81F4;</span>
       <span class="hljs-keyword">if</span> (lastTag === <span class="hljs-string">&apos;p&apos;</span> &amp;&amp; isNonPhrasingTag(tagName)) {
         parseEndTag(lastTag)
       }
@@ -473,6 +503,10 @@
     <span class="hljs-keyword">const</span> attrs = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(l)
     <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; l; i++) {
       <span class="hljs-keyword">const</span> args = match.attrs[i]
+      <span class="hljs-comment">// let html = &apos;v-html=&quot;html | xxxxxxxx&quot;&apos;  args[3]</span>
+      <span class="hljs-comment">// let html = &quot;v-html=&apos;html | xxxx&apos;&quot;  args[4]</span>
+      <span class="hljs-comment">// let html = &quot;v-html=html&quot;   args[5]</span>
+      <span class="hljs-comment">// &#x7ECF;&#x8FC7;&#x6D4F;&#x89C8;&#x5668;&#x540E; &#x4F1A;&#x7EDF;&#x4E00;&#x88AB;&#x66FF;&#x6362;&#x6210;args[3]  &#x6240;&#x4EE5;&#x540E;&#x4E24;&#x79CD;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728;&#x4EE3;&#x7801;&#x4E2D;&#x8BBE;&#x7F6E;  html = &lt;div v-html=&apos;xxx&apos;&gt;</span>
       <span class="hljs-keyword">const</span> value = args[<span class="hljs-number">3</span>] || args[<span class="hljs-number">4</span>] || args[<span class="hljs-number">5</span>] || <span class="hljs-string">&apos;&apos;</span>
       <span class="hljs-keyword">const</span> shouldDecodeNewlines = tagName === <span class="hljs-string">&apos;a&apos;</span> &amp;&amp; args[<span class="hljs-number">1</span>] === <span class="hljs-string">&apos;href&apos;</span>
         ? options.shouldDecodeNewlinesForHref
@@ -599,7 +633,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"html-parser","level":"1.2.1.1","depth":3,"previous":{"title":"parser","level":"1.2.1","depth":2,"path":"compiler/parser/index.md","ref":"compiler/parser/index.md","articles":[{"title":"html-parser","level":"1.2.1.1","depth":3,"path":"compiler/parser/html-parser.md","ref":"compiler/parser/html-parser.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Blankj","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Blankj's Glory","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"compiler/parser/html-parser.md","mtime":"2019-09-09T10:26:26.899Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-09T11:10:29.768Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"html-parser","level":"1.2.1.1","depth":3,"previous":{"title":"parser","level":"1.2.1","depth":2,"path":"compiler/parser/index.md","ref":"compiler/parser/index.md","articles":[{"title":"html-parser","level":"1.2.1.1","depth":3,"path":"compiler/parser/html-parser.md","ref":"compiler/parser/html-parser.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Blankj","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Blankj's Glory","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"compiler/parser/html-parser.md","mtime":"2019-09-17T11:56:02.134Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-17T11:56:18.245Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
