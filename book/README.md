@@ -9,7 +9,12 @@
 - 不一定正确  欢迎讨论
 - 不一定有用  辩证看待
 
+## donate
+
+![donate](https://chunmu.github.io/gitbook-vue/assets/pictures/money.jpeg "donate")
+
 
 ### 更新日志
 
+- 2019-09-17 html-parser完整发布 附加流程图 
 - 2019-09-09 html-parser发布 不过不完整 后续完善 
