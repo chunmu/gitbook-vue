@@ -3,9 +3,19 @@
 
 <br>
 需要注意的点
-- 浏览器会替换掉<  自动转译该类字符  < 会被替换成&lt;
+
+
+```javascript
+
+浏览器会替换掉<  自动转译该类字符  < 会被替换成&lt;
+
+```
 
 <br>
+
+## 流程图 
+
+![编译html的流程图](https://github.com/chunmu/gitbook-vue/blob/master/assets/pictures/compiler-parser-html-parser.jpg "编译html的流程图")
 
 ### attribute
 
@@ -52,15 +62,41 @@ const dynamicArgAttribute = /^\s*((?:v-[\w-]+:|@|:|#)\[[^=]+\][^\s"'<>\/=]*)(?:\
 ```javascript
 
 export function parseHTML (html, options) {
-  // stack的用法   <div1><div2><div3></div3></div></div>
+  /**
+  *  stack的用法   <div1><div2><img /></div2></div1>   这是正常情况
+  * 1. stack.push(div1) stack = ['div1'] 2. stack.push(div2) stack = ['div1', 'div2'] img为自闭合标签 不放入stack  
+  * 3. parseEndTag时   stack.pop()
+  * */
+  
+  /**
+  * 第一种异常情况
+  * stack的用法   <div 1><div 2><div 3><img /></div 2></div 1>   
+  * 1. stack.push(div 1) stack = ['div 1'] 
+  * 2. stack.push(div 2) stack = ['div 2'] 
+  * 3. stack.push(div 3) stack = ['div 3'] 
+  * 4. 匹配到</div2> </div3> parseEndTag('div1, div2')之后 stack = ['div1']
+  * 5. 在parseHtml最后 执行一次无参parseEndTag()  定位标记pos = 0 如果stack还有数据 铁定有匹配不到的  报错
+  * */
+  
+  /**
+  * 第二种异常情况
+  * stack的用法   <div 1><div 2><img /></div 3></div 2></div 1>   
+  * 1. stack.push(div 1) stack = ['div 1'] 
+  * 2. stack.push(div 2) stack = ['div 2'] 
+  * 3. </div 3> => <div 2>      </div 2> => <div 1>     </div 1> 找不到匹配的标签   
+  * 4. pos = -1   跳过处理   在循环末尾处理为 pos = 0   stack.length = 0 清空堆栈
+  * */
   const stack = []
   const expectHTML = options.expectHTML
   //  <img />  这样的自闭合标签
   const isUnaryTag = options.isUnaryTag || no
   // 可以省略闭合标签的标签  <p></p>  如果非自闭合标签 则会提示未找到对应标签的结束tag
   const canBeLeftOpenTag = options.canBeLeftOpenTag || no
-  let index = 0 // 游标
-  let last, lastTag
+  let index = 0 // 游标 记录当前索引位置
+  let last, lastTag // lastTag表示最深层次的标签   
+  /**
+  * eg. <div><div><img /></div></div>
+  * */
   // 循环处理html内容 每进行一份内容的处理 调用advance向前移动索引 截取剩余html html = html.substring(index)
   while (html) {
     // last表示上一次所备份的string
@@ -254,8 +290,10 @@ export function parseHTML (html, options) {
     // 个人猜测这个变量的意思是是否需要同步html的行为表现 比如p标签没有起始标签也可以通过
     // isNonPhrasingTag
 
-    if (expectHTML && switch005) {
+    if (expectHTML) {
       // expectHTML 是否与浏览器保持行为一致   比如<p>标签内部是否允许嵌套块标签  <p><div></div></p>
+      // <p>pp<div>div</div></p>   浏览器和vue的处理结果为  <p>pp</p><div>div</div><p></p>  
+      // 浏览器自带优化机制  会填充至正确格式  要设置这个场景的话  重写html 可以发现vue表现和浏览器一致
       if (lastTag === 'p' && isNonPhrasingTag(tagName)) {
         parseEndTag(lastTag)
       }
@@ -273,6 +311,10 @@ export function parseHTML (html, options) {
     const attrs = new Array(l)
     for (let i = 0; i < l; i++) {
       const args = match.attrs[i]
+      // let html = 'v-html="html | xxxxxxxx"'  args[3]
+      // let html = "v-html='html | xxxx'"  args[4]
+      // let html = "v-html=html"   args[5]
+      // 经过浏览器后 会统一被替换成args[3]  所以后两种可以直接在代码中设置  html = <div v-html='xxx'>
       const value = args[3] || args[4] || args[5] || ''
       const shouldDecodeNewlines = tagName === 'a' && args[1] === 'href'
         ? options.shouldDecodeNewlinesForHref

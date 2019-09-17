@@ -1,0 +1,43 @@
+<script>
+
+  let perf = window.performance
+  let testObj = {}
+  let testArr = []
+  let limit = 10000 * 10 * 10 * 10
+
+
+  for (let i=0; i<= limit; i++) {
+    testObj[i] = i
+    testArr.push(i)
+  }
+
+  perf.mark('obj test start')
+  for (key in testObj) {}
+  perf.mark('obj test end')
+  perf.measure(
+    "testObj",
+    "obj test start",
+    "obj test end"
+  )
+
+  perf.mark('arr test start')
+  for (let i = 0; i < testArr.length; i++) {}
+  perf.mark('arr test end')
+  perf.measure(
+    "testArr",
+    "arr test start",
+    "arr test end"
+  )
+
+  var measuresObj = perf.getEntriesByName("testObj");
+  var measureObj = measuresObj[0];
+  console.log("obj", measureObj.duration)
+
+  var measuresArr = perf.getEntriesByName("testArr");
+  var measureArr = measuresArr[0];
+  console.log("arr:", measureArr.duration)
+
+  // 清除存储的标志位
+  perf.clearMarks();
+  perf.clearMeasures();
+</script>
