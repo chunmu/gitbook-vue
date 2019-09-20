@@ -34,6 +34,13 @@ var filters = {
   }
 }
 
+let child = {
+  template: `<div>
+      <header slot="header"></header>
+      <footer>xxx</footer>
+    </div>`,
+  name: 'child-component'
+}
 // app Vue instance
 
 var app = new Vue({
@@ -44,7 +51,12 @@ var app = new Vue({
     },
   },
   data: {
+    form: {
+      yyy: 'xxx'
+    },
+    inputType: 'text',
     yyy: 'yyy',
+    xxx: 'xxx',
     todos: todoStorage.fetch(),
     newTodo: '',
     editedTodo: null,
@@ -141,6 +153,9 @@ var app = new Vue({
     removeCompleted: function () {
       this.todos = filters.active(this.todos)
     }
+  },
+  components: {
+    'child-component': child
   },
 
   // a custom directive to wait for the DOM to be updated

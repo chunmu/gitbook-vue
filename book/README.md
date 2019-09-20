@@ -1,6 +1,6 @@
 # VUE
 
-> vue源码阅读的记录  版本=2.6.9
+> vue源码阅读的记录  版本@2.6.9
 
 
 <br>
@@ -11,6 +11,8 @@
 
 ## donate
 
+
+对您有帮助么，可请喝杯咖啡
 ![donate](https://chunmu.github.io/gitbook-vue/assets/pictures/money.jpeg "donate")
 
 

@@ -1,30 +1,13 @@
-/* @flow */
 
-/**
- * Expand input[v-model] with dyanmic type bindings into v-if-else chains
- * Turn this:
- *   <input v-model="data[type]" :type="type">
- * into this:
- *   <input v-if="type === 'checkbox'" type="checkbox" v-model="data[type]">
- *   <input v-else-if="type === 'radio'" type="radio" v-model="data[type]">
- *   <input v-else :type="type" v-model="data[type]">
- */
+### preTransformNode
 
-import {
-  addRawAttr,
-  getBindingAttr,
-  getAndRemoveAttr
-} from 'compiler/helpers'
+> 存在v-model的input预先解析
 
-import {
-  processFor,
-  processElement,
-  addIfCondition,
-  createASTElement
-} from 'compiler/parser/index'
+```javascript
 
 function preTransformNode (el: ASTElement, options: CompilerOptions) {
   if (el.tag === 'input') {
+    console.log(el.attrsMap, 'el.attrsMap')
     const map = el.attrsMap
     if (!map['v-model']) {
       return
@@ -86,10 +69,5 @@ function preTransformNode (el: ASTElement, options: CompilerOptions) {
   }
 }
 
-function cloneASTElement (el) {
-  return createASTElement(el.tag, el.attrsList.slice(), el.parent)
-}
+```
 
-export default {
-  preTransformNode
-}

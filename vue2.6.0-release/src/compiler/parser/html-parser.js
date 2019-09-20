@@ -261,7 +261,6 @@ export function parseHTML (html, options) {
         attr.end = index
         if (attr[0].indexOf('@keyup.ente') > 0) {
         }
-        console.log(attr, 'attr')
         match.attrs.push(attr)
       }
       if (end) {

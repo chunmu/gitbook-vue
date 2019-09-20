@@ -89,7 +89,6 @@ export function parse (
   platformGetTagNamespace = options.getTagNamespace || no // 获取命名空间 有些标签是带有命名空间属性的  比如 <svg>  <frame>
   const isReservedTag = options.isReservedTag || no // 是否为保留tag
   maybeComponent = (el: ASTElement) => !!el.component || !isReservedTag(el.tag)
-
   transforms = pluckModuleFunction(options.modules, 'transformNode')
   preTransforms = pluckModuleFunction(options.modules, 'preTransformNode')
   postTransforms = pluckModuleFunction(options.modules, 'postTransformNode')
@@ -97,12 +96,14 @@ export function parse (
   // 默认值 ["{{", "}}"]   delimiters: ['${', '}']  改变纯文本插入分隔符
   delimiters = options.delimiters
 
+  // 创建stack,root,currentParent
   const stack = []
   const preserveWhitespace = options.preserveWhitespace !== false
   const whitespaceOption = options.whitespace
   let root
   let currentParent
   // https://cn.vuejs.org/v2/api/#v-pre
+  // 是否
   let inVPre = false
   let inPre = false
   let warned = false
@@ -272,7 +273,6 @@ export function parse (
       for (let i = 0; i < preTransforms.length; i++) {
         element = preTransforms[i](element, options) || element
       }
-
       // 查看是否在v-pre中  如果是在v-pre中 则跳过大量的不用编译的模板
       if (!inVPre) {
         processPre(element)
@@ -410,7 +410,6 @@ export function parse (
       }
     }
   })
-  console.log(root, 'root')
   return root
 }
 
@@ -527,9 +526,6 @@ type ForParseResult = {
 export function parseFor (exp: string): ?ForParseResult {
 
   const inMatch = exp.match(forAliasRE)
-  if (window.switch006) {
-    console.log(inMatch, inMatch)
-  }
   if (!inMatch) return
   const res = {}
   res.for = inMatch[2].trim()
@@ -787,7 +783,7 @@ function processAttrs (el) {
     name = rawName = list[i].name
     value = list[i].value
     if (dirRE.test(name)) {
-      // mark element as dynamic
+      // mark element as dynamicprocessSlotOutlet
       el.hasBindings = true
       // modifiers
       // 匹配修饰符 .once  .enter  .passive .prevent等
@@ -803,9 +799,6 @@ function processAttrs (el) {
       if (bindRE.test(name)) {
         name = name.replace(bindRE, '')
         value = parseFilters(value)  // <div v-bind:xx="value | format">
-        if (window.showFilterResults) {
-          console.log(value, 'filters value')
-        }
         // _f("monthFormat")(_f("yearFormat")(createdTime,'arg1', 'arg2'),'yyyy')
         isDynamic = dynamicArgRE.test(name)
         if (isDynamic) {
@@ -882,6 +875,7 @@ function processAttrs (el) {
         }
         addHandler(el, name, value, modifiers, false, warn, list[i], isDynamic)
       } else { // normal directives
+        // 普通指令解析
         name = name.replace(dirRE, '')
         // parse arg
         const argMatch = name.match(argRE)
@@ -895,6 +889,7 @@ function processAttrs (el) {
           }
         }
         // pdd: 指令处理
+        // 需要研究一下
         addDirective(el, name, rawName, value, arg, isDynamic, modifiers, list[i])
         if (process.env.NODE_ENV !== 'production' && name === 'model') {
           checkForAliasModel(el, value)
@@ -902,7 +897,9 @@ function processAttrs (el) {
       }
     } else {
       // literal attribute
+      // 剩下的atrribute没的匹配
       if (process.env.NODE_ENV !== 'production') {
+        // 解析剩下的text  如果存在{{}}  这种  提示不合法
         const res = parseText(value, delimiters)
         if (res) {
           warn(
@@ -917,6 +914,7 @@ function processAttrs (el) {
       addAttr(el, name, JSON.stringify(value), list[i])
       // #6887 firefox doesn't update muted state if set via attribute
       // even immediately after element creation
+      // 兼容firefox muted video的bug  添加到prop中监听
       if (!el.component &&
           name === 'muted' &&
           platformMustUseProp(el.tag, el.attrsMap.type, name)) {

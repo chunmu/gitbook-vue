@@ -10,8 +10,16 @@
   <body>
     <section class="todoapp">
       <header class="header">
-        <h1>todos</h1>
-        <div v-html='yyy'>{{yyy | formatDate | formatValue | formatSize}}</div>
+        <input :value.sync="yyy">todos</input>
+        <child-component>
+          <template v-slot:header>
+            <span>header</span>
+          </template>
+          <template>xxx</template>
+          <template v-slot:footer>
+            <span>footer</span>
+          </template>
+        </child-component>
         <input class="new-todo"
           autofocus autocomplete="off"formatDate
           placeholder="What needs to be done?"

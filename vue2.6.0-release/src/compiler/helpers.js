@@ -169,6 +169,7 @@ export function getBindingAttr (
     return parseFilters(dynamicValue)
   } else if (getStatic !== false) {
     const staticValue = getAndRemoveAttr(el, name)
+
     if (staticValue != null) {
       return JSON.stringify(staticValue)
     }

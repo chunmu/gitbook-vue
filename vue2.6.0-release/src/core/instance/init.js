@@ -80,7 +80,6 @@ export function initInternalComponent (vm: Component, options: InternalComponent
   opts._parentVnode = parentVnode
 
   const vnodeComponentOptions = parentVnode.componentOptions
-  console.log(parentVnode, vm, vnodeComponentOptions.propsData, 'propsData')
   opts.propsData = vnodeComponentOptions.propsData
   opts._parentListeners = vnodeComponentOptions.listeners
   opts._renderChildren = vnodeComponentOptions.children

@@ -1,0 +1,503 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>filter-parser · Blankj's Glory</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Blankj">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../directives/index.md" />
+    
+    
+    <link rel="prev" href="html-parser.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../source/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../source/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../source/images/apple-touch-icon.jpg">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    compiler
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    parser
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="html-parser.html">
+            
+                <a href="html-parser.html">
+            
+                    
+                    html-parser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.1.3" data-path="filter-parser.html">
+            
+                <a href="filter-parser.html">
+            
+                    
+                    filter-parser
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../directives/index.md">
+            
+                <span>
+            
+                    
+                    directives
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../directives/model.html">
+            
+                <a href="../directives/model.html">
+            
+                    
+                    model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../helpers.html">
+            
+                <a href="../helpers.html">
+            
+                    
+                    helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >filter-parser</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="filter-parser">filter-parser</h1>
+<h3 id="parsefilters">parseFilters</h3>
+<blockquote>
+<p>&#x89E3;&#x6790;filter</p>
+</blockquote>
+<pre><code class="lang-javascript">
+<span class="hljs-comment">/**
+* &#x54B1;&#x4EEC;&#x4EE5;&#x8FD9;&#x4E2A;&#x4E3A;&#x4F8B;&#x5B50;&#x60F3;&#x73B2;&#x89E3;&#x6790;&#x8FC7;&#x7A0B;&lt;h1 v-bind:xx=&quot;(&apos;haha&apos; || yyy) | formatValue&quot;&gt;todos&lt;/h1&gt;
+* 1. exp = (&apos;haha&apos; || yyy) | formatValue
+* 2. i = 0, paren ++
+* 3. i = 1, inSingle = true
+* 4. i = 2, 3, 4, 5 haha
+* 5. i = 6, inSingle = false
+* 6. i = 7, c = &apos;  inSingle = false
+* 7, i = 8, &#x666E;&#x901A;&#x7A7A;&#x683C; 
+* 8, i = 9, i = \ &#x4F46;&#x662F; i + 1 = | &#x4E0D;&#x7B26;&#x5408;&#x524D;&#x540E;&#x4E0D;&#x4E3A;pipe&#x7684;&#x60C5;&#x51B5;  &#x6240;&#x4EE5;&#x4E0D;&#x662F;&#x7BA1;&#x9053;&#x7B26;
+* 9, i = 10, 11, 12, 13, 14, 15 = | yyy
+* 10, i = 16, )  paren --   paren&#x8868;&#x793A;&#x62EC;&#x53F7;&#x8BA1;&#x6570;  &#x6B64;&#x65F6; = 0
+* 11, i = 17 &#x666E;&#x901A;&#x7A7A;&#x683C;
+* 12, i = 18 |  &#x524D;&#x540E;&#x6CA1;&#x6709;&#x7BA1;&#x9053;&#x7B26;  &#x6B64;&#x65F6;&#x62EC;&#x53F7; &#x603B;&#x62EC;&#x53F7;  &#x6570;&#x7EC4;&#x62EC;&#x53F7;&#x7B49;&#x8BA1;&#x6570;&#x4E3A;0  &#x6761;&#x4EF6;&#x6210;&#x7ACB; &#x83B7;&#x53D6;expression = (&apos;haha&apos; || yyy)  &#x6B64;&#x65F6;expression&#x7ED3;&#x675F;undefined&#x72B6;&#x6001;  &#x4E0B;&#x4E00;&#x6B21;&#x5728;&#x5339;&#x914D;&#x5230;  &#x5C31;&#x662F;&#x786E;&#x5B9E;filter&#x4E86;
+* 13, i = 19, 20, 21...29 &#x7ED3;&#x675F;&#x5FAA;&#x73AF;&#x5339;&#x914D;  &#x5404;&#x79CD;&#x8BA1;&#x6570;&#x4E5F;&#x5F52;&#x96F6; inSingle&#x7B49;&#x4E3A;false  &#x5982;&#x679C;expression&#x4E0D;&#x4E3A;undefined  &#x5219;&#x5269;&#x4E0B;&#x7684;lastFilterIndex&#x5230;i&#x4E4B;&#x95F4;&#x7684;string&#x5C31;&#x662F;filter&#x8868;&#x8FBE;&#x5F0F;
+* 14, &#x4E0A;&#x9762;&#x6CA1;&#x6709;&#x5217;&#x4E3E;&#x591A;&#x5C42;filter&#x7684;&#x60C5;&#x51B5;  &#x5982;&#x679C;&#x6709; &#x5219;&#x4F1A;&#x5728;&#x5FAA;&#x73AF;&#x4E2D;&#x5904;&#x7406;&#x4E2D;&#x95F4;&#x7684;filter  &#x672B;&#x5C3E;&#x5904;&#x7406;&#x6700;&#x540E;&#x7684;filter  pushFilter
+* */</span>
+
+
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">parseFilters</span> (<span class="hljs-params">exp: string</span>): <span class="hljs-title">string</span> </span>{
+  <span class="hljs-comment">// &#x5224;&#x65AD;&#x5355;&#x53CC;&#x5F15;&#x53F7;&#x5305;&#x88F9;</span>
+  <span class="hljs-keyword">let</span> inSingle = <span class="hljs-literal">false</span>
+  <span class="hljs-keyword">let</span> inDouble = <span class="hljs-literal">false</span>
+  <span class="hljs-keyword">let</span> inTemplateString = <span class="hljs-literal">false</span>
+  <span class="hljs-keyword">let</span> inRegex = <span class="hljs-literal">false</span>
+  <span class="hljs-keyword">let</span> curly = <span class="hljs-number">0</span>
+  <span class="hljs-keyword">let</span> square = <span class="hljs-number">0</span>
+  <span class="hljs-keyword">let</span> paren = <span class="hljs-number">0</span>
+  <span class="hljs-keyword">let</span> lastFilterIndex = <span class="hljs-number">0</span> <span class="hljs-comment">// &#x4E0B;&#x4E00;&#x4E2A;filter&#x7684;&#x5F00;&#x59CB;   &#x4E0A;&#x4E00;&#x4E2A;filter&#x7684;&#x7ED3;&#x675F;</span>
+  <span class="hljs-keyword">let</span> c, prev, i, expression, filters
+
+  <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; exp.length; i++) {
+    prev = c
+    c = exp.charCodeAt(i)
+    <span class="hljs-comment">//</span>
+    <span class="hljs-keyword">if</span> (inSingle) {
+      <span class="hljs-keyword">if</span> (c === <span class="hljs-number">0x27</span> &amp;&amp; prev !== <span class="hljs-number">0x5C</span>) inSingle = <span class="hljs-literal">false</span> <span class="hljs-comment">// 0x5C \</span>
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (inDouble) {
+      <span class="hljs-keyword">if</span> (c === <span class="hljs-number">0x22</span> &amp;&amp; prev !== <span class="hljs-number">0x5C</span>) inDouble = <span class="hljs-literal">false</span>
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (inTemplateString) {
+      <span class="hljs-keyword">if</span> (c === <span class="hljs-number">0x60</span> &amp;&amp; prev !== <span class="hljs-number">0x5C</span>) inTemplateString = <span class="hljs-literal">false</span>
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (inRegex) {
+      <span class="hljs-keyword">if</span> (c === <span class="hljs-number">0x2f</span> &amp;&amp; prev !== <span class="hljs-number">0x5C</span>) inRegex = <span class="hljs-literal">false</span>
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (
+      c === <span class="hljs-number">0x7C</span> &amp;&amp; <span class="hljs-comment">// pipe</span>
+      <span class="hljs-comment">// &#x8868;&#x8FBE;&#x5F0F;&#x6709;&#x53EF;&#x80FD;&#x662F;   v-bind:xx=&quot;&apos;haha&apos; | formatValue&quot;  v-bind:xx=&apos;&quot;haha&quot; | formatValue&apos;  v-bind:xx=&quot;(&apos;haha&apos; || ifShow) | formatValue&quot;</span>
+      <span class="hljs-comment">// &#x5224;&#x65AD;&#x662F;&#x5426;&#x5728; |&#x7684;&#x524D;&#x540E;&#x662F;&#x5426;&#x4E0D;&#x4E3A;|  &#x4E14;&#x5355;&#x5F15;&#x53F7; &#x53CC;&#x5F15;&#x53F7; &#x62EC;&#x53F7;&#x7B49;&#x8BA1;&#x6570;&#x4E3A;0</span>
+      <span class="hljs-comment">// &#x4ECE;&#x5DE6;&#x4FA7;&#x5F00;&#x59CB;  &#x9047;&#x89C1;&#x7B2C;&#x4E00;&#x4E2A;&#x5355;&#x5F15;&#x53F7;  &#x8BB0;&#x4E3A;inSingle &#x4E14;</span>
+      exp.charCodeAt(i + <span class="hljs-number">1</span>) !== <span class="hljs-number">0x7C</span> &amp;&amp;
+      exp.charCodeAt(i - <span class="hljs-number">1</span>) !== <span class="hljs-number">0x7C</span> &amp;&amp;
+      !curly &amp;&amp; !square &amp;&amp; !paren
+    ) {
+      <span class="hljs-comment">// &#x5148;&#x63D0;&#x53D6;&#x8868;&#x8FBE;&#x5F0F;  &#x5728;&#x5F80;&#x540E;&#x5C31;&#x662F;filter</span>
+      <span class="hljs-keyword">if</span> (expression === <span class="hljs-literal">undefined</span>) {
+        <span class="hljs-comment">// first filter, end of expression</span>
+        lastFilterIndex = i + <span class="hljs-number">1</span>
+        expression = exp.slice(<span class="hljs-number">0</span>, i).trim()
+      } <span class="hljs-keyword">else</span> {
+        <span class="hljs-comment">// expression&#x8868;&#x8FBE;&#x5F0F;&#x5DF2;&#x7ECF;&#x6709;&#x4E86;   &#x63A5;&#x4E0B;&#x6765;&#x8FD8;&#x8D70;&#x8FD9;&#x91CC;&#x5C31;&#x662F;filter&#x8868;&#x8FBE;&#x5F0F;&#x4E86;</span>
+        pushFilter()
+      }
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">switch</span> (c) {
+        <span class="hljs-keyword">case</span> <span class="hljs-number">0x22</span>: inDouble = <span class="hljs-literal">true</span>; <span class="hljs-keyword">break</span>         <span class="hljs-comment">// &quot;</span>
+        <span class="hljs-keyword">case</span> <span class="hljs-number">0x27</span>: inSingle = <span class="hljs-literal">true</span>; <span class="hljs-keyword">break</span>         <span class="hljs-comment">// &apos;</span>
+        <span class="hljs-keyword">case</span> <span class="hljs-number">0x60</span>: inTemplateString = <span class="hljs-literal">true</span>; <span class="hljs-keyword">break</span> <span class="hljs-comment">// `</span>
+        <span class="hljs-keyword">case</span> <span class="hljs-number">0x28</span>: paren++; <span class="hljs-keyword">break</span>                 <span class="hljs-comment">// (</span>
+        <span class="hljs-keyword">case</span> <span class="hljs-number">0x29</span>: paren--; <span class="hljs-keyword">break</span>                 <span class="hljs-comment">// )</span>
+        <span class="hljs-keyword">case</span> <span class="hljs-number">0x5B</span>: square++; <span class="hljs-keyword">break</span>                <span class="hljs-comment">// [</span>
+        <span class="hljs-keyword">case</span> <span class="hljs-number">0x5D</span>: square--; <span class="hljs-keyword">break</span>                <span class="hljs-comment">// ]</span>
+        <span class="hljs-keyword">case</span> <span class="hljs-number">0x7B</span>: curly++; <span class="hljs-keyword">break</span>                 <span class="hljs-comment">// {</span>
+        <span class="hljs-keyword">case</span> <span class="hljs-number">0x7D</span>: curly--; <span class="hljs-keyword">break</span>                 <span class="hljs-comment">// }</span>
+      }
+      <span class="hljs-keyword">if</span> (c === <span class="hljs-number">0x2f</span>) { <span class="hljs-comment">// /</span>
+        <span class="hljs-keyword">let</span> j = i - <span class="hljs-number">1</span>
+        <span class="hljs-keyword">let</span> p
+        <span class="hljs-comment">// find first non-whitespace prev char</span>
+        <span class="hljs-keyword">for</span> (; j &gt;= <span class="hljs-number">0</span>; j--) {
+          p = exp.charAt(j)
+          <span class="hljs-keyword">if</span> (p !== <span class="hljs-string">&apos; &apos;</span>) <span class="hljs-keyword">break</span>
+        }
+        <span class="hljs-keyword">if</span> (!p || !validDivisionCharRE.test(p)) {
+          inRegex = <span class="hljs-literal">true</span>
+        }
+      }
+    }
+  }
+  <span class="hljs-comment">// &#x6536;&#x5C3E;&#x5904;&#x7406; &#x5982;&#x679C;expression&#x662F;undefined&#x8868;&#x793A;&#x6CA1;&#x6709;&#x7BA1;&#x9053;  &#x5C31;&#x662F;&#x666E;&#x901A;&#x4E00;&#x4E2A;&#x8868;&#x8FBE;&#x5F0F;</span>
+  <span class="hljs-keyword">if</span> (expression === <span class="hljs-literal">undefined</span>) {
+    expression = exp.slice(<span class="hljs-number">0</span>, i).trim()
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (lastFilterIndex !== <span class="hljs-number">0</span>) {
+    pushFilter()
+  }
+
+  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">pushFilter</span> (<span class="hljs-params"></span>) </span>{
+    (filters || (filters = [])).push(exp.slice(lastFilterIndex, i).trim())
+    lastFilterIndex = i + <span class="hljs-number">1</span>
+  }
+
+  <span class="hljs-keyword">if</span> (filters) {
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; filters.length; i++) {
+      expression = wrapFilter(expression, filters[i])
+    }
+  }
+
+  <span class="hljs-keyword">return</span> expression
+}
+</code></pre>
+<h3 id="wrapfilter">wrapFilter</h3>
+<blockquote>
+<p>&#x89E3;&#x6790;&#x51FA;filter&#x8868;&#x8FBE;&#x5F0F;&#x540E;  &#x8FDB;&#x884C;&#x4EE3;&#x7801;&#x62FC;&#x63A5;&#x5904;&#x7406;</p>
+</blockquote>
+<pre><code class="lang-javascript">
+<span class="hljs-comment">/**
+* &#x8BBE; &lt;h1 v-bind:xx=&quot;(&apos;haha&apos; || yyy) | formatValue | formatSize&quot;&gt;todos&lt;/h1&gt;
+* return _f(&quot;formatSize&quot;)(_f(&quot;formatValue&quot;)((&apos;haha&apos; || yyy)))  // &#x5148;&#x77E5;&#x9053;&#x8FD9;&#x4E2A;&#x7ED3;&#x679C;  &#x540E;&#x9762;&#x4ECB;&#x7ECD;&#x600E;&#x4E48;&#x7528;
+* */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">wrapFilter</span> (<span class="hljs-params">exp: string, filter: string</span>): <span class="hljs-title">string</span> </span>{
+  <span class="hljs-keyword">const</span> i = filter.indexOf(<span class="hljs-string">&apos;(&apos;</span>)
+  <span class="hljs-comment">// &#x8868;&#x793A;&#x65E0;&#x53C2;filter</span>
+  <span class="hljs-keyword">if</span> (i &lt; <span class="hljs-number">0</span>) {
+    <span class="hljs-comment">// _f: resolveFilter</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`_f(&quot;<span class="hljs-subst">${filter}</span>&quot;)(<span class="hljs-subst">${exp}</span>)`</span>
+  } <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">const</span> name = filter.slice(<span class="hljs-number">0</span>, i)
+    <span class="hljs-keyword">const</span> args = filter.slice(i + <span class="hljs-number">1</span>)
+    <span class="hljs-keyword">return</span> <span class="hljs-string">`_f(&quot;<span class="hljs-subst">${name}</span>&quot;)(<span class="hljs-subst">${exp}</span><span class="hljs-subst">${args !== &apos;)&apos; ? &apos;,&apos; + args : args}</span>`</span>
+  }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="html-parser.html" class="navigation navigation-prev " aria-label="Previous page: html-parser">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../directives/index.md" class="navigation navigation-next " aria-label="Next page: directives">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"filter-parser","level":"1.2.1.3","depth":3,"next":{"title":"directives","level":"1.2.2","depth":2,"path":"compiler/directives/index.md","ref":"compiler/directives/index.md","articles":[{"title":"model","level":"1.2.2.1","depth":3,"path":"compiler/directives/model.md","ref":"compiler/directives/model.md","articles":[]}]},"previous":{"title":"html-parser","level":"1.2.1.2","depth":3,"path":"compiler/parser/html-parser.md","ref":"compiler/parser/html-parser.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Blankj","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Blankj's Glory","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"compiler/parser/filter-parser.md","mtime":"2019-09-20T11:50:38.033Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-20T13:20:21.644Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
