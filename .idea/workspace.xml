@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7b10eb9-a1c3-429d-9fb6-ece302b3bc1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/book/compiler/directives/model.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book/compiler/helpers.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book/compiler/parser/filter-parser.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book/platforms/web/compiler/modules/model.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/book/wonderful.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/book/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/book/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book/SUMMARY.md" beforeDir="false" afterPath="$PROJECT_DIR$/book/SUMMARY.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/book/compiler/parser/index.md" beforeDir="false" afterPath="$PROJECT_DIR$/book/compiler/parser/index.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue2.6.0-release/examples/todomvc/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue2.6.0-release/examples/todomvc/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue2.6.0-release/examples/todomvc/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/vue2.6.0-release/examples/todomvc/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue2.6.0-release/src/compiler/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue2.6.0-release/src/compiler/helpers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue2.6.0-release/src/compiler/parser/filter-parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue2.6.0-release/src/compiler/parser/filter-parser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue2.6.0-release/src/compiler/parser/html-parser.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue2.6.0-release/src/compiler/parser/html-parser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue2.6.0-release/src/compiler/parser/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue2.6.0-release/src/compiler/parser/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue2.6.0-release/src/core/instance/init.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue2.6.0-release/src/core/instance/init.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/compiler/modules/model.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/compiler/modules/model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/assets/pictures/money.jpeg" beforeDir="false" afterPath="$PROJECT_DIR$/book/assets/pictures/money.jpeg" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -31,107 +16,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/parser/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="15" column="12" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/directives/model.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/helpers.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="41" selection-start-line="41" selection-end-line="60" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book/compiler/parser/index.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="300">
-                <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/package.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book/compiler/parser/html-parser.md">
+        <entry file="file://$PROJECT_DIR$/book/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="255">
-                <caret line="17" selection-start-line="17" selection-end-line="17" selection-end-column="112" />
+              <first_editor relative-caret-position="315">
+                <caret line="21" column="36" lean-forward="true" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book/SUMMARY.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="180">
-                <caret line="12" selection-start-line="12" selection-end-line="12" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book/compiler/helpers.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="109">
-                <caret line="106" column="3" selection-start-line="106" selection-start-column="3" selection-end-line="106" selection-end-column="3" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/book/compiler/parser/filter-parser.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="283">
-                <caret line="121" selection-start-line="121" selection-end-line="121" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue2.6.0-release/examples/todomvc/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -164,12 +56,12 @@
       <find>console</find>
       <find>isStringStart</find>
       <find>console.log(parentVnode</find>
-      <find>lastFilterIndex</find>
-      <find>stringQuote</find>
       <find>genAssignmentCode</find>
       <find>dirRE</find>
-      <find>addDirective</find>
       <find>rangeSetItem</find>
+      <find>stringQuote</find>
+      <find>addDirective</find>
+      <find>lastFilterIndex</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/vue2.6.0-release</dir>
@@ -193,7 +85,6 @@
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/vue2.6.0-release/src/compiler/parser/html-parser.js" />
         <option value="$PROJECT_DIR$/book/platforms/web/compiler/modules/model.md" />
-        <option value="$PROJECT_DIR$/book/README.md" />
         <option value="$PROJECT_DIR$/book/wonderful.md" />
         <option value="$PROJECT_DIR$/book/compiler/parser/filter-parser.md" />
         <option value="$PROJECT_DIR$/vue2.6.0-release/examples/todomvc/app.js" />
@@ -207,6 +98,7 @@
         <option value="$PROJECT_DIR$/vue2.6.0-release/src/compiler/parser/index.js" />
         <option value="$PROJECT_DIR$/book/compiler/helpers.md" />
         <option value="$PROJECT_DIR$/book/compiler/parser/index.md" />
+        <option value="$PROJECT_DIR$/book/README.md" />
       </list>
     </option>
   </component>
@@ -452,12 +344,12 @@
       <workItem from="1568719007805" duration="3378000" />
       <workItem from="1568774045693" duration="1594000" />
       <workItem from="1568789924091" duration="21055000" />
-      <workItem from="1568960252032" duration="13444000" />
+      <workItem from="1568960252032" duration="13803000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71184000" />
+    <option name="totallyTimeSpent" value="71543000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="23" width="1440" height="836" extended-state="0" />
@@ -623,16 +515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="135">
-            <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/parser/filter-parser.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="292">
@@ -670,23 +552,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book/SUMMARY.md">
+    <entry file="file://$PROJECT_DIR$/book/compiler/parser/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="180">
-            <caret line="12" selection-start-line="12" selection-end-line="12" />
+          <first_editor relative-caret-position="150">
+            <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book/compiler/parser/filter-parser.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="283">
-            <caret line="121" selection-start-line="121" selection-end-line="121" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/helpers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="41" selection-start-line="41" selection-end-line="60" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -704,10 +583,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/helpers.js">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="41" selection-start-line="41" selection-end-line="60" selection-end-column="1" />
+        <state relative-caret-position="30">
+          <caret line="2" column="21" lean-forward="true" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -721,10 +600,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/examples/todomvc/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+    <entry file="file://$PROJECT_DIR$/book/SUMMARY.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="180">
+            <caret line="12" selection-start-line="12" selection-end-line="12" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
@@ -738,20 +620,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book/compiler/parser/index.md">
+    <entry file="file://$PROJECT_DIR$/book/compiler/parser/filter-parser.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="300">
-            <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+          <first_editor relative-caret-position="283">
+            <caret line="121" selection-start-line="121" selection-end-line="121" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/examples/todomvc/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="187">
+          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="315">
+            <caret line="21" column="36" lean-forward="true" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
