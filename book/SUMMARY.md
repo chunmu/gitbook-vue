@@ -9,4 +9,6 @@
     * [directives](compiler/directives/index.md)
         * [model](compiler/directives/model.md)
     * [helpers](compiler/helpers.md)
+* [core]()
+    * [observer](core/observer/index.md)
 
