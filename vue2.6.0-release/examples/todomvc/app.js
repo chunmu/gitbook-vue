@@ -51,6 +51,29 @@ var app = new Vue({
     },
   },
   data: {
+    users: [
+      {
+        name: 'chunmu.zhang',
+        info: {
+          weight: '120'
+        },
+        password: '123456'
+      },
+      {
+        name: 'zeng.zeng',
+        info: {
+          weight: '120'
+        },
+        password: '34567'
+      },
+      {
+        name: 'xiu.zhang',
+        info: {
+          weight: '120'
+        },
+        password: 'test'
+      }
+    ],
     form: {
       yyy: 'xxx'
     },
@@ -112,6 +135,13 @@ var app = new Vue({
   // methods that implement data logic.
   // note there's no DOM manipulation here at all.
   methods: {
+    handleClick () {
+      this.users[0] = {
+        info: {
+          weight: Date.now()
+        }
+      }
+    },
     test () {},
     handleSync () {},
     addTodo: function () {

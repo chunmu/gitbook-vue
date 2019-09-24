@@ -1,0 +1,8 @@
+{
+  "name": "gitbook-vue",
+  "version": "0.0.0",
+  "description": "build book",
+  "scripts": {
+    "build": "cd book && gitbook build && rm -rf ../docs && mkdir ../docs && mv ./_book/* ../docs"
+  }
+}

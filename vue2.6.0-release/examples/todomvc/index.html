@@ -10,7 +10,11 @@
   <body>
     <section class="todoapp">
       <header class="header">
-        <input :value.sync="yyy">todos</input>
+        <span @click="handleClick">todos</span>
+        <ul>
+          <li v-for="user in users">{{user.info.weight}}</li>
+        </ul>
+
         <child-component>
           <template v-slot:header>
             <span>header</span>
