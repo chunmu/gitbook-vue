@@ -10,25 +10,7 @@
   <body>
     <section class="todoapp">
       <header class="header">
-        <span @click="handleClick">todos</span>
-        <ul>
-          <li v-for="user in users">{{user.info.weight}}</li>
-        </ul>
-
-        <child-component>
-          <template v-slot:header>
-            <span>header</span>
-          </template>
-          <template>xxx</template>
-          <template v-slot:footer>
-            <span>footer</span>
-          </template>
-        </child-component>
-        <input class="new-todo"
-          autofocus autocomplete="off"formatDate
-          placeholder="What needs to be done?"
-          v-model="newTodo"
-          @keyup.enter="addTodo">
+        <div>{{yyy}}{{xxx}}</div>
       </header>
 
     </section>

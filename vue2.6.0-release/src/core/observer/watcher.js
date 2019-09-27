@@ -77,6 +77,7 @@ export default class Watcher {
       : ''
     // parse expression for getter
     if (typeof expOrFn === 'function') {
+
       this.getter = expOrFn
     } else {
       this.getter = parsePath(expOrFn)

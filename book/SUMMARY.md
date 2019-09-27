@@ -10,5 +10,7 @@
         * [model](compiler/directives/model.md)
     * [helpers](compiler/helpers.md)
 * [core]()
-    * [observer](core/observer/index.md)
+    * [observer]()
+        * [index](core/observer/index.md)
+        * [dep](core/observer/dep.md)
 

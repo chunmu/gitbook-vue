@@ -86,104 +86,15 @@ var app = new Vue({
     visibility: 'all'
   },
 
-  // watch todos change for localStorage persistence
-  watch: {
-    todos: {
-      handler: function (todos) {
-        todoStorage.save(todos)
-      },
-      deep: true
-    }
-  },
+
 
   // computed properties
   // https://vuejs.org/guide/computed.html
-  computed: {
-    filteredTodos: function () {
-      return filters[this.visibility](this.todos)
-    },
-    remaining: function () {
-      return filters.active(this.todos).length
-    },
-    allDone: {
-      get: function () {
-        return this.remaining === 0
-      },
-      set: function (value) {
-        this.todos.forEach(function (todo) {
-          todo.completed = value
-        })
-      }
-    }
-  },
 
-  filters: {
-    pluralize: function (n) {
-      return n === 1 ? 'item' : 'items'
-    },
-    formatDate: function (value) {
-      return value += 'formatDate'
-    },
-    formatValue (value) {
-      return value += 'formatValue'
-    },
-    formatSize (value) {
-      return value += 'formatSize'
-    }
-  },
 
   // methods that implement data logic.
   // note there's no DOM manipulation here at all.
-  methods: {
-    handleClick () {
-      this.users[0] = {
-        info: {
-          weight: Date.now()
-        }
-      }
-    },
-    test () {},
-    handleSync () {},
-    addTodo: function () {
-      var value = this.newTodo && this.newTodo.trim()
-      if (!value) {
-        return
-      }
-      this.todos.splice(2, 2)
-      this.newTodo = ''
-    },
 
-    removeTodo: function (todo) {
-      this.todos.splice(this.todos.indexOf(todo), 1)
-    },
-
-    editTodo: function (todo) {
-      this.beforeEditCache = todo.title
-      this.editedTodo = todo
-    },
-
-    doneEdit: function (todo) {
-      console.log('get in')
-      if (!this.editedTodo) {
-        return
-      }
-      this.editedTodo = null
-      todo.title = todo.title.trim()
-      if (!todo.title) {
-        this.removeTodo(todo)
-      }
-    },
-
-    cancelEdit: function (todo) {
-      console.log('cancel')
-      this.editedTodo = null
-      todo.title = this.beforeEditCache
-    },
-
-    removeCompleted: function () {
-      this.todos = filters.active(this.todos)
-    }
-  },
   components: {
     'child-component': child
   },
