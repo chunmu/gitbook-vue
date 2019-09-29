@@ -41,7 +41,6 @@ export function parsePath (path: string): any {
       if (!obj) return
       obj = obj[segments[i]]
     }
-    console.log(obj, 'obj')
     return obj
   }
 }

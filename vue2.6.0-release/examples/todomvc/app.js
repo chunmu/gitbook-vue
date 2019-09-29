@@ -41,7 +41,6 @@ let child = {
     </div>`,
   name: 'child-component'
 }
-// app Vue instance
 
 var app = new Vue({
   // app initial state
@@ -96,7 +95,8 @@ var app = new Vue({
   // note there's no DOM manipulation here at all.
 
   components: {
-    'child-component': child
+    'child-component': child,
+    'app-child': appChild
   },
 
   // a custom directive to wait for the DOM to be updated
