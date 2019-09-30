@@ -23,8 +23,4 @@ Object.defineProperty(Vue, 'FunctionalRenderContext', {
 
 Vue.version = '__VERSION__'
 
-// 获取此步骤Vue.prototype快照   shouldGetPrototypeCaptureAfterInitGlobalAPI
-if (window.shouldGetPrototypeCaptureAfterInitGlobalAPI) {
-  console.log(Vue.prototype, 'prototype')
-}
 export default Vue

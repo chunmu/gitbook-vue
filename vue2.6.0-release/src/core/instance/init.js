@@ -17,7 +17,7 @@ export function initMixin (Vue: Class<Component>) {
     const vm: Component = this
     // a uid
     vm._uid = uid++
-
+    console.log(options, 'options before')
     let startTag, endTag
     /* istanbul ignore if */
     if (process.env.NODE_ENV !== 'production' && config.performance && mark) {
@@ -29,6 +29,7 @@ export function initMixin (Vue: Class<Component>) {
     // a flag to avoid this being observed
     vm._isVue = true
     // merge options
+
     if (options && options._isComponent) {
       // optimize internal component instantiation
       // since dynamic options merging is pretty slow, and none of the
@@ -42,6 +43,7 @@ export function initMixin (Vue: Class<Component>) {
         vm
       )
     }
+    console.log(options, 'options after')
     /* istanbul ignore else */
     if (process.env.NODE_ENV !== 'production') {
       initProxy(vm)
@@ -78,7 +80,6 @@ export function initInternalComponent (vm: Component, options: InternalComponent
   const parentVnode = options._parentVnode
   opts.parent = options.parent
   opts._parentVnode = parentVnode
-
   const vnodeComponentOptions = parentVnode.componentOptions
   opts.propsData = vnodeComponentOptions.propsData
   opts._parentListeners = vnodeComponentOptions.listeners
@@ -89,6 +90,7 @@ export function initInternalComponent (vm: Component, options: InternalComponent
     opts.render = options.render
     opts.staticRenderFns = options.staticRenderFns
   }
+  console.log(opts, 'opts')
 }
 
 export function resolveConstructorOptions (Ctor: Class<Component>) {

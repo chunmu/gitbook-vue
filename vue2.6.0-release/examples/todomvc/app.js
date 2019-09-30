@@ -35,6 +35,9 @@ var filters = {
 }
 
 let child = {
+  props: {
+    xxx: {}
+  },
   template: `<div>
       <header slot="header"></header>
       <footer>xxx</footer>
@@ -78,7 +81,7 @@ var app = new Vue({
     },
     inputType: 'text',
     yyy: 'yyy',
-    xxx: 'xxx',
+    xxx: 'propsXXXX',
     todos: todoStorage.fetch(),
     newTodo: '',
     editedTodo: null,
@@ -95,8 +98,7 @@ var app = new Vue({
   // note there's no DOM manipulation here at all.
 
   components: {
-    'child-component': child,
-    'app-child': appChild
+    'child-component': child
   },
 
   // a custom directive to wait for the DOM to be updated

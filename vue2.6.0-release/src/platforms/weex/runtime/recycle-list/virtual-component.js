@@ -88,6 +88,7 @@ function updateVirtualComponent (vnode?: VNode) {
   if (vm._isMounted) {
     callHook(vm, 'beforeUpdate')
   }
+  console.log(vnode, 'vnode')
   vm._vnode = vnode
   if (vm._isMounted && componentId) {
     // TODO: data should be filtered and without bindings
