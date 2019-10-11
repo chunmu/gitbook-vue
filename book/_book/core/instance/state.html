@@ -1,0 +1,851 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>state · Blankj's Glory</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Blankj">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="inject.html" />
+    
+
+    
+        <link rel="shortcut icon" href='../../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../../source/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../../source/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../../source/images/apple-touch-icon.jpg">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../wonderful.html">
+            
+                <a href="../../wonderful.html">
+            
+                    
+                    有趣的发现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../flow.html">
+            
+                <a href="../../flow.html">
+            
+                    
+                    各种流程图解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../compiler/">
+            
+                <a href="../../compiler/">
+            
+                    
+                    compiler
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../../compiler/parser/">
+            
+                <a href="../../compiler/parser/">
+            
+                    
+                    parser
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" data-path="../../compiler/parser/">
+            
+                <a href="../../compiler/parser/">
+            
+                    
+                    index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../../compiler/parser/html-parser.html">
+            
+                <a href="../../compiler/parser/html-parser.html">
+            
+                    
+                    html-parser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../../compiler/parser/filter-parser.html">
+            
+                <a href="../../compiler/parser/filter-parser.html">
+            
+                    
+                    filter-parser
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../../compiler/directives/index.md">
+            
+                <span>
+            
+                    
+                    directives
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../../compiler/directives/model.html">
+            
+                <a href="../../compiler/directives/model.html">
+            
+                    
+                    model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../compiler/helpers.html">
+            
+                <a href="../../compiler/helpers.html">
+            
+                    
+                    helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    core
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" >
+            
+                <span>
+            
+                    
+                    instance
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="init.html">
+            
+                <a href="init.html">
+            
+                    
+                    init
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="proxy.html">
+            
+                <a href="proxy.html">
+            
+                    
+                    proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.4" data-path="events.html">
+            
+                <a href="events.html">
+            
+                    
+                    events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.5" data-path="inject.html">
+            
+                <a href="inject.html">
+            
+                    
+                    inject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.1.6" data-path="state.html">
+            
+                <a href="state.html">
+            
+                    
+                    state
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    observer
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../observer/">
+            
+                <a href="../observer/">
+            
+                    
+                    index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../observer/dep.html">
+            
+                <a href="../observer/dep.html">
+            
+                    
+                    dep
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" >
+            
+                <span>
+            
+                    
+                    vdom
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" >
+            
+                <span>
+            
+                    
+                    helpers
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1.1" data-path="../vdom/helpers/update-listeners.html">
+            
+                <a href="../vdom/helpers/update-listeners.html">
+            
+                    
+                    update-listeners
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >state</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="state">state</h1>
+<h3 id="initprops">initProps</h3>
+<pre><code class="lang-javascript">
+<span class="hljs-comment">// props&#x89E3;&#x6790;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">initProps</span> (<span class="hljs-params">vm: Component, propsOptions: Object</span>) </span>{
+  <span class="hljs-keyword">const</span> propsData = vm.$options.propsData || {}
+  <span class="hljs-keyword">const</span> props = vm._props = {}
+  <span class="hljs-comment">// cache prop keys so that future props updates can iterate using Array</span>
+  <span class="hljs-comment">// instead of dynamic object key enumeration.</span>
+  <span class="hljs-keyword">const</span> keys = vm.$options._propKeys = []
+  <span class="hljs-keyword">const</span> isRoot = !vm.$parent
+  <span class="hljs-comment">// root instance props should be converted</span>
+  <span class="hljs-comment">// &#x5982;&#x679C;&#x662F;&#x666E;&#x901A;&#x7EC4;&#x4EF6; &#x4E0D;&#x5E94;&#x8BE5;&#x8BBE;&#x7F6E;props&#x7684;getter&#x6216;&#x8005;setter  &#x7406;&#x8BBA;&#x4E0A;&#x8FD9;&#x4E9B;&#x5728;&#x4ED6;&#x4EEC;&#x5404;&#x81EA;&#x7684;&#x7236;&#x7EC4;&#x4EF6;&#x4E0A;&#x6709;&#x8FDB;&#x884C;&#x6B64;&#x7C7B;&#x5904;&#x7406;</span>
+  <span class="hljs-keyword">if</span> (!isRoot) {
+    toggleObserving(<span class="hljs-literal">false</span>)
+  }
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> key <span class="hljs-keyword">in</span> propsOptions) {
+    keys.push(key)
+    <span class="hljs-keyword">const</span> value = validateProp(key, propsOptions, propsData, vm)
+    <span class="hljs-comment">/* istanbul ignore else */</span>
+    <span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span>) {
+      <span class="hljs-keyword">const</span> hyphenatedKey = hyphenate(key)
+      <span class="hljs-comment">// key,ref,slot,slot-scope,is&#x4FDD;&#x7559;&#x7684;&#x5173;&#x952E;&#x5B57;</span>
+      <span class="hljs-keyword">if</span> (isReservedAttribute(hyphenatedKey) ||
+          config.isReservedAttr(hyphenatedKey)) {
+        warn(
+          <span class="hljs-string">`&quot;<span class="hljs-subst">${hyphenatedKey}</span>&quot; is a reserved attribute and cannot be used as component prop.`</span>,
+          vm
+        )
+      }
+      defineReactive(props, key, value, () =&gt; {
+        <span class="hljs-comment">// &#x5B50;&#x7EC4;&#x4EF6;&#x4E0D;&#x518D;&#x66F4;&#x65B0;&#x7684;&#x60C5;&#x51B5;&#x4E0B;  &#x8BBE;&#x7F6E;setter</span>
+        <span class="hljs-keyword">if</span> (!isRoot &amp;&amp; !isUpdatingChildComponent) {
+          warn(
+            <span class="hljs-string">`Avoid mutating a prop directly since the value will be `</span> +
+            <span class="hljs-string">`overwritten whenever the parent component re-renders. `</span> +
+            <span class="hljs-string">`Instead, use a data or computed property based on the prop&apos;s `</span> +
+            <span class="hljs-string">`value. Prop being mutated: &quot;<span class="hljs-subst">${key}</span>&quot;`</span>,
+            vm
+          )
+        }
+      })
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x4F20;&#x8FDB;&#x6765;&#x7684;prop setter &#x5982;&#x679C;&#x7236;&#x7EA7;&#x7EC4;&#x4EF6;&#x4FEE;&#x6539;&#x4E86;&#x5B83;&#x7684;&#x503C; &#x53EF;&#x4EE5;&#x5728;&#x5B50;&#x7EC4;&#x4EF6;&#x6355;&#x6349;&#x5230;</span>
+      defineReactive(props, key, value)
+    }
+    <span class="hljs-comment">// static props are already proxied on the component&apos;s prototype</span>
+    <span class="hljs-comment">// during Vue.extend(). We only need to proxy props defined at</span>
+    <span class="hljs-comment">// instantiation here.</span>
+    <span class="hljs-keyword">if</span> (!(key <span class="hljs-keyword">in</span> vm)) {
+      proxy(vm, <span class="hljs-string">`_props`</span>, key)
+    }
+  }
+  toggleObserving(<span class="hljs-literal">true</span>)
+}
+</code></pre>
+<h3 id="initmethods">initMethods</h3>
+<pre><code class="lang-javascript">
+<span class="hljs-comment">// &#x521D;&#x59CB;&#x5316;methods</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">initMethods</span> (<span class="hljs-params">vm: Component, methods: Object</span>) </span>{
+  <span class="hljs-keyword">const</span> props = vm.$options.props
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> key <span class="hljs-keyword">in</span> methods) {
+    <span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span>) {
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> methods[key] !== <span class="hljs-string">&apos;function&apos;</span>) {
+        warn(
+          <span class="hljs-string">`Method &quot;<span class="hljs-subst">${key}</span>&quot; has type &quot;<span class="hljs-subst">${typeof methods[key]}</span>&quot; in the component definition. `</span> +
+          <span class="hljs-string">`Did you reference the function correctly?`</span>,
+          vm
+        )
+      }
+      <span class="hljs-keyword">if</span> (props &amp;&amp; hasOwn(props, key)) {
+        warn(
+          <span class="hljs-string">`Method &quot;<span class="hljs-subst">${key}</span>&quot; has already been defined as a prop.`</span>,
+          vm
+        )
+      }
+      <span class="hljs-keyword">if</span> ((key <span class="hljs-keyword">in</span> vm) &amp;&amp; isReserved(key)) {
+        warn(
+          <span class="hljs-string">`Method &quot;<span class="hljs-subst">${key}</span>&quot; conflicts with an existing Vue instance method. `</span> +
+          <span class="hljs-string">`Avoid defining component methods that start with _ or $.`</span>
+        )
+      }
+    }
+    <span class="hljs-comment">// &#x7ED1;&#x5B9A;this</span>
+    vm[key] = <span class="hljs-keyword">typeof</span> methods[key] !== <span class="hljs-string">&apos;function&apos;</span> ? noop : bind(methods[key], vm)
+  }
+}
+</code></pre>
+<h3 id="initdata">initData</h3>
+<pre><code class="lang-javascript">
+<span class="hljs-comment">// &#x521D;&#x59CB;&#x5316;data</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">initData</span> (<span class="hljs-params">vm: Component</span>) </span>{
+  <span class="hljs-keyword">let</span> data = vm.$options.data
+  <span class="hljs-comment">// &#x8FD9;&#x4E2A;&#x7248;&#x672C;&#x662F;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x7A7A;&#x5BF9;&#x8C61;</span>
+  data = vm._data = <span class="hljs-keyword">typeof</span> data === <span class="hljs-string">&apos;function&apos;</span>
+    ? getData(data, vm)
+    : data || {}
+    <span class="hljs-comment">// data: {} &#x8FD9;&#x79CD;&#x5F62;&#x5F0F;&#x5F53;&#x524D;&#x7248;&#x672C;&#x4E0D;&#x4F1A;&#x629B;&#x51FA;error</span>
+  <span class="hljs-keyword">if</span> (!isPlainObject(data)) {
+    data = {}
+    <span class="hljs-comment">// &#x6BD4;&#x8F83;&#x773C;&#x719F;&#x7684;&#x63D0;&#x793A;</span>
+    process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span> &amp;&amp; warn(
+      <span class="hljs-string">&apos;data functions should return an object:\n&apos;</span> +
+      <span class="hljs-string">&apos;https://vuejs.org/v2/guide/components.html#data-Must-Be-a-Function&apos;</span>,
+      vm
+    )
+  }
+  <span class="hljs-comment">// proxy data on instance</span>
+  <span class="hljs-keyword">const</span> keys = <span class="hljs-built_in">Object</span>.keys(data)
+  <span class="hljs-keyword">const</span> props = vm.$options.props
+  <span class="hljs-keyword">const</span> methods = vm.$options.methods
+  <span class="hljs-keyword">let</span> i = keys.length
+  <span class="hljs-comment">// &#x8FC7;&#x6EE4;props&#x6216;&#x8005;methods&#x4E2D;&#x51FA;&#x73B0;&#x8FC7;&#x7684;key</span>
+  <span class="hljs-keyword">while</span> (i--) {
+    <span class="hljs-keyword">const</span> key = keys[i]
+    <span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span>) {
+      <span class="hljs-keyword">if</span> (methods &amp;&amp; hasOwn(methods, key)) {
+        warn(
+          <span class="hljs-string">`Method &quot;<span class="hljs-subst">${key}</span>&quot; has already been defined as a data property.`</span>,
+          vm
+        )
+      }
+    }
+    <span class="hljs-keyword">if</span> (props &amp;&amp; hasOwn(props, key)) {
+      process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span> &amp;&amp; warn(
+        <span class="hljs-string">`The data property &quot;<span class="hljs-subst">${key}</span>&quot; is already declared as a prop. `</span> +
+        <span class="hljs-string">`Use prop default value instead.`</span>,
+        vm
+      )
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (!isReserved(key)) {
+      proxy(vm, <span class="hljs-string">`_data`</span>, key)
+    }
+  }
+  <span class="hljs-comment">// observe data</span>
+  <span class="hljs-comment">// observe data&#x5BF9;&#x8C61; &#x901A;&#x8FC7;&#x6E90;&#x7801;&#x53D1;&#x73B0;  &#x5982;&#x679C;&#x6CA1;&#x6709;&#x6307;&#x5B9A;shallow&#x6D45;&#x5C42;&#x89C2;&#x5BDF;  &#x5219;&#x4F1A;&#x9012;&#x5F52;&#x89E3;&#x6790;&#x6DF1;&#x5C42;&#x4E14;&#x6302;&#x8F7D;observer</span>
+  <span class="hljs-comment">// &#x6570;&#x7EC4;&#x7684;&#x90E8;&#x5206;&#x64CD;&#x4F5C;&#x65B9;&#x6CD5;&#x4F1A;&#x5F15;&#x53D1;&#x66F4;&#x65B0; &#x62C6;&#x5206;&#x6570;&#x7EC4;&#x9879;&#x7EE7;&#x7EED;&#x6DF1;&#x5C42;ob</span>
+  <span class="hljs-comment">// &#x5982;&#x679C;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x6570;&#x7EC4;&#x7684;&#x67D0;&#x4E00;&#x9879;  &#x8FD9;&#x4E0D;&#x4F1A;&#x5F15;&#x53D1;&#x89C6;&#x56FE;&#x66F4;&#x65B0; </span>
+  <span class="hljs-comment">// &#x4F8B;&#x5982;: arr[0] = {}   &#x8FD9;&#x4E2A;&#x5C31;&#x5F88;&#x96BE;&#x8BBE;&#x7F6E;ob&#x4E86;&#x7D22;&#x5F15;&#x4E0D;&#x662F;key  &#x8FD9;&#x4E2A;&#x4E0D;&#x662F;&#x56FA;&#x5B9A;&#x4E0D;&#x53D8;&#x6307;&#x5411;&#x67D0;&#x4E2A;item&#x7684;  &#x6240;&#x4EE5;&#x6CA1;&#x6709;ob&#x7684;&#x610F;&#x4E49;</span>
+  <span class="hljs-comment">// arr[index] = new Val  &#x8FD9;&#x6837;&#x662F;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x89C6;&#x56FE;&#x66F4;&#x65B0;&#x7684;  &#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x4E3A;&#x4ED6;&#x4EEC;&#x6307;&#x5B9A;&#x7279;&#x6B8A;&#x7684;setter  &#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x53D8;&#x66F4;&#x901A;&#x77E5;</span>
+  observe(data, <span class="hljs-literal">true</span> <span class="hljs-comment">/* asRootData */</span>)
+}
+</code></pre>
+<h3 id="proxy">proxy</h3>
+<blockquote>
+<p>&#x8BBE;&#x7F6E;&#x4EE3;&#x7406; vm[key] = vm._data[key]</p>
+</blockquote>
+<pre><code class="lang-javascript">
+<span class="hljs-comment">// &#x4EE3;&#x7406;&#x8BBE;&#x7F6E;  data =&gt; _data</span>
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">proxy</span> (<span class="hljs-params">target: Object, sourceKey: string, key: string</span>) </span>{
+  sharedPropertyDefinition.get = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">proxyGetter</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>[sourceKey][key]
+  }
+  sharedPropertyDefinition.set = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">proxySetter</span> (<span class="hljs-params">val</span>) </span>{
+    <span class="hljs-keyword">this</span>[sourceKey][key] = val
+  }
+  <span class="hljs-built_in">Object</span>.defineProperty(target, key, sharedPropertyDefinition)
+}
+</code></pre>
+<h3 id="initcomputed">initComputed</h3>
+<pre><code class="lang-javascript">
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">initComputed</span> (<span class="hljs-params">vm: Component, computed: Object</span>) </span>{
+  <span class="hljs-comment">// $flow-disable-line</span>
+  <span class="hljs-keyword">const</span> watchers = vm._computedWatchers = <span class="hljs-built_in">Object</span>.create(<span class="hljs-literal">null</span>)
+  <span class="hljs-comment">// computed properties are just getters during SSR</span>
+  <span class="hljs-keyword">const</span> isSSR = isServerRendering()
+
+  <span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> key <span class="hljs-keyword">in</span> computed) {
+    <span class="hljs-keyword">const</span> userDef = computed[key]
+    <span class="hljs-comment">// &#x8FD9;&#x8FB9;&#x5BF9;&#x5E94;&#x7684;&#x662F;&#x4E24;&#x79CD;computed&#x7684;&#x5B9A;&#x4E49;&#x65B9;&#x5F0F;</span>
+    <span class="hljs-comment">/**
+    * computed: {
+    *   userinfo: function () {
+    *     return &apos;&apos;
+    *   },
+    *   userinfo: {
+    *     get: function () {}
+    *   }
+    * }
+    * */</span>
+    <span class="hljs-keyword">const</span> getter = <span class="hljs-keyword">typeof</span> userDef === <span class="hljs-string">&apos;function&apos;</span> ? userDef : userDef.get
+    <span class="hljs-comment">// computed&#x9700;&#x8981;&#x8BA1;&#x7B97;&#x7684;&#x5C5E;&#x6027;&#x5FC5;&#x987B;&#x8981;&#x6709;getter</span>
+    <span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span> &amp;&amp; getter == <span class="hljs-literal">null</span>) {
+      warn(
+        <span class="hljs-string">`Getter is missing for computed property &quot;<span class="hljs-subst">${key}</span>&quot;.`</span>,
+        vm
+      )
+    }
+
+    <span class="hljs-keyword">if</span> (!isSSR) {
+      <span class="hljs-comment">// create internal watcher for the computed property.</span>
+      <span class="hljs-comment">// &#x5F88;&#x660E;&#x663E;computed&#x672C;&#x8D28;&#x4E0A;&#x662F;&#x4E00;&#x4E2A;watcher</span>
+      watchers[key] = <span class="hljs-keyword">new</span> Watcher(
+        vm,
+        getter || noop,
+        noop,
+        computedWatcherOptions
+      )
+    }
+
+    <span class="hljs-comment">// component-defined computed properties are already defined on the</span>
+    <span class="hljs-comment">// component prototype. We only need to define computed properties defined</span>
+    <span class="hljs-comment">// at instantiation here.</span>
+    <span class="hljs-keyword">if</span> (!(key <span class="hljs-keyword">in</span> vm)) {
+      defineComputed(vm, key, userDef)
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span>) {
+      <span class="hljs-comment">// &#x5F53;&#x524D;&#x7248;&#x672C;&#x6CA1;&#x6709;&#x6821;&#x9A8C;computed&#x548C;methods&#x5D07;&#x660E;&#x7684;&#x60C5;&#x51B5; </span>
+      <span class="hljs-keyword">if</span> (key <span class="hljs-keyword">in</span> vm.$data) {
+        warn(<span class="hljs-string">`The computed property &quot;<span class="hljs-subst">${key}</span>&quot; is already defined in data.`</span>, vm)
+      } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (vm.$options.props &amp;&amp; key <span class="hljs-keyword">in</span> vm.$options.props) {
+        warn(<span class="hljs-string">`The computed property &quot;<span class="hljs-subst">${key}</span>&quot; is already defined as a prop.`</span>, vm)
+      }
+    }
+  }
+}
+</code></pre>
+<h3 id="definecomputed">defineComputed</h3>
+<pre><code class="lang-javascript">
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">defineComputed</span> (<span class="hljs-params">
+  target: any,
+  key: string,
+  userDef: Object | Function
+</span>) </span>{
+  <span class="hljs-keyword">const</span> shouldCache = !isServerRendering()
+  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> userDef === <span class="hljs-string">&apos;function&apos;</span>) {
+    sharedPropertyDefinition.get = shouldCache
+      ? createComputedGetter(key)
+      : createGetterInvoker(userDef)
+    sharedPropertyDefinition.set = noop
+  } <span class="hljs-keyword">else</span> {
+    sharedPropertyDefinition.get = userDef.get
+      ? shouldCache &amp;&amp; userDef.cache !== <span class="hljs-literal">false</span>
+        ? createComputedGetter(key)
+        : createGetterInvoker(userDef.get)
+      : noop
+    sharedPropertyDefinition.set = userDef.set || noop
+  }
+  <span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span> &amp;&amp;
+      sharedPropertyDefinition.set === noop) {
+    sharedPropertyDefinition.set = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      warn(
+        <span class="hljs-string">`Computed property &quot;<span class="hljs-subst">${key}</span>&quot; was assigned to but it has no setter.`</span>,
+        <span class="hljs-keyword">this</span>
+      )
+    }
+  }
+  <span class="hljs-built_in">Object</span>.defineProperty(target, key, sharedPropertyDefinition)
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="inject.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: inject">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"state","level":"1.5.1.6","depth":3,"next":{"title":"observer","level":"1.5.2","depth":2,"ref":"","articles":[{"title":"index","level":"1.5.2.1","depth":3,"path":"core/observer/index.md","ref":"core/observer/index.md","articles":[]},{"title":"dep","level":"1.5.2.2","depth":3,"path":"core/observer/dep.md","ref":"core/observer/dep.md","articles":[]}]},"previous":{"title":"inject","level":"1.5.1.5","depth":3,"path":"core/instance/inject.md","ref":"core/instance/inject.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","favicon","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Blankj","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Blankj's Glory","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"core/instance/state.md","mtime":"2019-10-10T04:26:10.521Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-10T06:28:36.150Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

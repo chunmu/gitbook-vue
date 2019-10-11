@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>dep · Blankj's Glory</title>
+        <title>init · Blankj's Glory</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -51,6 +51,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
+    
+    <link rel="next" href="proxy.html" />
     
     
     <link rel="prev" href="./" />
@@ -288,9 +290,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.1.1" data-path="../instance/">
+        <li class="chapter " data-level="1.5.1.1" data-path="./">
             
-                <a href="../instance/">
+                <a href="./">
             
                     
                     index
@@ -301,9 +303,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.2" data-path="../instance/init.html">
+        <li class="chapter active" data-level="1.5.1.2" data-path="init.html">
             
-                <a href="../instance/init.html">
+                <a href="init.html">
             
                     
                     init
@@ -314,9 +316,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.3" data-path="../instance/proxy.html">
+        <li class="chapter " data-level="1.5.1.3" data-path="proxy.html">
             
-                <a href="../instance/proxy.html">
+                <a href="proxy.html">
             
                     
                     proxy
@@ -327,9 +329,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.4" data-path="../instance/events.html">
+        <li class="chapter " data-level="1.5.1.4" data-path="events.html">
             
-                <a href="../instance/events.html">
+                <a href="events.html">
             
                     
                     events
@@ -340,9 +342,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.5" data-path="../instance/inject.html">
+        <li class="chapter " data-level="1.5.1.5" data-path="inject.html">
             
-                <a href="../instance/inject.html">
+                <a href="inject.html">
             
                     
                     inject
@@ -353,9 +355,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.1.6" data-path="../instance/state.html">
+        <li class="chapter " data-level="1.5.1.6" data-path="state.html">
             
-                <a href="../instance/state.html">
+                <a href="state.html">
             
                     
                     state
@@ -385,9 +387,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.5.2.1" data-path="./">
+        <li class="chapter " data-level="1.5.2.1" data-path="../observer/">
             
-                <a href="./">
+                <a href="../observer/">
             
                     
                     index
@@ -398,9 +400,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.2.2" data-path="dep.html">
+        <li class="chapter " data-level="1.5.2.2" data-path="../observer/dep.html">
             
-                <a href="dep.html">
+                <a href="../observer/dep.html">
             
                     
                     dep
@@ -502,7 +504,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >dep</a>
+        <a href="../.." >init</a>
     </h1>
 </div>
 
@@ -517,50 +519,125 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="dep">dep</h1>
-<h2 id="">#</h2>
+                                <h1 id="init">init</h1>
+<h3 id="initmixin">initMixin</h3>
 <pre><code class="lang-javascript">
-<span class="hljs-comment">/**
- * A dep is an observable that can have multiple
- * directives subscribing to it.
- */</span>
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Dep</span> </span>{
-  <span class="hljs-keyword">static</span> target: ?Watcher;
-  id: number;
-  subs: <span class="hljs-built_in">Array</span>&lt;Watcher&gt;;
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">initMixin</span> (<span class="hljs-params">Vue: Class&lt;Component&gt;</span>) </span>{
+  Vue.prototype._init = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">options?: Object</span>) </span>{
+    <span class="hljs-keyword">const</span> vm: Component = <span class="hljs-keyword">this</span>
+    <span class="hljs-comment">// a uid</span>
+    vm._uid = uid++
 
-  <span class="hljs-keyword">constructor</span> () {
-    <span class="hljs-keyword">this</span>.id = uid++
-    <span class="hljs-keyword">this</span>.subs = []
-  }
+    <span class="hljs-keyword">let</span> startTag, endTag
+    <span class="hljs-comment">/* istanbul ignore if */</span>
+    <span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span> &amp;&amp; config.performance &amp;&amp; mark) {
+      startTag = <span class="hljs-string">`vue-perf-start:<span class="hljs-subst">${vm._uid}</span>`</span>
+      endTag = <span class="hljs-string">`vue-perf-end:<span class="hljs-subst">${vm._uid}</span>`</span>
+      mark(startTag)
+    }
 
-  addSub (sub: Watcher) {
-    <span class="hljs-keyword">this</span>.subs.push(sub)
-  }
+    <span class="hljs-comment">// a flag to avoid this being observed</span>
+    vm._isVue = <span class="hljs-literal">true</span>
+    <span class="hljs-comment">// merge options</span>
+    <span class="hljs-keyword">if</span> (options &amp;&amp; options._isComponent) {
+      <span class="hljs-comment">// optimize internal component instantiation</span>
+      <span class="hljs-comment">// since dynamic options merging is pretty slow, and none of the</span>
+      <span class="hljs-comment">// internal component options needs special treatment.</span>
+      <span class="hljs-comment">// &#x5982;&#x679C;&#x662F;&#x5B50;&#x7EC4;&#x4EF6; &#x4ECE;&#x7236;&#x7EC4;&#x4EF6;&#x83B7;&#x53D6;&#x90E8;&#x5206;&#x9700;&#x8981;merge&#x7684;&#x6570;&#x636E;  &#x6BD4;&#x5982;&#x8BF4;props</span>
+      initInternalComponent(vm, options)
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-comment">// &#x901A;&#x8FC7;extend  &#x6216;&#x8005;new Vue&#x5165;&#x53E3;&#x8FDB;&#x6765;&#x7684;&#x5904;&#x7406;</span>
+      vm.$options = mergeOptions(
+        resolveConstructorOptions(vm.constructor),
+        options || {},
+        vm
+      )
+    }
+    <span class="hljs-comment">/* istanbul ignore else */</span>
+    <span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span>) {
+      initProxy(vm)
+    } <span class="hljs-keyword">else</span> {
+      vm._renderProxy = vm
+    }
+    <span class="hljs-comment">// expose real self</span>
+    vm._self = vm
+    initLifecycle(vm)
+    initEvents(vm)
+    initRender(vm)
+    callHook(vm, <span class="hljs-string">&apos;beforeCreate&apos;</span>)
+    <span class="hljs-comment">// &#x5904;&#x7406;inject&#x76F8;&#x5173;&#x7684;&#x683C;&#x5F0F;&#x5316;&#x521D;&#x59CB;&#x5DE5;&#x4F5C;</span>
+    initInjections(vm) <span class="hljs-comment">// resolve injections before data/props</span>
+    initState(vm)
+    initProvide(vm) <span class="hljs-comment">// resolve provide after data/props</span>
+    callHook(vm, <span class="hljs-string">&apos;created&apos;</span>)
 
-  removeSub (sub: Watcher) {
-    remove(<span class="hljs-keyword">this</span>.subs, sub)
-  }
+    <span class="hljs-comment">/* istanbul ignore if */</span>
+    <span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span> &amp;&amp; config.performance &amp;&amp; mark) {
+      vm._name = formatComponentName(vm, <span class="hljs-literal">false</span>)
+      mark(endTag)
+      measure(<span class="hljs-string">`vue <span class="hljs-subst">${vm._name}</span> init`</span>, startTag, endTag)
+    }
 
-  depend () {
-    <span class="hljs-keyword">if</span> (Dep.target) {
-      Dep.target.addDep(<span class="hljs-keyword">this</span>)
+    <span class="hljs-keyword">if</span> (vm.$options.el) {
+      vm.$mount(vm.$options.el)
     }
   }
-
-  notify () {
-    <span class="hljs-comment">// stabilize the subscriber list first</span>
-    <span class="hljs-keyword">const</span> subs = <span class="hljs-keyword">this</span>.subs.slice()
-    <span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span> &amp;&amp; !config.async) {
-      <span class="hljs-comment">// subs aren&apos;t sorted in scheduler if not running async</span>
-      <span class="hljs-comment">// we need to sort them now to make sure they fire in correct</span>
-      <span class="hljs-comment">// order</span>
-      subs.sort((a, b) =&gt; a.id - b.id)
-    }
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>, l = subs.length; i &lt; l; i++) {
-      subs[i].update()
+}
+</code></pre>
+<h3 id="resolveconstructoroptions">resolveConstructorOptions</h3>
+<blockquote>
+<p>&#x7EE7;&#x627F;&#x7236;&#x7EA7;&#x6216;&#x8005;&#x7956;&#x5148;&#x7EA7;&#x7684;options</p>
+</blockquote>
+<pre><code class="lang-javascript">
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">resolveConstructorOptions</span> (<span class="hljs-params">Ctor: Class&lt;Component&gt;</span>) </span>{
+  <span class="hljs-comment">// ctor.options   contructor&#x4E0A;&#x6302;&#x8F7D;&#x7684;options  &#x4E5F;&#x5C31;&#x662F; Vue.options  &#x6BD4;&#x5982;&#x5168;&#x5C40;&#x7684;filter  directive components&#x7B49;</span>
+  <span class="hljs-keyword">let</span> options = Ctor.options
+  <span class="hljs-comment">// &#x5982;&#x679C;&#x6709;super   super&#x7B49;&#x4E8E;extend&#x4E2D;&#x7684;this  &#x5219;&#x8FD4;&#x56DE;&#x7684;options&#x662F;superOptions&#x4E0E;Ctor&#x4E0A;&#x7684;options&#x5408;&#x5E76;&#x800C;&#x6765;</span>
+  <span class="hljs-comment">// &#x9012;&#x5F52;&#x5408;&#x5E76;</span>
+  <span class="hljs-keyword">if</span> (Ctor.super) {
+    <span class="hljs-keyword">const</span> superOptions = resolveConstructorOptions(Ctor.super)
+    <span class="hljs-keyword">const</span> cachedSuperOptions = Ctor.superOptions
+    <span class="hljs-keyword">if</span> (superOptions !== cachedSuperOptions) {
+      <span class="hljs-comment">// super option changed,</span>
+      <span class="hljs-comment">// need to resolve new options.</span>
+      Ctor.superOptions = superOptions
+      <span class="hljs-comment">// check if there are any late-modified/attached options (#4976)</span>
+      <span class="hljs-keyword">const</span> modifiedOptions = resolveModifiedOptions(Ctor)
+      <span class="hljs-comment">// update base extend options</span>
+      <span class="hljs-keyword">if</span> (modifiedOptions) {
+        extend(Ctor.extendOptions, modifiedOptions)
+      }
+      options = Ctor.options = mergeOptions(superOptions, Ctor.extendOptions)
+      <span class="hljs-keyword">if</span> (options.name) {
+        options.components[options.name] = Ctor
+      }
     }
   }
+  <span class="hljs-keyword">return</span> options
+}
+</code></pre>
+<h3 id="initinternalcomponent">initInternalComponent</h3>
+<blockquote>
+<p>&#x7EC4;&#x4EF6;&#x521D;&#x59CB;&#x5316;&#x7684;optons&#x5904;&#x7406;</p>
+</blockquote>
+<pre><code class="lang-javascript">
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">initInternalComponent</span> (<span class="hljs-params">vm: Component, options: InternalComponentOptions</span>) </span>{
+  <span class="hljs-keyword">const</span> opts = vm.$options = <span class="hljs-built_in">Object</span>.create(vm.constructor.options)
+  <span class="hljs-comment">// doing this because it&apos;s faster than dynamic enumeration.</span>
+  <span class="hljs-keyword">const</span> parentVnode = options._parentVnode
+  opts.parent = options.parent
+  opts._parentVnode = parentVnode
+  <span class="hljs-keyword">const</span> vnodeComponentOptions = parentVnode.componentOptions
+  opts.propsData = vnodeComponentOptions.propsData
+  opts._parentListeners = vnodeComponentOptions.listeners
+  opts._renderChildren = vnodeComponentOptions.children
+  opts._componentTag = vnodeComponentOptions.tag
+
+  <span class="hljs-keyword">if</span> (options.render) {
+    opts.render = options.render
+    opts.staticRenderFns = options.staticRenderFns
+  }
+  <span class="hljs-built_in">console</span>.log(opts, <span class="hljs-string">&apos;opts&apos;</span>)
 }
 </code></pre>
 
@@ -590,10 +667,14 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: index">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: index">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="proxy.html" class="navigation navigation-next " aria-label="Next page: proxy">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -602,7 +683,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"dep","level":"1.5.2.2","depth":3,"next":{"title":"vdom","level":"1.5.3","depth":2,"ref":"","articles":[{"title":"helpers","level":"1.5.3.1","depth":3,"ref":"","articles":[{"title":"update-listeners","level":"1.5.3.1.1","depth":4,"path":"core/vdom/helpers/update-listeners.md","ref":"core/vdom/helpers/update-listeners.md","articles":[]}]}]},"previous":{"title":"index","level":"1.5.2.1","depth":3,"path":"core/observer/index.md","ref":"core/observer/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","favicon","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Blankj","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Blankj's Glory","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"core/observer/dep.md","mtime":"2019-09-26T11:58:02.290Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-10T06:28:36.150Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"init","level":"1.5.1.2","depth":3,"next":{"title":"proxy","level":"1.5.1.3","depth":3,"path":"core/instance/proxy.md","ref":"core/instance/proxy.md","articles":[]},"previous":{"title":"index","level":"1.5.1.1","depth":3,"path":"core/instance/index.md","ref":"core/instance/index.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","favicon","livereload"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"Blankj","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Blankj's Glory","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"core/instance/init.md","mtime":"2019-10-09T11:18:43.110Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-10T06:28:36.150Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

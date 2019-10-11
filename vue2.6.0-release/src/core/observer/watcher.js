@@ -41,13 +41,14 @@ export default class Watcher {
   before: ?Function;
   getter: Function;
   value: any;
-
+  name: string;
   constructor (
     vm: Component,
     expOrFn: string | Function,
     cb: Function,
     options?: ?Object,
-    isRenderWatcher?: boolean
+    isRenderWatcher?: boolean,
+    name?: string
   ) {
     this.vm = vm
     if (isRenderWatcher) {
@@ -61,9 +62,11 @@ export default class Watcher {
       this.lazy = !!options.lazy
       this.sync = !!options.sync
       this.before = options.before
+      this.name = name
     } else {
       this.deep = this.user = this.lazy = this.sync = false
     }
+
     this.cb = cb
     this.id = ++uid // uid for batching
     this.active = true
@@ -164,6 +167,8 @@ export default class Watcher {
    */
   update () {
     /* istanbul ignore else */
+    console.log(this, this.lazy, 'lazy')
+    console.log(this.sync, 'sync')
     if (this.lazy) {
       this.dirty = true
     } else if (this.sync) {
@@ -209,6 +214,7 @@ export default class Watcher {
    * This only gets called for lazy watchers.
    */
   evaluate () {
+    console.log('get in')
     this.value = this.get()
     this.dirty = false
   }

@@ -200,7 +200,7 @@ export function mountComponent (
         callHook(vm, 'beforeUpdate')
       }
     }
-  }, true /* isRenderWatcher */)
+  }, true /* isRenderWatcher */, 'beforeUpdate')
   hydrating = false
 
   // manually mounted instance, call mounted on self

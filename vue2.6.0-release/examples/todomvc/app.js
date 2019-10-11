@@ -34,60 +34,62 @@ var filters = {
   }
 }
 
-let child = {
+let grandSon = {
+  inject: ['getMap'],
   props: {
     xxx: {}
   },
   template: `<div>
-      <header slot="header"></header>
-      <footer>xxx</footer>
+      <span @click="handleClick">grandSon click</span>
+      <footer>grandSon</footer>
     </div>`,
-  name: 'child-component'
+  name: 'grandSon-component',
+  methods: {
+    handleClick () {
+      this.$emit('update-Click')
+    }
+  }
+}
+
+let child = {
+  components: { grandSon },
+  inject: ['getMap'],
+  props: {
+    xxx: {}
+  },
+  template: `<div>
+      <slot name="header"></slot>
+      <slot></slot>
+      <span @click="handleClick">child click</span>
+      <footer>child</footer>
+      <grand-son></grand-son>
+    </div>`,
+  name: 'child-component',
+  methods: {
+    handleClick () {
+      this.$emit('update-Click')
+    }
+  }
 }
 
 var app = new Vue({
+  el: '.todoapp',
   // app initial state
-  props: {
-    booll: {
-      type: Boolean
-    },
-  },
   data: {
-    users: [
-      {
-        name: 'chunmu.zhang',
-        info: {
-          weight: '120'
-        },
-        password: '123456'
-      },
-      {
-        name: 'zeng.zeng',
-        info: {
-          weight: '120'
-        },
-        password: '34567'
-      },
-      {
-        name: 'xiu.zhang',
-        info: {
-          weight: '120'
-        },
-        password: 'test'
-      }
-    ],
-    form: {
-      yyy: 'xxx'
-    },
-    inputType: 'text',
     yyy: 'yyy',
-    xxx: 'propsXXXX',
-    todos: todoStorage.fetch(),
-    newTodo: '',
-    editedTodo: null,
-    visibility: 'all'
   },
-
+  computed: {
+    timeNow: {
+      get () {
+        return Date.now() + this.yyy
+      }
+    }
+  },
+  methods: {
+    handleClick () {
+      this.yyy += 'kkkkk'
+    }
+  },
 
 
   // computed properties
@@ -97,9 +99,6 @@ var app = new Vue({
   // methods that implement data logic.
   // note there's no DOM manipulation here at all.
 
-  components: {
-    'child-component': child
-  },
 
   // a custom directive to wait for the DOM to be updated
   // before focusing on the input field.
@@ -128,4 +127,4 @@ window.addEventListener('hashchange', onHashChange)
 onHashChange()
 
 // mount
-app.$mount('.todoapp')
+// app.$mount('.todoapp')

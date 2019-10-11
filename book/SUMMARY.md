@@ -1,6 +1,8 @@
 # Summary
 
 * [概述](README.md)
+* [有趣的发现](wonderful.md)
+* [各种流程图解](flow.md)
 * [compiler](compiler/index.md)
     * [parser](compiler/parser/index.md)
         * [index](compiler/parser/index.md)
@@ -10,7 +12,17 @@
         * [model](compiler/directives/model.md)
     * [helpers](compiler/helpers.md)
 * [core]()
+    * [instance]()
+        * [index](core/instance/index.md)
+        * [init](core/instance/init.md)
+        * [proxy](core/instance/proxy.md)
+        * [events](core/instance/events.md)
+        * [inject](core/instance/inject.md)
+        * [state](core/instance/state.md)
     * [observer]()
         * [index](core/observer/index.md)
         * [dep](core/observer/dep.md)
+    * [vdom]()
+        * [helpers]()
+            * [update-listeners](core/vdom/helpers/update-listeners.md)
 
