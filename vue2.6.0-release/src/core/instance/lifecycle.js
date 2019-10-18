@@ -145,6 +145,7 @@ export function mountComponent (
 ): Component {
   vm.$el = el
   if (!vm.$options.render) {
+    // 如果不存在render
     vm.$options.render = createEmptyVNode
     if (process.env.NODE_ENV !== 'production') {
       /* istanbul ignore if */
@@ -187,6 +188,7 @@ export function mountComponent (
     }
   } else {
     updateComponent = () => {
+      console.log(vm._render, vm._render(), 'vm._render()')
       vm._update(vm._render(), hydrating)
     }
   }

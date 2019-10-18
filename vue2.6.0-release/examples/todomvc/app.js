@@ -77,14 +77,13 @@ var app = new Vue({
   // app initial state
   data: {
     yyy: 'yyy',
+    xxx: 'xxx'
   },
-  computed: {
-    timeNow: {
-      get () {
-        return Date.now() + this.yyy
-      }
-    }
-  },
+  beforeMount: [function () {
+    console.log('beforeMount')
+  }, function () {
+    console.log('22222')
+  }],
   methods: {
     handleClick () {
       this.yyy += 'kkkkk'

@@ -167,8 +167,6 @@ export default class Watcher {
    */
   update () {
     /* istanbul ignore else */
-    console.log(this, this.lazy, 'lazy')
-    console.log(this.sync, 'sync')
     if (this.lazy) {
       this.dirty = true
     } else if (this.sync) {
@@ -214,7 +212,6 @@ export default class Watcher {
    * This only gets called for lazy watchers.
    */
   evaluate () {
-    console.log('get in')
     this.value = this.get()
     this.dirty = false
   }

@@ -474,6 +474,76 @@
             
         </li>
     
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    platforms
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    web
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" >
+            
+                <span>
+            
+                    
+                    compiler
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1.1" data-path="platforms/web/compiler/">
+            
+                <a href="platforms/web/compiler/">
+            
+                    
+                    index
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
     
 
@@ -536,6 +606,37 @@ JSON.stringify(undefined) = &apos;&quot;&quot;&apos;   &lt;div slot&gt;show slot
 <li>&#x8BBE;&#x7F6E;cache = false  &#x53D6;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x662F;&#x4E34;&#x65F6;&#x518D;&#x6B21;&#x6267;&#x884C;&#x4E00;&#x6B21;&#x83B7;&#x53D6;&#x6700;&#x65B0;&#x7684;&#x503C; &#x67D0;&#x4E9B;&#x7279;&#x6B8A;&#x573A;&#x666F;&#x9700;&#x8981;&#x8FD9;&#x6837;  </li>
 <li>&#x89C6;&#x56FE;&#x53EA;&#x6709;&#x5728;&#x4F9D;&#x8D56;&#x66F4;&#x65B0;&#x7684;&#x65F6;&#x5019;&#x66F4;&#x65B0;  &#x6240;&#x4EE5;cache = false&#x7684;&#x65F6;&#x5019;&#x4E34;&#x65F6;&#x8BA1;&#x7B97;&#x7684;&#x503C;&#x662F;js&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x6700;&#x65B0;&#x503C;  &#x4E0D;&#x4E00;&#x5B9A;&#x53CD;&#x6620;&#x5230;&#x89C6;&#x56FE;&#x4E0A;</li>
 </ul>
+<h5 id="6-&#x865A;&#x62DF;dom&#x6280;&#x672F;">6. &#x865A;&#x62DF;dom&#x6280;&#x672F;</h5>
+<ul>
+<li>&#x672C;&#x8D28;&#x662F;&#x628A;js&#x5BF9;&#x8C61;&#x8868;&#x793A;dom&#x8282;&#x70B9;  &#x4E0E;&#x771F;&#x5B9E;dom&#x5BF9;&#x8C61;&#x76F8;&#x6BD4;  &#x5C11;&#x4E86;&#x5F88;&#x591A;&#x5C5E;&#x6027; &#x6709;&#x5174;&#x8DA3;&#x7684;&#x540C;&#x5B66;&#x53EF;&#x4EE5;get&#x4E00;&#x4E2A;dom&#x8282;&#x70B9; for in &#x6253;&#x5370;&#x4E00;&#x4E0B;&#x770B;&#x770B;</li>
+<li>&#x597D;&#x5904;&#x662F;  &#x5728;&#x67D0;&#x4E9B;&#x573A;&#x666F;&#x4E0B;&#x5E76;&#x4E0D;&#x9700;&#x8981;&#x771F;&#x6B63;&#x521B;&#x5EFA;dom&#xFF0C;&#x5728;&#x865A;&#x62DF;&#x8282;&#x70B9;&#x4E2D;&#x505A;&#x51FA;&#x62D2;&#x7EDD;&#x64CD;&#x4F5C;dom&#x7684;&#x547D;&#x4EE4;  &#x53EF;&#x4EE5;&#x4E0D;&#x5FC5;&#x8981;&#x7684;dom&#x64CD;&#x4F5C; &#x63D0;&#x9AD8;&#x6027;&#x80FD;</li>
+<li>&#x5BF9;&#x4E8E;&#x5DF2;&#x7ECF;&#x6E32;&#x67D3;&#x7684;dom  &#x59CB;&#x7EC8;&#x90FD;&#x6709;&#x4E00;&#x4E2A;VNode&#x4E0E;&#x4E4B;&#x5BF9;&#x5E94;  &#x8FD9;&#x5C31;&#x6709;1&#x4E2A;dom+1&#x4E2A;VNode&#x7684;&#x60C5;&#x51B5;</li>
+<li>&#x628A;&#x6BD4;&#x8F83;&#x662F;&#x5426;&#x89C6;&#x56FE;&#x66F4;&#x65B0;&#x7684;diff&#x7B97;&#x6CD5;&#x5728;VNode&#x5C42;&#x5B9E;&#x73B0; &#x8FD9;&#x6837;&#x5C31;&#x8282;&#x7701;&#x4E86;&#x64CD;&#x4F5C;&#x9891;&#x7E41;&#x64CD;&#x4F5C;dom&#x7684;&#x60C5;&#x51B5;</li>
+</ul>
+<h5 id="7-&#x94A9;&#x5B50;&#x7684;&#x6CE8;&#x518C;&#x5F62;&#x5F0F;--&#x5728;mergehook&#x7684;&#x65F6;&#x5019;&#x505A;&#x4E86;&#x4E00;&#x5C42;&#x5904;&#x7406;">7. &#x94A9;&#x5B50;&#x7684;&#x6CE8;&#x518C;&#x5F62;&#x5F0F;  &#x5728;mergehook&#x7684;&#x65F6;&#x5019;&#x505A;&#x4E86;&#x4E00;&#x5C42;&#x5904;&#x7406;</h5>
+<ul>
+<li>&#x5355;&#x4E2A;&#x51FD;&#x6570;</li>
+</ul>
+<pre><code class="lang-javascript">
+created () {},
+</code></pre>
+<ul>
+<li>&#x6570;&#x7EC4;&#x5F62;&#x5F0F;</li>
+</ul>
+<pre><code class="lang-javascript">
+created: [fn1, fn2]
+</code></pre>
+<h5 id="8-&#x4ECE;&#x6A21;&#x677F;&#x4E2D;&#x89E3;&#x6790;&#x7684;&#x5404;&#x79CD;&#x8868;&#x8FBE;&#x5F0F;&#x6267;&#x884C;&#x539F;&#x7406;">8. &#x4ECE;&#x6A21;&#x677F;&#x4E2D;&#x89E3;&#x6790;&#x7684;&#x5404;&#x79CD;&#x8868;&#x8FBE;&#x5F0F;&#x6267;&#x884C;&#x539F;&#x7406;</h5>
+<blockquote>
+<p>&#x8BB0;&#x5F97;&#x8BF4;with&#x8BED;&#x6CD5;&#x4F1A;&#x5F71;&#x54CD;js&#x7684;&#x6548;&#x7387;&#x3002;&#x3002;&#x3002;</p>
+</blockquote>
+<pre><code class="lang-javascript">
+<span class="hljs-keyword">let</span> code = <span class="hljs-string">`with(this){return _m(0)}`</span>
+
+<span class="hljs-keyword">let</span> render = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Function</span>(code)
+
+vm.render()
+</code></pre>
 
                                 
                                 </section>
@@ -579,7 +680,7 @@ JSON.stringify(undefined) = &apos;&quot;&quot;&apos;   &lt;div slot&gt;show slot
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"有趣的发现","level":"1.2","depth":1,"next":{"title":"各种流程图解","level":"1.3","depth":1,"path":"flow.md","ref":"flow.md","articles":[]},"previous":{"title":"概述","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Blankj","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Blankj's Glory","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"wonderful.md","mtime":"2019-10-10T11:54:08.995Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-11T10:05:04.742Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"有趣的发现","level":"1.2","depth":1,"next":{"title":"各种流程图解","level":"1.3","depth":1,"path":"flow.md","ref":"flow.md","articles":[]},"previous":{"title":"概述","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Blankj","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Blankj's Glory","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"wonderful.md","mtime":"2019-10-18T12:39:38.832Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-18T12:54:03.437Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

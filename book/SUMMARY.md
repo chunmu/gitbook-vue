@@ -25,4 +25,7 @@
     * [vdom]()
         * [helpers]()
             * [update-listeners](core/vdom/helpers/update-listeners.md)
-
+* [platforms]()
+    * [web]()
+        * [compiler]()
+            * [index](platforms/web/compiler/index.md)

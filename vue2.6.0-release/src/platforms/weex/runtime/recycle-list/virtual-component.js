@@ -70,8 +70,7 @@ function initVirtualComponent (options: Object = {}) {
     const updateComponent = () => {
       vm._update(vm._vnode, false)
     }
-    let name = 'updateComponent'
-    new Watcher(vm, updateComponent, noop, null, true, name)
+    new Watcher(vm, updateComponent, noop, null, true)
 
     vm._isMounted = true
     callHook(vm, 'mounted')
