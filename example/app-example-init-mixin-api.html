@@ -1,0 +1,104 @@
+<!doctype html>
+<html data-framework="vue">
+<head>
+  <meta charset="utf-8">
+  <title>Vue Example</title>
+</head>
+<body>
+<section class="example">
+  <child></child>
+</section>
+
+<script src="../vue2.6.0-release/dist/vue.js"></script>
+<script>
+
+  var child1 = {
+    template: `<span>child1</span>`,
+    data () {
+      return {
+        name: 'child1'
+      }
+    },
+    created () {
+      console.log('created child1')
+    }
+  }
+
+  var child2 = {
+    template: `<span>child2</span>`,
+    props: [],
+    data () {
+      return {
+        name: 'child2'
+      }
+    },
+    created () {
+      console.log('created child2')
+    }
+  }
+
+  var options = {
+    data () {
+      return {
+        mixinData: 'mixinData',
+        value1: 'value1-child',
+        value3: 'value3'
+      }
+    },
+    methods: {
+      mixinMethod: function () {}
+    },
+    components: {
+      child: child2
+    },
+    watch: {
+      value1: function () {
+      },
+      value3: function () {
+      }
+    },
+    created () {
+      console.log('options created')
+    }
+  }
+
+  Vue.mixin(options)
+
+  // var app = new Vue({
+  //   el: '.example',
+  //   components: {
+  //     child: child1
+  //   },
+  //   data: {
+  //     appLang: 'zh'
+  //   },
+  //   methods: {
+  //     mainMethod: function () {}
+  //   }
+  // })
+
+  var app = new Vue({
+    el: '.example',
+    mixins: [options],
+    data () {
+      return {
+        mixinData: 'main',
+        value1: 'value1',
+        value2: 'value2'
+      }
+    },
+    watch: {
+      value1: function () {},
+      value2: function () {}
+    },
+    created () {
+      console.log('Vue created')
+    },
+    methods: {
+      mainMethod: function () {}
+    }
+  })
+
+</script>
+</body>
+</html>

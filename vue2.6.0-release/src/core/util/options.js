@@ -250,6 +250,7 @@ strats.computed = function (
   if (childVal && process.env.NODE_ENV !== 'production') {
     assertObjectType(key, childVal, vm)
   }
+  // 优先用childVal
   if (!parentVal) return childVal
   const ret = Object.create(null)
   extend(ret, parentVal)
@@ -283,6 +284,7 @@ export function validateComponentName (name: string) {
       'should conform to valid custom element name in html5 specification.'
     )
   }
+  // 是否保留字 保留标签 或者内建组件  slot  components  这些不能用
   if (isBuiltInTag(name) || config.isReservedTag(name)) {
     warn(
       'Do not use built-in or reserved HTML elements as component ' +
@@ -364,6 +366,7 @@ function normalizeDirectives (options: Object) {
   if (dirs) {
     for (const key in dirs) {
       const def = dirs[key]
+      // 格式化指令  如果对应的是一个function  做如下改造
       if (typeof def === 'function') {
         dirs[key] = { bind: def, update: def }
       }
@@ -406,6 +409,7 @@ export function mergeOptions (
   // but only if it is a raw options object that isn't
   // the result of another mergeOptions call.
   // Only merged options has the _base property.
+  // extends是对象  mixins是数组
   if (!child._base) {
     if (child.extends) {
       parent = mergeOptions(parent, child.extends, vm)
@@ -417,8 +421,9 @@ export function mergeOptions (
     }
   }
 
+  // 合并策略处理
   const options = {}
-  let key
+  let key // key = data, props, method, hooks, etc
   for (key in parent) {
     mergeField(key)
   }

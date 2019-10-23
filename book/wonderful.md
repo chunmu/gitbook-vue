@@ -61,3 +61,11 @@ let render = new Function(code)
 vm.render()
 
 ```
+
+##### 9. 如果需要安装全局放到到所有示例
+
+```javascript
+
+Vue.prototype.$t = function () {} // 这种形式  且可以访问到this vue实例
+
+```

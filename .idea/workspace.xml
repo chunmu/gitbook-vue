@@ -2,8 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d7b10eb9-a1c3-429d-9fb6-ece302b3bc1d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/book/compiler/to-function.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book/example/index.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/book/example/initVue.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/app-example-init-mixin-api.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/app-example-install-plugin.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/SUMMARY.md" beforeDir="false" afterPath="$PROJECT_DIR$/book/SUMMARY.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book/wonderful.md" beforeDir="false" afterPath="$PROJECT_DIR$/book/wonderful.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue2.6.0-release/examples/share/object-create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue2.6.0-release/src/core/global-api/assets.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue2.6.0-release/src/core/global-api/assets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue2.6.0-release/src/core/global-api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue2.6.0-release/src/core/global-api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue2.6.0-release/src/core/util/options.js" beforeDir="false" afterPath="$PROJECT_DIR$/vue2.6.0-release/src/core/util/options.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -18,117 +29,32 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/compiler/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="5" column="35" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="35" />
-                  <folding>
-                    <element signature="e#13#52#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/to-function.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="247">
-                  <caret line="80" column="50" lean-forward="true" selection-start-line="80" selection-start-column="50" selection-end-line="80" selection-end-column="50" />
+            <entry file="file://$PROJECT_DIR$/book/example/initVue.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="FIRST">
+                  <first_editor relative-caret-position="345">
+                    <caret line="431" lean-forward="true" selection-start-line="431" selection-end-line="431" />
+                  </first_editor>
+                  <second_editor />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/codeframe.js">
+            <entry file="file://$PROJECT_DIR$/example/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+                <state relative-caret-position="225">
+                  <caret line="15" selection-start-line="15" selection-end-line="15" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/create-compiler.js">
+            <entry file="file://$PROJECT_DIR$/example/app-example-init-mixin-api.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="30">
-                  <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                    <element signature="e#13#49#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/vdom/helpers/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="135">
-                  <caret line="9" selection-start-line="9" selection-end-line="9" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/optimizer.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1515">
-                  <caret line="101" column="16" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/runtime/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="435">
-                  <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                    <element signature="e#13#41#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/runtime/components/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="15">
-                  <caret line="2" selection-start-line="2" selection-end-line="2" />
-                  <folding>
-                    <element signature="e#0#37#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/index.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="60">
-                  <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                    <element signature="e#13#51#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/entry-runtime-with-compiler.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="150">
-                  <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                    <element signature="e#13#45#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="1050">
+                  <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -138,31 +64,25 @@
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/vdom/patch.js">
+            <entry file="file://$PROJECT_DIR$/book/wonderful.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="FIRST">
+                  <first_editor relative-caret-position="480">
+                    <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+                  </first_editor>
+                  <second_editor />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1170">
-                  <caret line="94" column="29" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
+                <state relative-caret-position="210">
+                  <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
                   <folding>
-                    <element signature="e#360#403#0" expanded="true" />
+                    <element signature="e#0#34#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/instance/render.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="165">
-                  <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/vdom/create-element.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
                 </state>
               </provider>
             </entry>
@@ -171,44 +91,8 @@
             <entry file="file://$PROJECT_DIR$/book/core/instance/lifecycle.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="FIRST">
-                  <first_editor relative-caret-position="1680">
-                    <caret line="112" column="52" selection-start-line="112" selection-start-column="52" selection-end-line="112" selection-end-column="52" />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/book/compiler/codegen/index.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="FIRST">
-                  <first_editor relative-caret-position="765">
-                    <caret line="51" column="7" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/book/core/vdom/vnode.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="FIRST">
-                  <first_editor relative-caret-position="1620">
-                    <caret line="108" column="1" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/book/wonderful.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="FIRST">
-                  <first_editor relative-caret-position="375">
-                    <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+                  <first_editor relative-caret-position="1785">
+                    <caret line="119" column="1" selection-start-line="119" selection-start-column="1" selection-end-line="119" selection-end-column="1" />
                   </first_editor>
                   <second_editor />
                 </state>
@@ -216,37 +100,14 @@
             </entry>
           </file>
           <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/book/compiler/to-function.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="FIRST">
-                  <first_editor relative-caret-position="300">
-                    <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/book/SUMMARY.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="FIRST">
-                  <first_editor relative-caret-position="450">
-                    <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/book/compiler/index.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="FIRST">
-                  <first_editor relative-caret-position="75">
-                    <caret line="5" selection-start-line="5" selection-end-line="5" />
-                  </first_editor>
-                  <second_editor />
+            <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/runtime/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="345">
+                  <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                    <element signature="e#13#41#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -257,36 +118,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>_m</find>
-      <find>patch</find>
-      <find>createElm</find>
-      <find>hooks</find>
-      <find>genChildren</find>
-      <find>genElement</find>
-      <find>node</find>
-      <find>vnode {</find>
-      <find>type: 1</find>
-      <find>type</find>
-      <find>_e =</find>
-      <find>type:</find>
-      <find>_c =</find>
-      <find>update</find>
-      <find>nodeops</find>
-      <find>createCompiler(</find>
-      <find>compileToFunctions(</find>
-      <find>$mount =</find>
-      <find>generate</find>
-      <find>mountComponent</find>
-      <find>callHook</find>
-      <find>LIFECYCLE_HOOKS</find>
-      <find>console.log(</find>
-      <find>invokeWithErrorHandling</find>
-      <find>genNode</find>
-      <find>compileToFunctions</find>
-      <find>createCompiler</find>
       <find>createCompileToFunctionFn</find>
       <find>createFunction</find>
       <find>generateCodeFrame</find>
+      <find>proxy</find>
+      <find>install</find>
+      <find>isBuiltInTag</find>
+      <find>normal</find>
+      <find>normalizeInject</find>
+      <find>normalizeDirectives</find>
+      <find>mergeoptions(</find>
+      <find>optionMergeStrategies</find>
+      <find>defaultStrat</find>
+      <find>mergeoptions</find>
+      <find>mergeOptions(</find>
+      <find>mergeData</find>
+      <find>.props</find>
+      <find>.</find>
+      <find>nativeWatch</find>
+      <find>assertObjectType</find>
+      <find>mergeDataOrFn</find>
+      <find>strats.</find>
+      <find>concat</find>
+      <find>strats</find>
+      <find>strats[</find>
+      <find>builtInComponents</find>
+      <find>cid</find>
+      <find>mergeOptions</find>
+      <find>resolveAsset</find>
+      <find>$set</find>
+      <find>extends</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/vue2.6.0-release</dir>
@@ -296,8 +157,8 @@
       <dir>$PROJECT_DIR$/vue2.6.0-release/src/core/observer</dir>
       <dir>$PROJECT_DIR$/vue2.6.0-release/src/compiler/codegen</dir>
       <dir>$PROJECT_DIR$/vue2.6.0-release/src/platforms/web</dir>
-      <dir>$PROJECT_DIR$/vue2.6.0-release/src</dir>
       <dir>$PROJECT_DIR$/vue2.6.0-release/src/compiler</dir>
+      <dir>$PROJECT_DIR$/vue2.6.0-release/src</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -306,15 +167,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/book/core/observer/dep.md" />
-        <option value="$PROJECT_DIR$/vue2.6.0-release/src/core/util/lang.js" />
-        <option value="$PROJECT_DIR$/book/core/instance/index.md" />
-        <option value="$PROJECT_DIR$/vue2.6.0-release/src/core/index.js" />
-        <option value="$PROJECT_DIR$/vue2.6.0-release/src/core/instance/index.js" />
-        <option value="$PROJECT_DIR$/book/core/instance/proxy.md" />
-        <option value="$PROJECT_DIR$/book/core/vdom/helpers/update-listeners.md" />
-        <option value="$PROJECT_DIR$/vue2.6.0-release/examples/todomvc/readme.md" />
-        <option value="$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/runtime/modules/events.js" />
         <option value="$PROJECT_DIR$/vue2.6.0-release/src/core/instance/events.js" />
         <option value="$PROJECT_DIR$/vue2.6.0-release/src/core/vdom/helpers/update-listeners.js" />
         <option value="$PROJECT_DIR$/book/core/instance/events.md" />
@@ -334,7 +186,6 @@
         <option value="$PROJECT_DIR$/book/core/instance/state.md" />
         <option value="$PROJECT_DIR$/book/flow.md" />
         <option value="$PROJECT_DIR$/book/platforms/web/index.md" />
-        <option value="$PROJECT_DIR$/book/SUMMARY.md" />
         <option value="$PROJECT_DIR$/book/platforms/web/compiler/index.md" />
         <option value="$PROJECT_DIR$/book/platforms/web/compiler/optimizer.md" />
         <option value="$PROJECT_DIR$/vue2.6.0-release/src/core/observer/watcher.js" />
@@ -354,9 +205,19 @@
         <option value="$PROJECT_DIR$/vue2.6.0-release/src/core/observer/index.js" />
         <option value="$PROJECT_DIR$/vue2.6.0-release/src/core/instance/lifecycle.js" />
         <option value="$PROJECT_DIR$/vue2.6.0-release/src/core/vdom/create-component.js" />
-        <option value="$PROJECT_DIR$/book/wonderful.md" />
         <option value="$PROJECT_DIR$/vue2.6.0-release/src/compiler/to-function.js" />
         <option value="$PROJECT_DIR$/book/compiler/to-function.md" />
+        <option value="$PROJECT_DIR$/book/SUMMARY.md" />
+        <option value="$PROJECT_DIR$/vue2.6.0-release/src/core/global-api/index.js" />
+        <option value="$PROJECT_DIR$/book/example/index.md" />
+        <option value="$PROJECT_DIR$/example/index.html" />
+        <option value="$PROJECT_DIR$/book/wonderful.md" />
+        <option value="$PROJECT_DIR$/example/app.js" />
+        <option value="$PROJECT_DIR$/example/app-example-install-plugin.html" />
+        <option value="$PROJECT_DIR$/example/app-example-init-mixin-api.html" />
+        <option value="$PROJECT_DIR$/vue2.6.0-release/src/core/util/options.js" />
+        <option value="$PROJECT_DIR$/vue2.6.0-release/src/core/global-api/assets.js" />
+        <option value="$PROJECT_DIR$/book/example/initVue.md" />
       </list>
     </option>
   </component>
@@ -366,18 +227,17 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="59" />
-    <option name="y" value="57" />
-    <option name="width" value="1322" />
-    <option name="height" value="766" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1703" />
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="834" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -393,78 +253,7 @@
             <path>
               <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
               <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="book" type="462c0819:PsiDirectoryNode" />
-              <item name="compiler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="book" type="462c0819:PsiDirectoryNode" />
-              <item name="compiler" type="462c0819:PsiDirectoryNode" />
-              <item name="codegen" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="book" type="462c0819:PsiDirectoryNode" />
-              <item name="compiler" type="462c0819:PsiDirectoryNode" />
-              <item name="directives" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="book" type="462c0819:PsiDirectoryNode" />
-              <item name="compiler" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="book" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="book" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="instance" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="book" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="instance" type="462c0819:PsiDirectoryNode" />
-              <item name="render-helpers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="book" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="vdom" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="book" type="462c0819:PsiDirectoryNode" />
-              <item name="platforms" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="book" type="462c0819:PsiDirectoryNode" />
-              <item name="platforms" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="book" type="462c0819:PsiDirectoryNode" />
-              <item name="platforms" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="compiler" type="462c0819:PsiDirectoryNode" />
+              <item name="example" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
@@ -476,13 +265,6 @@
               <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
               <item name="vue2.6.0-release" type="462c0819:PsiDirectoryNode" />
               <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
-              <item name="vue2.6.0-release" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-              <item name="select2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
@@ -502,7 +284,39 @@
               <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
               <item name="vue2.6.0-release" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="compiler" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
+              <item name="vue2.6.0-release" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
+              <item name="vue2.6.0-release" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="global-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
+              <item name="vue2.6.0-release" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="instance" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
+              <item name="vue2.6.0-release" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="core" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
@@ -526,12 +340,20 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="platforms" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="compiler" type="462c0819:PsiDirectoryNode" />
+              <item name="runtime" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="gitbook-vue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="gitbook-vue" type="462c0819:PsiDirectoryNode" />
+              <item name="vue2.6.0-release" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="shared" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -602,19 +424,20 @@
       <workItem from="1570688943344" duration="37849000" />
       <workItem from="1571312738359" duration="2747000" />
       <workItem from="1571368575349" duration="18955000" />
-      <workItem from="1571497288799" duration="308000" />
+      <workItem from="1571497288799" duration="34661000" />
+      <workItem from="1571823054056" duration="130000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218087000" />
+    <option name="totallyTimeSpent" value="252570000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="834" extended-state="6" />
+    <frame x="1703" y="23" width="1440" height="834" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.065539114" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16490486" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -637,204 +460,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/compiler/directives/html.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/observer/watcher.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="85" column="14" selection-start-line="85" selection-start-column="14" selection-end-line="85" selection-end-column="14" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#13#124#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/global-api/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="37" column="14" lean-forward="true" selection-start-line="37" selection-start-column="14" selection-end-line="37" selection-end-column="14" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/observer/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="48" column="41" selection-start-line="48" selection-start-column="41" selection-end-line="48" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/compiler/directives/text.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/compiler/directives/model.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/vdom/modules/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/vdom/helpers/update-listeners.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="37" column="27" lean-forward="true" selection-start-line="37" selection-start-column="27" selection-end-line="37" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book/compiler/parser/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="261">
-            <caret line="307" column="45" lean-forward="true" selection-start-line="307" selection-start-column="45" selection-end-line="307" selection-end-column="45" />
-            <folding>
-              <element signature="n#!!doc" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/compiler/directives/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/compiler/modules/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/runtime/node-ops.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/runtime/modules/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/examples/todomvc/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/helpers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/parser/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="364" column="39" lean-forward="true" selection-start-line="364" selection-start-column="39" selection-end-line="364" selection-end-column="39" />
-          <folding>
-            <element signature="e#13#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book/core/instance/render-helpers/index.js" />
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/vdom/vnode.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="560">
-          <caret line="98" column="18" lean-forward="true" selection-start-line="98" selection-start-column="18" selection-end-line="98" selection-end-column="18" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book/core/instance/render-helpers/index.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="90">
-            <caret line="6" column="15" lean-forward="true" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-            <folding>
-              <element signature="e#12#86#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/runtime/patch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#13#60#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/runtime/modules/dom-props.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -870,48 +495,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/examples/todomvc/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="52" lean-forward="true" selection-start-line="52" selection-end-line="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/components/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/instance/lifecycle.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="176" column="39" selection-start-line="176" selection-start-column="39" selection-end-line="176" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/instance/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/codegen/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="42" column="24" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/instance/render-helpers/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="53" selection-start-line="8" selection-start-column="53" selection-end-line="8" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -943,6 +530,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/vdom/patch.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1170">
+          <caret line="94" column="29" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
+          <folding>
+            <element signature="e#360#403#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#13#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/runtime/components/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/vdom/helpers/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -955,83 +573,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/optimizer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1515">
+        <state relative-caret-position="402">
           <caret line="101" column="16" selection-start-line="101" selection-start-column="16" selection-end-line="101" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/runtime/index.js">
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/to-function.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#13#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="250">
+          <caret line="80" column="48" lean-forward="true" selection-start-line="80" selection-start-column="48" selection-end-line="80" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/runtime/components/index.js">
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/instance/events.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="353">
+          <caret line="59" column="12" lean-forward="true" selection-start-line="59" selection-start-column="12" selection-end-line="59" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/index.js">
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/instance/render-helpers/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#13#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/entry-runtime-with-compiler.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#13#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/vdom/patch.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="94" column="29" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
-          <folding>
-            <element signature="e#360#403#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/instance/render.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+        <state relative-caret-position="180">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/vdom/create-element.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+        <state relative-caret-position="210">
+          <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book/core/instance/lifecycle.md">
+    <entry file="file://$PROJECT_DIR$/book/core/vdom/vnode.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="1680">
-            <caret line="112" column="52" selection-start-line="112" selection-start-column="52" selection-end-line="112" selection-end-column="52" />
+          <first_editor relative-caret-position="648">
+            <caret line="108" column="1" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
           </first_editor>
           <second_editor />
         </state>
@@ -1040,28 +619,8 @@
     <entry file="file://$PROJECT_DIR$/book/compiler/codegen/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="765">
+          <first_editor relative-caret-position="210">
             <caret line="51" column="7" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book/core/vdom/vnode.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="1620">
-            <caret line="108" column="1" selection-start-line="108" selection-start-column="1" selection-end-line="108" selection-end-column="1" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/book/wonderful.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="375">
-            <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
           </first_editor>
           <second_editor />
         </state>
@@ -1070,8 +629,18 @@
     <entry file="file://$PROJECT_DIR$/book/SUMMARY.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="450">
-            <caret line="30" column="54" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book/compiler/to-function.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="90">
+            <caret line="6" column="18" lean-forward="true" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
           </first_editor>
           <second_editor />
         </state>
@@ -1082,25 +651,255 @@
         <state split_layout="FIRST">
           <first_editor relative-caret-position="75">
             <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <folding>
+              <element signature="n#!!doc" expanded="true" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/book/compiler/to-function.md">
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/instance/lifecycle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="115" column="5" lean-forward="true" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/instance/render.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="69" column="30" lean-forward="true" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+          <folding>
+            <element signature="e#13#111#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="12" lean-forward="true" selection-end-line="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/util/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/examples/todomvc/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="22" column="16" lean-forward="true" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/shared/constants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/shared/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="112" column="33" lean-forward="true" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/examples/todomvc/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book/example/index.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="300">
-            <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <first_editor relative-caret-position="165">
+            <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/compiler/to-function.js">
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/global-api/extend.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="80" column="50" lean-forward="true" selection-start-line="80" selection-start-column="50" selection-end-line="80" selection-end-column="50" />
+        <state relative-caret-position="180">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/global-api/mixin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="52" lean-forward="true" selection-start-line="6" selection-start-column="52" selection-end-line="6" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/util/options.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="374" column="1" lean-forward="true" selection-start-line="374" selection-start-column="1" selection-end-line="374" selection-end-column="1" />
+          <folding>
+            <element signature="e#13#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/components/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/observer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="214" column="17" selection-start-line="214" selection-start-column="17" selection-end-line="214" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/app-example-install-plugin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/entry-runtime-with-compiler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="2" lean-forward="true" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#13#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/instance/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/instance/state.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="340" column="1" lean-forward="true" selection-start-line="340" selection-start-column="1" selection-end-line="340" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/instance/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/global-api/use.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/global-api/assets.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="5" lean-forward="true" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="5" />
+          <folding>
+            <element signature="e#13#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/global-api/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/app-example-init-mixin-api.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1050">
+          <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book/wonderful.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="480">
+            <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/core/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book/core/instance/lifecycle.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="1785">
+            <caret line="119" column="1" selection-start-line="119" selection-start-column="1" selection-end-line="119" selection-end-column="1" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue2.6.0-release/src/platforms/web/runtime/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="40" lean-forward="true" selection-start-line="23" selection-start-column="40" selection-end-line="23" selection-end-column="40" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#13#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/book/example/initVue.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="345">
+            <caret line="431" lean-forward="true" selection-start-line="431" selection-end-line="431" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

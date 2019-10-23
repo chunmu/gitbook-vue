@@ -3,6 +3,8 @@
 * [概述](README.md)
 * [有趣的发现](wonderful.md)
 * [各种流程图解](flow.md)
+* [实例演示](example/index.md)
+    * [初始化Vue](example/initVue.md)
 * [compiler](compiler/index.md)
     * [parser](compiler/parser/index.md)
         * [index](compiler/parser/index.md)
