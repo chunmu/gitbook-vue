@@ -67,7 +67,6 @@ function initVirtualComponent (options: Object = {}) {
 
   registerComponentHook(componentId, 'lifecycle', 'attach', () => {
     callHook(vm, 'beforeMount')
-
     const updateComponent = () => {
       vm._update(vm._vnode, false)
     }

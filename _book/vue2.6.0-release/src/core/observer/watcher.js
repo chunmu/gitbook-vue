@@ -41,13 +41,14 @@ export default class Watcher {
   before: ?Function;
   getter: Function;
   value: any;
-
+  name: string;
   constructor (
     vm: Component,
     expOrFn: string | Function,
     cb: Function,
     options?: ?Object,
-    isRenderWatcher?: boolean
+    isRenderWatcher?: boolean,
+    name?: string
   ) {
     this.vm = vm
     if (isRenderWatcher) {
@@ -61,9 +62,11 @@ export default class Watcher {
       this.lazy = !!options.lazy
       this.sync = !!options.sync
       this.before = options.before
+      this.name = name
     } else {
       this.deep = this.user = this.lazy = this.sync = false
     }
+
     this.cb = cb
     this.id = ++uid // uid for batching
     this.active = true
@@ -77,6 +80,7 @@ export default class Watcher {
       : ''
     // parse expression for getter
     if (typeof expOrFn === 'function') {
+
       this.getter = expOrFn
     } else {
       this.getter = parsePath(expOrFn)

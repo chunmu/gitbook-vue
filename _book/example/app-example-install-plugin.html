@@ -1,0 +1,51 @@
+<!doctype html>
+<html data-framework="vue">
+<head>
+  <meta charset="utf-8">
+  <title>Vue Example</title>
+</head>
+<body>
+<section class="example">
+  <div>{{$$t2('app.common.name')}}</div>
+</section>
+
+<script src="../vue2.6.0-release/dist/vue.js"></script>
+<script>
+  // 关于展示插件安装js  编号 app00001
+
+  var localJson = {
+    en: {
+      'app.common.name': 'Vue Example'
+    },
+    zh: {
+      'app.common.name': 'Vue关于插件安装示例程序'
+    }
+  }
+
+  var $t1 = function () {
+    Vue.prototype.$$t1 = function (key) {
+      return localJson[this.appLang][key] + 'from func'
+    }
+  }
+  var $t2 = {
+    install: function () {
+      Vue.prototype.$$t2 = function (key) {
+        return localJson[this.appLang][key] + 'from object'
+      }
+    }
+  }
+
+  Vue.use($t2)
+
+  var app = new Vue({
+    el: '.example',
+    data: {
+      appLang: 'zh'
+    }
+  })
+
+
+
+</script>
+</body>
+</html>

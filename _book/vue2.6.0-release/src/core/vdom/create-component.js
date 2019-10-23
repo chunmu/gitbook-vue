@@ -108,7 +108,6 @@ export function createComponent (
   if (isUndef(Ctor)) {
     return
   }
-
   const baseCtor = context.$options._base
 
   // plain options object: turn it into a constructor

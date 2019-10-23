@@ -62,7 +62,6 @@ Vue.prototype.$mount = function (
       if (process.env.NODE_ENV !== 'production' && config.performance && mark) {
         mark('compile')
       }
-
       const { render, staticRenderFns } = compileToFunctions(template, {
         outputSourceRange: process.env.NODE_ENV !== 'production',
         shouldDecodeNewlines,
@@ -99,11 +98,4 @@ function getOuterHTML (el: Element): string {
 }
 
 Vue.compile = compileToFunctions
-// 获取快静态初始化后的快照
-if (window.shouldGetStaticInitCapture) {
-  console.log(Vue.prototype, 'prototype 需要构造实例对象才能使用的属性')
-  for (let key in Vue) {
-    console.log(key, '构造函数对象上的方法和属性')
-  }
-}
 export default Vue

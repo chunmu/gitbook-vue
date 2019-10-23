@@ -22,7 +22,7 @@
 
 <br>
 
-![donate](https://chunmu.github.io/gitbook-vue/assets/pictures/money.jpeg "donate")
+![donate](/assets/pictures/money.jpeg "donate")
 
 
 ## 更新日志
@@ -40,5 +40,6 @@
 - 16至今 在深圳的一家公司上班
 - 我的傻馒在哪里
 - 我可以在陪你逛街的时候不玩手机
+- 曾经用过的ID 捡到一颗白矮星 + 听完这首歌 + 唱完这首歌 + 不是很有趣的灵魂 + 枯木离人
 
-![chunmu](https://chunmu.github.io/gitbook-vue/assets/pictures/WechatIMG31.jpeg?raw=true)
+![chunmu](/assets/pictures/WechatIMG31.jpeg?raw=true)

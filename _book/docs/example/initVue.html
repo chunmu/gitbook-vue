@@ -1,0 +1,1114 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>初始化Vue · Blankj's Glory</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Blankj">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+
+        
+    
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../compiler/" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    
+        <link rel="shortcut icon" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="bookmark" href='../source/images/favicon.jpg' type="image/x-icon">
+    
+    
+        <link rel="apple-touch-icon" href='../source/images/apple-touch-icon.jpg'>
+    
+    
+        
+        <link rel="apple-touch-icon" sizes="120x120" href="../source/images/apple-touch-icon.jpg">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../source/images/apple-touch-icon.jpg">
+        
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../wonderful.html">
+            
+                <a href="../wonderful.html">
+            
+                    
+                    有趣的发现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../flow.html">
+            
+                <a href="../flow.html">
+            
+                    
+                    各种流程图解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    实例演示
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="initVue.html">
+            
+                <a href="initVue.html">
+            
+                    
+                    初始化Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../compiler/">
+            
+                <a href="../compiler/">
+            
+                    
+                    compiler
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../compiler/parser/">
+            
+                <a href="../compiler/parser/">
+            
+                    
+                    parser
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" data-path="../compiler/parser/">
+            
+                <a href="../compiler/parser/">
+            
+                    
+                    index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" data-path="../compiler/parser/html-parser.html">
+            
+                <a href="../compiler/parser/html-parser.html">
+            
+                    
+                    html-parser
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.3" data-path="../compiler/parser/filter-parser.html">
+            
+                <a href="../compiler/parser/filter-parser.html">
+            
+                    
+                    filter-parser
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../compiler/directives/index.md">
+            
+                <span>
+            
+                    
+                    directives
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../compiler/directives/model.html">
+            
+                <a href="../compiler/directives/model.html">
+            
+                    
+                    model
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../compiler/helpers.html">
+            
+                <a href="../compiler/helpers.html">
+            
+                    
+                    helpers
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    core
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" >
+            
+                <span>
+            
+                    
+                    instance
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1.1" data-path="../core/instance/">
+            
+                <a href="../core/instance/">
+            
+                    
+                    index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.2" data-path="../core/instance/init.html">
+            
+                <a href="../core/instance/init.html">
+            
+                    
+                    init
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.3" data-path="../core/instance/proxy.html">
+            
+                <a href="../core/instance/proxy.html">
+            
+                    
+                    proxy
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.4" data-path="../core/instance/events.html">
+            
+                <a href="../core/instance/events.html">
+            
+                    
+                    events
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.5" data-path="../core/instance/inject.html">
+            
+                <a href="../core/instance/inject.html">
+            
+                    
+                    inject
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.1.6" data-path="../core/instance/state.html">
+            
+                <a href="../core/instance/state.html">
+            
+                    
+                    state
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" >
+            
+                <span>
+            
+                    
+                    observer
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.2.1" data-path="../core/observer/">
+            
+                <a href="../core/observer/">
+            
+                    
+                    index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2.2" data-path="../core/observer/dep.html">
+            
+                <a href="../core/observer/dep.html">
+            
+                    
+                    dep
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" >
+            
+                <span>
+            
+                    
+                    vdom
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1" >
+            
+                <span>
+            
+                    
+                    helpers
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.3.1.1" data-path="../core/vdom/helpers/update-listeners.html">
+            
+                <a href="../core/vdom/helpers/update-listeners.html">
+            
+                    
+                    update-listeners
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    platforms
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" >
+            
+                <span>
+            
+                    
+                    web
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1" >
+            
+                <span>
+            
+                    
+                    compiler
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1.1.1" data-path="../platforms/web/compiler/">
+            
+                <a href="../platforms/web/compiler/">
+            
+                    
+                    index
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >初始化Vue</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="initvue">initVue</h1>
+<h5 id="vue&#x6784;&#x9020;&#x51FD;&#x6570;&#x5B9A;&#x4E49;--coreinstanceindex">Vue&#x6784;&#x9020;&#x51FD;&#x6570;&#x5B9A;&#x4E49;  core/instance/index</h5>
+<pre><code class="lang-javascript">
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Vue</span> (<span class="hljs-params">options</span>) </span>{
+  <span class="hljs-comment">// &#x68C0;&#x6D4B;&#x662F;&#x4E0D;&#x662F;&#x901A;&#x8FC7;new Vue()&#x65B0;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;  &#x5982;&#x679C;&#x4E0D;&#x662F;&#x5219;&#x544A;&#x8B66;</span>
+  <span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span> &amp;&amp;
+    !(<span class="hljs-keyword">this</span> <span class="hljs-keyword">instanceof</span> Vue)
+  ) {
+    warn(<span class="hljs-string">&apos;Vue is a constructor and should be called with the `new` keyword&apos;</span>)
+  }
+  <span class="hljs-keyword">this</span>._init(options)
+}
+</code></pre>
+<h5 id="initmixin--coreinstanceinit">initMixin  core/instance/init</h5>
+<ul>
+<li>&#x6302;&#x8F7D;_init&#x65B9;&#x6CD5;  Vue.prototype._init</li>
+</ul>
+<h5 id="statemixin-coreinstancestate">stateMixin core/instance/state</h5>
+<ul>
+<li>$data &amp; $props</li>
+</ul>
+<pre><code class="lang-javascript">
+  <span class="hljs-comment">/**
+  * &#x5728;vue&#xFF0C;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x7684;props&amp;data&#x5404;&#x81EA;&#x4EE3;&#x7406;&#x5728;$props&amp;$data 
+  * &#x62E6;&#x622A;set&#x8D4B;&#x503C;&#x5668; &#x963B;&#x6B62;&#x7528;&#x6237;&#x4FEE;&#x6539;$data&#x6216;&#x8005;props&#x6307;&#x5411;&#x7684;&#x5BF9;&#x8C61;
+  * eg: data () {username: &apos;chunmu.zhang&apos;}
+  * &#x628A;&#x7528;&#x6237;&#x5B9A;&#x4E49;&#x5728;data&#x4E2D;&#x7684;username&#x79FB;&#x690D;&#x5230;$data
+  * &#x8BBE;&#x7F6E;&#x4EE3;&#x7406;proxy  &#x5728;&#x7528;&#x6237;this.username&#x65F6;  &#x5C06;&#x6307;&#x5411;this.$data.username
+  * */</span>
+  <span class="hljs-keyword">const</span> dataDef = {}
+  dataDef.get = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._data }
+  <span class="hljs-keyword">const</span> propsDef = {}
+  propsDef.get = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>._props }
+  <span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span>) {
+    dataDef.set = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      warn(
+        <span class="hljs-string">&apos;Avoid replacing instance root $data. &apos;</span> +
+        <span class="hljs-string">&apos;Use nested data properties instead.&apos;</span>,
+        <span class="hljs-keyword">this</span>
+      )
+    }
+    propsDef.set = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+      warn(<span class="hljs-string">`$props is readonly.`</span>, <span class="hljs-keyword">this</span>)
+    }
+  }
+  <span class="hljs-comment">// $data  $props</span>
+  <span class="hljs-built_in">Object</span>.defineProperty(Vue.prototype, <span class="hljs-string">&apos;$data&apos;</span>, dataDef)
+  <span class="hljs-built_in">Object</span>.defineProperty(Vue.prototype, <span class="hljs-string">&apos;$props&apos;</span>, propsDef)
+</code></pre>
+<ul>
+<li>&#x6302;&#x8F7D;$set&amp;del&amp;watch</li>
+</ul>
+<pre><code class="lang-javascript">
+  Vue.prototype.$set
+  Vue.prototype.$<span class="hljs-keyword">delete</span>
+  Vue.prototype.$watch
+</code></pre>
+<h5 id="eventsmixin--coreinstanceevents">eventsMixin  core/instance/events</h5>
+<ul>
+<li>&#x6302;&#x8F7D;$on, $off, $once, $emit</li>
+</ul>
+<pre><code class="lang-javascript">
+Vue.prototype.$on
+Vue.prototype.$off
+Vue.prototype.$once
+Vue.prototype.$emit
+</code></pre>
+<h5 id="lifecyclemixin-coreinstancelifecycle">lifecycleMixin core/instance/lifecycle</h5>
+<ul>
+<li>&#x6302;&#x8F7D;_update&#xFF0C;$forceUpdate&#xFF0C;$destroy</li>
+</ul>
+<pre><code class="lang-javascript">Vue.prototype.update
+Vue.prototype.$forceUpdate
+Vue.prototype.$destroy
+</code></pre>
+<h5 id="rendermixin-coreinstancerender">renderMixin core/instance/render</h5>
+<ul>
+<li>installRenderHelpers  </li>
+</ul>
+<blockquote>
+<p>&#x6E32;&#x67D3;&#x76F8;&#x5173;&#x51FD;&#x6570;&#x88C5;&#x8F7D;</p>
+</blockquote>
+<pre><code class="lang-javascript">
+<span class="hljs-keyword">export</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">installRenderHelpers</span> (<span class="hljs-params">target: any</span>) </span>{
+  target._o = markOnce  <span class="hljs-comment">// &#x6807;&#x8BB0;once</span>
+  target._n = toNumber
+  target._s = toString
+  target._l = renderList
+  target._t = renderSlot <span class="hljs-comment">// slot&#x6E32;&#x67D3;</span>
+  target._q = looseEqual <span class="hljs-comment">// &#x5224;&#x65AD;&#x662F;&#x5426;&#x5FAA;&#x73AF;</span>
+  target._i = looseIndexOf
+  target._m = renderStatic <span class="hljs-comment">// &#x9759;&#x6001;&#x5185;&#x5BB9;&#x6E32;&#x67D3;</span>
+  target._f = resolveFilter
+  target._k = checkKeyCodes
+  target._b = bindObjectProps
+  target._v = createTextVNode <span class="hljs-comment">// &#x7A7F;&#x4EF6;text VNode</span>
+  target._e = createEmptyVNode <span class="hljs-comment">// &#x521B;&#x5EFA;&#x7A7A;VNode</span>
+  target._u = resolveScopedSlots
+  target._g = bindObjectListeners
+  target._d = bindDynamicKeys
+  target._p = prependModifier
+}
+</code></pre>
+<ul>
+<li>&#x88C5;&#x8F7D;$nextTick, _render</li>
+</ul>
+<pre><code class="lang-javascript">
+Vue.prototype.$nextTick
+Vue.prototype.render
+</code></pre>
+<h5 id="initglobalapi--coreglobal-apiindex">initGlobalAPI  core/global-api/index</h5>
+<ul>
+<li>config</li>
+</ul>
+<pre><code class="lang-javascript">  <span class="hljs-comment">/**
+  * &#x91CD;&#x5B9A;&#x4E49;config&#x7684;set &#x963B;&#x6B62;&#x7528;&#x6237;&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x5BF9;&#x8C61;&#x5F15;&#x7528;
+  * */</span>
+  <span class="hljs-keyword">const</span> configDef = {}
+  configDef.get = () =&gt; config
+  <span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">&apos;production&apos;</span>) {
+    configDef.set = () =&gt; {
+      warn(
+        <span class="hljs-string">&apos;Do not replace the Vue.config object, set individual fields instead.&apos;</span>
+      )
+    }
+  }
+  <span class="hljs-built_in">Object</span>.defineProperty(Vue, <span class="hljs-string">&apos;config&apos;</span>, configDef)
+</code></pre>
+<ul>
+<li>Vue.util</li>
+</ul>
+<pre><code class="lang-javascript">
+  <span class="hljs-comment">/**
+  * &#x5BF9;&#x5916;&#x66B4;&#x9732;vue&#x7684;&#x5DE5;&#x5177;&#x65B9;&#x6CD5;&#x4EE5;&#x53CA;options&#x5408;&#x5E76;&#x7B56;&#x7565;&amp;&#x5BF9;&#x8C61;&#x5408;&#x5E76;&#x7B56;&#x7565;&#x65B9;&#x6CD5;&#x7B49; &#x4EE5;&#x53CA;&#x5BF9;&#x5916;&#x66B4;&#x9732;&#x4E86;&#x4E00;&#x4E2A;warn&#x65B9;&#x6CD5;
+  * &#x4FEE;&#x6539;&#x8FD9;&#x4E9B;&#x65B9;&#x6CD5;&#x5177;&#x6709;&#x5F88;&#x5927;&#x7684;&#x5371;&#x9669;&#x6027; &#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x4E86;&#x5185;&#x90E8;&#x7684;&#x673A;&#x5236;
+  * */</span>
+  <span class="hljs-comment">// &#x91CD;&#x5199;warn&#x65B9;&#x6CD5; &#x6355;&#x6349;Vue&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x5404;&#x79CD;&#x544A;&#x8B66;&#x7B49;  &#x6BD4;&#x5982;sentry&#x4E0A;&#x62A5;</span>
+  Vue.util = {
+    warn,
+    extend,
+    mergeOptions,
+    defineReactive
+  }
+</code></pre>
+<ul>
+<li>&#x88C5;&#x8F7D;set</li>
+</ul>
+<pre><code class="lang-javascript">
+  Vue.set = set   <span class="hljs-comment">// &#x6B64;&#x5904;&#x7684;set = Vue.prototype.$set &#x6307;&#x5411;&#x540C;&#x4E00;&#x4E2A;&#x65B9;&#x6CD5; &#x6240;&#x4EE5;&#x4E3A;&#x5565;&#x8FD8;&#x8981;&#x8FD9;&#x4E48;&#x6302;&#x8F7D;&#x5462;</span>
+  Vue.delete = del
+  Vue.nextTick = nextTick
+  Vue.observable = (obj) =&gt; {observe(obj)} <span class="hljs-comment">// &#x6784;&#x9020;obj&#x4E3A;&#x4E00;&#x4E2A;&#x5177;&#x6709;&#x53EF;&#x89C2;&#x6D4B;&#x7684;&#x5BF9;&#x8C61;</span>
+</code></pre>
+<ul>
+<li>options</li>
+</ul>
+<pre><code class="lang-javascript">
+  Vue.options = <span class="hljs-built_in">Object</span>.create(<span class="hljs-literal">null</span>) <span class="hljs-comment">// &#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x6BD4;&#x8F83;&#x7EAF;&#x51C0;&#x7684;&#x5BF9;&#x8C61;</span>
+  ASSET_TYPES.forEach(type =&gt; {
+    Vue.options[type + <span class="hljs-string">&apos;s&apos;</span>] = <span class="hljs-built_in">Object</span>.create(<span class="hljs-literal">null</span>)
+  })
+  <span class="hljs-comment">/**
+  * &#x6B64;&#x65F6;options&#x7684;&#x5FEB;&#x7167;
+  * Vue.options = {
+  *   components: {},
+  *   directives: {},
+  *   filters: {}
+  * }
+  * */</span>
+</code></pre>
+<ul>
+<li>_base</li>
+</ul>
+<pre><code class="lang-javascript">
+Vue.options._base = Vue <span class="hljs-comment">// _base&#x6307;&#x5411;Vue&#x6784;&#x9020;&#x51FD;&#x6570;</span>
+</code></pre>
+<ul>
+<li>&#x9884;&#x7F6E;KeepAlive&#x7EC4;&#x4EF6;</li>
+</ul>
+<pre><code class="lang-javascript">
+  <span class="hljs-comment">// &#x5148;&#x5F80;components&#x6302;&#x8F7D;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x7EC4;&#x4EF6;&#x5BF9;&#x8C61; KeepAlive &#x7F13;&#x5B58;&#x76F8;&#x5173;</span>
+  extend(Vue.options.components, builtInComponents)
+</code></pre>
+<h5 id="inituse--coreglobal-apiuse">initUse  core/global-api/use</h5>
+<ul>
+<li>&#x6302;&#x8F7D;use  &#x63D2;&#x4EF6;&#x5B89;&#x88C5;api</li>
+</ul>
+<pre><code class="lang-javascript">
+Vue.use
+
+<span class="hljs-comment">// &#x4EE5;&#x51FD;&#x6570;&#x65B9;&#x5F0F;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;</span>
+Vue.use(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+
+}, arg1, arg2, arg3) <span class="hljs-comment">// &#x63D2;&#x4EF6;&#x5B89;&#x88C5;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x83B7;&#x53D6;&#x7528;&#x6237;&#x8F93;&#x5165;&#x53C2;&#x6570;  &#x5728;use&#x4E2D;&#x5904;&#x7406;&#x8FC7;&#x540E; &#x53C2;&#x6570;(this, arg1, arg2, arg3)  this&#x6307;&#x5411;Vue</span>
+
+<span class="hljs-comment">// &#x4EE5;&#x5BF9;&#x8C61;&#x65B9;&#x5F0F;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;</span>
+Vue.use({
+  install: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{}
+}, arg1, arg2, arg3)
+</code></pre>
+<h5 id="initmixin-coreglobal-apimixin">initMixin core/global-api/mixin</h5>
+<ul>
+<li>&#x6302;&#x8F7D;mixin  &#x6DF7;&#x5165;api</li>
+</ul>
+<blockquote>
+<p>&#x4E3B;&#x8981;&#x529F;&#x80FD;&#x662F;&#x5408;&#x5E76; data&amp;props&amp;method&#x4EE5;&#x53CA;&#x5404;&#x79CD;&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;</p>
+</blockquote>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x5168;&#x5C40;&#x8C03;&#x7528;&#x7684;mixin&#x662F;&#x5BF9;&#x8C61;  &#x7EC4;&#x4EF6;&#x653E;&#x5165;&#x7684;&#x662F;&#x6570;&#x7EC4; </span>
+Vue.mixin({})
+mixins: [mixin1, mixin2]
+</code></pre>
+<ul>
+<li>&#x5408;&#x5E76;&#x8FC7;&#x7A0B;&#x548C;&#x7B56;&#x7565; mergeOptions 1. &#x683C;&#x5F0F;&#x5316; &#x4E3A;&#x5408;&#x5E76;&#x505A;&#x51C6;&#x5907;</li>
+</ul>
+<pre><code class="lang-javascript">
+<span class="hljs-comment">/**
+* &#x5B9A;&#x4E49;&#x4E00;&#x4E0B;  this.options &#x662F;childVal   mixins&#x6216;&#x8005;extends&#x662F;parentVal &#x7236;
+* */</span>
+
+<span class="hljs-comment">// 1. &#x6821;&#x9A8C;components  checkComponents &#x68C0;&#x67E5;&#x7EC4;&#x4EF6;&#x540D;&#x79F0; &#x4E0D;&#x80FD;&#x662F;&#x4FDD;&#x7559;&#x6807;&#x7B7E; &#x5185;&#x5EFA;&#x6807;&#x7B7E;  &#x7136;&#x540E;&#x7B26;&#x5408;unicode&#x7F16;&#x7801;&#x5C31;&#x884C;</span>
+
+<span class="hljs-comment">// 2. &#x683C;&#x5F0F;&#x5316;props&#x5904;&#x7406;  normalizeProps</span>
+<span class="hljs-comment">/**
+* props&#x53EF;&#x4EE5;&#x662F;&#x6570;&#x7EC4;  &#x5982;&#x679C;&#x662F;&#x6570;&#x7EC4;  &#x5143;&#x7D20;&#x5FC5;&#x987B;&#x4E3A;string&#x7C7B;&#x578B;  props = [&apos;username&apos;, userinfo&apos;]
+* &#x683C;&#x5F0F;&#x5316;&#x540E; &#x4F1A;&#x6210;&#x4E3A; props = {
+*   username: {
+*     type: null
+*   }
+* }
+* */</span>
+
+<span class="hljs-comment">/**
+* props&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;
+* props = {
+*   username: String,  &#x5728;&#x683C;&#x5F0F;&#x5316;&#x65F6;  &#x4F1A;&#x5904;&#x7406;&#x6210; =&gt; {type: String} 
+*   userinfo: {
+*     type: [String] | String,
+*     default: &apos;chunmu.zhang&apos;
+*   }
+* }
+* */</span>
+
+<span class="hljs-comment">// 3. &#x683C;&#x5F0F;&#x5316;inject  normalizeInject  &#x4F9D;&#x8D56;&#x6CE8;&#x5165;  &#x53EF;&#x4EE5;&#x770B;&#x6210;&#x662F;&#x591A;&#x7EA7;&#x7684;props&#x4F20;&#x9012;</span>
+<span class="hljs-comment">/**
+* props&#x53EF;&#x4EE5;&#x662F;&#x6570;&#x7EC4;  &#x5982;&#x679C;&#x662F;&#x6570;&#x7EC4;  &#x5143;&#x7D20;&#x5FC5;&#x987B;&#x4E3A;string&#x7C7B;&#x578B;  inject = [&apos;username&apos;, userinfo&apos;]
+* &#x683C;&#x5F0F;&#x5316;&#x540E; &#x4F1A;&#x6210;&#x4E3A; inject = {
+*   username: {
+*     from: &apos;username&apos;
+*   }
+* }
+* */</span>
+
+<span class="hljs-comment">/**
+* props&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;
+* props = {
+*   userinfo: {
+*     from: &apos;userinfo&apos;
+*   }
+* }
+* */</span>
+
+<span class="hljs-comment">// &#x683C;&#x5F0F;&#x5316;&#x6307;&#x4EE4;  normalizeDirectives</span>
+<span class="hljs-comment">/**
+* &#x5982;&#x679C;&#x662F;
+* directives = {
+*   &apos;v-haha&apos;: function xx() {}
+* }
+* 
+* &#x5219; directives = {
+*   &apos;v-haha&apos;: {
+*     bind: function xx() {},
+*     update: function xx() {}
+*   }
+* }
+* */</span>
+</code></pre>
+<ul>
+<li>&#x5408;&#x5E76;&#x8FC7;&#x7A0B;&#x548C;&#x7B56;&#x7565; mergeOptions 2. &#x5F00;&#x59CB;&#x6309;&#x7167;&#x5404;&#x81EA;&#x5408;&#x5E76;&#x7B56;&#x7565;&#x5408;&#x5E76;</li>
+</ul>
+<pre><code class="lang-javascript">
+<span class="hljs-comment">// 1. &#x9ED8;&#x8BA4;&#x7684;&#x5408;&#x5E76;&#x7B56;&#x7565;  &#x4EE5;&#x5B50;&#x7EA7;&#x7684;&#x503C;&#x4E3A;&#x51C6; &#x5982;&#x679C;&#x662F;undefined&#x624D;&#x53BB;&#x62FF;&#x7236;&#x7EA7;</span>
+
+<span class="hljs-comment">/**
+* childVal === undefined
+      ? parentVal
+      : childVal
+*/</span>
+
+
+<span class="hljs-comment">// 2. data&#x7684;&#x5408;&#x5E76;&#x7B56;&#x7565;  </span>
+<span class="hljs-comment">/**
+* &#x5173;&#x4E8E;data&#x7684;&#x4E00;&#x4E2A;&#x5C0F;&#x77E5;&#x8BC6;&#x70B9;  &#x7406;&#x8BBA;&#x4E0A;&#x53EF;&#x4EE5;&#x5728;&#x7EC4;&#x4EF6;&#x5185;&#x8FD9;&#x6837;&#x5199;
+* {
+*   data: {
+*     appLang: &apos;zh&apos;
+*   }
+* }
+* &#x8FD9;&#x6837;data&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61; &#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570; &#x8FD9;&#x6837;&#x662F;ok&#x7684;  &#x4F46;&#x662F;&#x8FD9;&#x6837;&#x7684;&#x5199;&#x6CD5;&#x5728;&#x5176;&#x5B83;&#x573A;&#x666F;  &#x6BD4;&#x5982;&#x8BF4;mixins &#x6216;&#x8005;extends&#x91CC;&#x9762;&#x4F1A;&#x88AB;vue&#x62E6;&#x622A;&#x5E76;&#x544A;&#x8B66;
+* &#x63D0;&#x793A;data&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;
+* &#x539F;&#x56E0;:
+* &#x5982;&#x679C;&#x6211;&#x9876;&#x4E00;&#x4E2A;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6765;&#x751F;&#x6210;vue&#x5B9E;&#x4F8B;  &#x5219;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x751F;&#x6210;&#x7684;&#x6240;&#x6709;vue&#x5B9E;&#x4F8B;&#x90FD;&#x4F1A;&#x5171;&#x7528;&#x8FD9;&#x9879;&#x914D;&#x7F6E;&#x7684;&#x6570;&#x636E;  &#x4E5F;&#x5305;&#x62EC;data
+* &#x5982;&#x679C;data&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;  &#x5219;&#x4ED6;&#x4EEC;&#x5171;&#x4EAB;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;  &#x4F1A;&#x6709;&#x4E32;&#x503C;&#x5F97;&#x60C5;&#x51B5;
+* &#x5982;&#x679C;&#x662F;&#x51FD;&#x6570;  &#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x65B0;&#x5BF9;&#x8C61;  &#x6BCF;&#x4E2A;vue&#x5B9E;&#x4F8B;&#x7528;&#x7684;&#x90FD;&#x662F;&#x5C5E;&#x4E8E;&#x81EA;&#x5DF1;&#x7684;data  &#x4E0D;&#x4F1A;&#x76F8;&#x4E92;&#x5F71;&#x54CD; 666&#x554A;
+* 
+* data&#x5408;&#x5E76;&#x7B56;&#x7565;&#xFF1A;
+* &#x5728;&#x6CA1;&#x6709;vue&#x5B9E;&#x4F8B;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5B50;&#x7EA7;data&#x5219;&#x8FD4;&#x56DE;&#x7236;&#x7EA7;  &#x6CA1;&#x6709;&#x7236;&#x7EA7;&#x5219;&#x8FD4;&#x56DE;&#x5B50;&#x7EA7;  &#x5982;&#x679C;&#x90FD;&#x5B58;&#x5728;
+* &#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x51FD;&#x6570; data&#x51FD;&#x6570;&#x5DF2;&#x6267;&#x884C; &#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x51FD;&#x6570;  &#x5728;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019; &#x8FD4;&#x56DE;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;
+* &#x5728;&#x6709;vue&#x5B9E;&#x4F8B;&#x7684;&#x60C5;&#x51B5;&#x4E0B;
+* data&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x666E;&#x901A;&#x5BF9;&#x8C61;
+* */</span>
+
+<span class="hljs-comment">// &#x5B50;&#x7EA7;&#x4F18;&#x5148;</span>
+childData () {
+   <span class="hljs-keyword">return</span> {
+     name: <span class="hljs-string">&apos;child&apos;</span>,
+     obj: {
+       objName: <span class="hljs-string">&apos;childObj&apos;</span>
+     }
+   }
+ },
+parentData () {
+   <span class="hljs-keyword">return</span> {
+     name: <span class="hljs-string">&apos;parent&apos;</span>,
+     obj: {
+       objName: <span class="hljs-string">&apos;parentObj&apos;</span>
+     },
+     otherObj: {
+       name: <span class="hljs-string">&apos;otherObj&apos;</span>
+     },
+     age: <span class="hljs-number">12</span>
+   }
+ }
+<span class="hljs-comment">//  &#x5408;&#x5E76;&#x7ED3;&#x679C;</span>
+data = {
+  name: <span class="hljs-string">&apos;child&apos;</span>,
+  obj: {
+    objName: <span class="hljs-string">&apos;childObj&apos;</span>
+  },
+  otherObj: {
+    name: <span class="hljs-string">&apos;otherObj&apos;</span>
+  },
+  age: <span class="hljs-number">12</span>
+}
+
+<span class="hljs-comment">// 3.0 el, propsData&#x7684;&#x5408;&#x5E76;&#x7B56;&#x7565;</span>
+
+<span class="hljs-comment">/**
+* &#x8FD9;&#x4E2A;&#x662F;&#x521B;&#x5EFA;&#x65B0;&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x7528;&#x5230;&#x7684;&#x7EE7;&#x627F; &#x6240;&#x4EE5;&#x4E0D;&#x4F1A;&#x4E5F;&#x4E0D;&#x5E94;&#x8BE5;&#x548C;&#x5B50;&#x7EA7;&#x51B2;&#x7A81;  &#x6240;&#x4EE5;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x5408;&#x5E76;&#x7B56;&#x7565;
+* */</span>
+
+
+<span class="hljs-comment">// 4.0 watch&#x5408;&#x5E76;&#x7B56;&#x7565;</span>
+
+<span class="hljs-comment">/**
+* parent.concat(child)
+* &#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;childVal  &#x5219;&#x4F7F;&#x7528;parentVal
+* &#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;parentVal, &#x5219;&#x7528;childVal
+* &#x5982;&#x679C;&#x90FD;&#x5B58;&#x5728;  &#x5219;&#x91C7;&#x7528;concat&#x7684;&#x7B56;&#x7565;  &#x56E0;&#x4E3A;&#x76D1;&#x542C;&#x51FD;&#x6570;&#x90FD;&#x9700;&#x8981;&#x751F;&#x6548; &#x5E76;&#x4E0D;&#x80FD;&#x4E22;&#x5F03;
+* &#x5BF9;&#x5E94;&#x540C;&#x540D;&#x7684;key&#x8F6C;&#x6362;&#x6210;&#x6570;&#x7EC4;&#x7C7B;
+* watch: {
+*   value1: [{}, {}, {}]
+* }
+* */</span>
+
+<span class="hljs-comment">// 5.0 props, methods, inject, computed&#x7684;&#x5408;&#x5E76;&#x7B56;&#x7565;</span>
+
+  <span class="hljs-comment">/**
+  * &#x5F88;&#x660E;&#x663E;&#x662F;&#x5B50;&#x4F1A;&#x8986;&#x76D6;&#x7236;
+  * */</span>
+  <span class="hljs-keyword">if</span> (!parentVal) <span class="hljs-keyword">return</span> childVal
+  <span class="hljs-keyword">const</span> ret = <span class="hljs-built_in">Object</span>.create(<span class="hljs-literal">null</span>)
+  extend(ret, parentVal)
+  <span class="hljs-keyword">if</span> (childVal) extend(ret, childVal)
+  <span class="hljs-keyword">return</span> ret
+
+<span class="hljs-comment">// 6.0 provide&#x7684;&#x5408;&#x5E76;&#x7B56;&#x7565;  parentVal&#x4F18;&#x5148;&#x3002;&#x3002;</span>
+
+<span class="hljs-comment">// 7.0 hook&#x7684;&#x5408;&#x5E76;&#x7B56;&#x7565;</span>
+parentVal.concat(childVal) <span class="hljs-comment">// &#x770B;&#x51FA;&#x6765;&#x4E86;&#x5417;  &#x5982;&#x679C;&#x90FD;&#x6709;  &#x5148;&#x6267;&#x884C;parentVal,&#x540E;&#x6267;&#x884C;childVal</span>
+
+<span class="hljs-comment">// 8.0 assets&#x7684;&#x5408;&#x5E76;&#x7B56;&#x7565;  directives, components&#x7B49;</span>
+<span class="hljs-comment">// &#x7B80;&#x5355;&#x7C97;&#x66B4;&#x7684;&#x5B50;&#x8986;&#x76D6;&#x7236;</span>
+</code></pre>
+<h5 id="initextend-coreglobal-apiextend">initExtend core/global-api/extend</h5>
+<ul>
+<li>&#x6302;&#x8F7D;extend cid&#x8BA1;&#x6570;  ???????? &#x9700;&#x8981;&#x8865;&#x5145;extend()&#x65B9;&#x6CD5;&#x7684;&#x7528;&#x4F8B;</li>
+</ul>
+<pre><code class="lang-javascript">
+Vue.extend
+</code></pre>
+<h5 id="initassetregisters--coreglobal-apiassets">initAssetRegisters  core/global-api/assets</h5>
+<ul>
+<li>&#x6CE8;&#x518C;&#x5168;&#x5C40;api  Vue.filter()  Vue.component() Vue.directive()  ???????? &#x9700;&#x8981;&#x8865;&#x5145;&#x7528;&#x4F8B;</li>
+</ul>
+<h5 id="&#x5B9A;&#x4E49;ssr&#x76F8;&#x5173;&#x53D8;&#x91CF;--coreindex">&#x5B9A;&#x4E49;ssr&#x76F8;&#x5173;&#x53D8;&#x91CF;  core/index</h5>
+<pre><code class="lang-javascript">
+<span class="hljs-built_in">Object</span>.defineProperty(Vue.prototype, <span class="hljs-string">&apos;$isServer&apos;</span>, {
+  get: isServerRendering
+})
+
+<span class="hljs-built_in">Object</span>.defineProperty(Vue.prototype, <span class="hljs-string">&apos;$ssrContext&apos;</span>, {
+  get () {
+    <span class="hljs-comment">/* istanbul ignore next */</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.$vnode &amp;&amp; <span class="hljs-keyword">this</span>.$vnode.ssrContext
+  }
+})
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 实例演示">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../compiler/" class="navigation navigation-next " aria-label="Next page: compiler">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"初始化Vue","level":"1.4.1","depth":2,"next":{"title":"compiler","level":"1.5","depth":1,"path":"compiler/index.md","ref":"compiler/index.md","articles":[{"title":"parser","level":"1.5.1","depth":2,"path":"compiler/parser/index.md","ref":"compiler/parser/index.md","articles":[{"title":"index","level":"1.5.1.1","depth":3,"path":"compiler/parser/index.md","ref":"compiler/parser/index.md","articles":[]},{"title":"html-parser","level":"1.5.1.2","depth":3,"path":"compiler/parser/html-parser.md","ref":"compiler/parser/html-parser.md","articles":[]},{"title":"filter-parser","level":"1.5.1.3","depth":3,"path":"compiler/parser/filter-parser.md","ref":"compiler/parser/filter-parser.md","articles":[]}]},{"title":"directives","level":"1.5.2","depth":2,"path":"compiler/directives/index.md","ref":"compiler/directives/index.md","articles":[{"title":"model","level":"1.5.2.1","depth":3,"path":"compiler/directives/model.md","ref":"compiler/directives/model.md","articles":[]}]},{"title":"helpers","level":"1.5.3","depth":2,"path":"compiler/helpers.md","ref":"compiler/helpers.md","articles":[]}]},"previous":{"title":"实例演示","level":"1.4","depth":1,"path":"example/index.md","ref":"example/index.md","articles":[{"title":"初始化Vue","level":"1.4.1","depth":2,"path":"example/initVue.md","ref":"example/initVue.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Blankj","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Blankj's Glory","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"example/initVue.md","mtime":"2019-10-23T03:45:27.865Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-23T09:56:44.017Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

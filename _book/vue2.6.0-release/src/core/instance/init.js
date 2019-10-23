@@ -17,7 +17,6 @@ export function initMixin (Vue: Class<Component>) {
     const vm: Component = this
     // a uid
     vm._uid = uid++
-
     let startTag, endTag
     /* istanbul ignore if */
     if (process.env.NODE_ENV !== 'production' && config.performance && mark) {
@@ -29,11 +28,13 @@ export function initMixin (Vue: Class<Component>) {
     // a flag to avoid this being observed
     vm._isVue = true
     // merge options
+
     if (options && options._isComponent) {
       // optimize internal component instantiation
       // since dynamic options merging is pretty slow, and none of the
       // internal component options needs special treatment.
       // 如果是子组件 从父组件获取部分需要merge的数据  比如说props
+      options.xxxx = true
       initInternalComponent(vm, options)
     } else {
       vm.$options = mergeOptions(
@@ -48,7 +49,7 @@ export function initMixin (Vue: Class<Component>) {
     } else {
       vm._renderProxy = vm
     }
-    // expose real self
+    // expose real self4. initProxy代理模式开启 如果找到未定义变量 则会有警告提示等
     vm._self = vm
     initLifecycle(vm)
     initEvents(vm)
@@ -65,7 +66,6 @@ export function initMixin (Vue: Class<Component>) {
       mark(endTag)
       measure(`vue ${vm._name} init`, startTag, endTag)
     }
-
     if (vm.$options.el) {
       vm.$mount(vm.$options.el)
     }
@@ -78,13 +78,11 @@ export function initInternalComponent (vm: Component, options: InternalComponent
   const parentVnode = options._parentVnode
   opts.parent = options.parent
   opts._parentVnode = parentVnode
-
   const vnodeComponentOptions = parentVnode.componentOptions
   opts.propsData = vnodeComponentOptions.propsData
   opts._parentListeners = vnodeComponentOptions.listeners
   opts._renderChildren = vnodeComponentOptions.children
   opts._componentTag = vnodeComponentOptions.tag
-
   if (options.render) {
     opts.render = options.render
     opts.staticRenderFns = options.staticRenderFns

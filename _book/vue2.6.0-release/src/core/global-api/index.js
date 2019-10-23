@@ -61,6 +61,7 @@ export function initGlobalAPI (Vue: GlobalAPI) {
   // components with in Weex's multi-instance scenarios.
   Vue.options._base = Vue
   // 先往components挂载一个全局组件对象 KeepAlive 缓存相关
+
   extend(Vue.options.components, builtInComponents)
 
   initUse(Vue)
