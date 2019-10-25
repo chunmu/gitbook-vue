@@ -5,6 +5,8 @@
 * [各种流程图解](flow.md)
 * [实例演示](example/index.md)
     * [初始化Vue](example/initVue.md)
+    * [mergeOptions的用法扩展](example/mergeOptions.md)
+    * [模板编译部分](example/compiler.md)
 * [compiler](compiler/index.md)
     * [parser](compiler/parser/index.md)
         * [index](compiler/parser/index.md)

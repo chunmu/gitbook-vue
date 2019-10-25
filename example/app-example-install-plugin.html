@@ -28,7 +28,9 @@
     }
   }
   var $t2 = {
+    pluginArg: '这是参数',
     install: function () {
+      console.log(this, this.pluginArg, 'this') // 获取$t2配置信息
       Vue.prototype.$$t2 = function (key) {
         return localJson[this.appLang][key] + 'from object'
       }

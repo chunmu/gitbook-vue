@@ -52,7 +52,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../compiler/" />
+    <link rel="next" href="mergeOptions.html" />
     
     
     <link rel="prev" href="./" />
@@ -160,6 +160,32 @@
             
                     
                     初始化Vue
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="mergeOptions.html">
+            
+                <a href="mergeOptions.html">
+            
+                    
+                    mergeOptions的用法扩展
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="compiler.html">
+            
+                <a href="compiler.html">
+            
+                    
+                    模板编译部分
             
                 </a>
             
@@ -622,7 +648,7 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="initvue">initVue</h1>
-<h5 id="vue&#x6784;&#x9020;&#x51FD;&#x6570;&#x5B9A;&#x4E49;--coreinstanceindex">Vue&#x6784;&#x9020;&#x51FD;&#x6570;&#x5B9A;&#x4E49;  core/instance/index</h5>
+<h4 id="10-vue&#x6784;&#x9020;&#x51FD;&#x6570;&#x5B9A;&#x4E49;--coreinstanceindex">1.0 Vue&#x6784;&#x9020;&#x51FD;&#x6570;&#x5B9A;&#x4E49;  core/instance/index</h4>
 <pre><code class="lang-javascript">
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Vue</span> (<span class="hljs-params">options</span>) </span>{
   <span class="hljs-comment">// &#x68C0;&#x6D4B;&#x662F;&#x4E0D;&#x662F;&#x901A;&#x8FC7;new Vue()&#x65B0;&#x5EFA;&#x7684;&#x5BF9;&#x8C61;  &#x5982;&#x679C;&#x4E0D;&#x662F;&#x5219;&#x544A;&#x8B66;</span>
@@ -634,11 +660,11 @@
   <span class="hljs-keyword">this</span>._init(options)
 }
 </code></pre>
-<h5 id="initmixin--coreinstanceinit">initMixin  core/instance/init</h5>
+<h4 id="11-initmixin--coreinstanceinit">1.1 initMixin  core/instance/init</h4>
 <ul>
 <li>&#x6302;&#x8F7D;_init&#x65B9;&#x6CD5;  Vue.prototype._init</li>
 </ul>
-<h5 id="statemixin-coreinstancestate">stateMixin core/instance/state</h5>
+<h4 id="12-statemixin-coreinstancestate">1.2 stateMixin core/instance/state</h4>
 <ul>
 <li>$data &amp; $props</li>
 </ul>
@@ -678,7 +704,7 @@
   Vue.prototype.$<span class="hljs-keyword">delete</span>
   Vue.prototype.$watch
 </code></pre>
-<h5 id="eventsmixin--coreinstanceevents">eventsMixin  core/instance/events</h5>
+<h4 id="13-eventsmixin--coreinstanceevents">1.3 eventsMixin  core/instance/events</h4>
 <ul>
 <li>&#x6302;&#x8F7D;$on, $off, $once, $emit</li>
 </ul>
@@ -688,7 +714,7 @@ Vue.prototype.$off
 Vue.prototype.$once
 Vue.prototype.$emit
 </code></pre>
-<h5 id="lifecyclemixin-coreinstancelifecycle">lifecycleMixin core/instance/lifecycle</h5>
+<h4 id="14-lifecyclemixin-coreinstancelifecycle">1.4 lifecycleMixin core/instance/lifecycle</h4>
 <ul>
 <li>&#x6302;&#x8F7D;_update&#xFF0C;$forceUpdate&#xFF0C;$destroy</li>
 </ul>
@@ -696,7 +722,7 @@ Vue.prototype.$emit
 Vue.prototype.$forceUpdate
 Vue.prototype.$destroy
 </code></pre>
-<h5 id="rendermixin-coreinstancerender">renderMixin core/instance/render</h5>
+<h4 id="15-rendermixin-coreinstancerender">1.5 renderMixin core/instance/render</h4>
 <ul>
 <li>installRenderHelpers  </li>
 </ul>
@@ -731,7 +757,7 @@ Vue.prototype.$destroy
 Vue.prototype.$nextTick
 Vue.prototype.render
 </code></pre>
-<h5 id="initglobalapi--coreglobal-apiindex">initGlobalAPI  core/global-api/index</h5>
+<h4 id="16-initglobalapi--coreglobal-apiindex">1.6 initGlobalAPI  core/global-api/index</h4>
 <ul>
 <li>config</li>
 </ul>
@@ -804,10 +830,11 @@ Vue.options._base = Vue <span class="hljs-comment">// _base&#x6307;&#x5411;Vue&#
   <span class="hljs-comment">// &#x5148;&#x5F80;components&#x6302;&#x8F7D;&#x4E00;&#x4E2A;&#x5168;&#x5C40;&#x7EC4;&#x4EF6;&#x5BF9;&#x8C61; KeepAlive &#x7F13;&#x5B58;&#x76F8;&#x5173;</span>
   extend(Vue.options.components, builtInComponents)
 </code></pre>
-<h5 id="inituse--coreglobal-apiuse">initUse  core/global-api/use</h5>
+<h4 id="17-inituse--coreglobal-apiuse">1.7 initUse  core/global-api/use</h4>
 <ul>
 <li>&#x6302;&#x8F7D;use  &#x63D2;&#x4EF6;&#x5B89;&#x88C5;api</li>
 </ul>
+<p><img src="app-example-install-plugin.html" alt="&#x63D2;&#x4EF6;&#x5B89;&#x88C5;&#x793A;&#x4F8B;"></p>
 <pre><code class="lang-javascript">
 Vue.use
 
@@ -820,202 +847,73 @@ Vue.use(<span class="hljs-function"><span class="hljs-keyword">function</span>(<
 Vue.use({
   install: <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{}
 }, arg1, arg2, arg3)
+
+<span class="hljs-comment">// &#x6E90;&#x7801;</span>
+
+  Vue.use = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">plugin: Function | Object</span>) </span>{
+    <span class="hljs-keyword">const</span> installedPlugins = (<span class="hljs-keyword">this</span>._installedPlugins || (<span class="hljs-keyword">this</span>._installedPlugins = []))
+    <span class="hljs-keyword">if</span> (installedPlugins.indexOf(plugin) &gt; <span class="hljs-number">-1</span>) {
+      <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>
+    }
+
+    <span class="hljs-comment">// additional parameters</span>
+    <span class="hljs-keyword">const</span> args = toArray(<span class="hljs-built_in">arguments</span>, <span class="hljs-number">1</span>)
+    args.unshift(<span class="hljs-keyword">this</span>)
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> plugin.install === <span class="hljs-string">&apos;function&apos;</span>) {
+      <span class="hljs-comment">// &#x5982;&#x679C;&#x662F;&#x5BF9;&#x8C61;&#x914D;&#x7F6E;&#x7684;&#x63D2;&#x4EF6;  &#x6267;&#x884C;install&#x65B9;&#x6CD5; &#x4E14;&#x628A;plugin&#x6574;&#x4E2A;&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;this&#x6267;&#x884C;  &#x53EF;&#x4EE5;&#x62FF;&#x5230;plugin&#x914D;&#x7F6E;&#x7684;&#x5185;&#x5BB9;</span>
+      plugin.install.apply(plugin, args)
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> plugin === <span class="hljs-string">&apos;function&apos;</span>) {
+      <span class="hljs-comment">// &#x76F4;&#x63A5;&#x6267;&#x884C;plugin  &#x6539;&#x53D8;&#x4F5C;&#x7528;&#x57DF;&#x4E3A;null</span>
+      plugin.apply(<span class="hljs-literal">null</span>, args)
+    }
+    installedPlugins.push(plugin)
+    <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>
+  }
 </code></pre>
-<h5 id="initmixin-coreglobal-apimixin">initMixin core/global-api/mixin</h5>
+<h4 id="18-initmixin-coreglobal-apimixin">1.8 initMixin core/global-api/mixin</h4>
 <ul>
-<li>&#x6302;&#x8F7D;mixin  &#x6DF7;&#x5165;api</li>
+<li>&#x6302;&#x8F7D;mixin  &#x6DF7;&#x5165;api  &#x6D89;&#x53CA;&#x5230;<a href="mergeOptions">mergeOptions</a>&#x7684;&#x8C03;&#x7528;</li>
 </ul>
 <blockquote>
 <p>&#x4E3B;&#x8981;&#x529F;&#x80FD;&#x662F;&#x5408;&#x5E76; data&amp;props&amp;method&#x4EE5;&#x53CA;&#x5404;&#x79CD;&#x751F;&#x547D;&#x5468;&#x671F;&#x94A9;&#x5B50;</p>
 </blockquote>
 <pre><code class="lang-javascript"><span class="hljs-comment">// &#x5168;&#x5C40;&#x8C03;&#x7528;&#x7684;mixin&#x662F;&#x5BF9;&#x8C61;  &#x7EC4;&#x4EF6;&#x653E;&#x5165;&#x7684;&#x662F;&#x6570;&#x7EC4; </span>
+<span class="hljs-comment">// mixins&#x5143;&#x7D20;&#x653E;&#x7684;&#x4F4D;&#x7F6E;&#x4E5F;&#x6709;&#x6743;&#x91CD;&#x5173;&#x7CFB;  &#x540E;&#x9762;&#x7684;&#x8986;&#x76D6;&#x524D;&#x9762;&#x7684;&#x5185;&#x5BB9;</span>
 Vue.mixin({})
 mixins: [mixin1, mixin2]
 </code></pre>
 <ul>
-<li>&#x5408;&#x5E76;&#x8FC7;&#x7A0B;&#x548C;&#x7B56;&#x7565; mergeOptions 1. &#x683C;&#x5F0F;&#x5316; &#x4E3A;&#x5408;&#x5E76;&#x505A;&#x51C6;&#x5907;</li>
+<li>extends&#x548C;mixins&#x7684;&#x533A;&#x522B;</li>
 </ul>
-<pre><code class="lang-javascript">
-<span class="hljs-comment">/**
-* &#x5B9A;&#x4E49;&#x4E00;&#x4E0B;  this.options &#x662F;childVal   mixins&#x6216;&#x8005;extends&#x662F;parentVal &#x7236;
-* */</span>
-
-<span class="hljs-comment">// 1. &#x6821;&#x9A8C;components  checkComponents &#x68C0;&#x67E5;&#x7EC4;&#x4EF6;&#x540D;&#x79F0; &#x4E0D;&#x80FD;&#x662F;&#x4FDD;&#x7559;&#x6807;&#x7B7E; &#x5185;&#x5EFA;&#x6807;&#x7B7E;  &#x7136;&#x540E;&#x7B26;&#x5408;unicode&#x7F16;&#x7801;&#x5C31;&#x884C;</span>
-
-<span class="hljs-comment">// 2. &#x683C;&#x5F0F;&#x5316;props&#x5904;&#x7406;  normalizeProps</span>
-<span class="hljs-comment">/**
-* props&#x53EF;&#x4EE5;&#x662F;&#x6570;&#x7EC4;  &#x5982;&#x679C;&#x662F;&#x6570;&#x7EC4;  &#x5143;&#x7D20;&#x5FC5;&#x987B;&#x4E3A;string&#x7C7B;&#x578B;  props = [&apos;username&apos;, userinfo&apos;]
-* &#x683C;&#x5F0F;&#x5316;&#x540E; &#x4F1A;&#x6210;&#x4E3A; props = {
-*   username: {
-*     type: null
-*   }
-* }
-* */</span>
-
-<span class="hljs-comment">/**
-* props&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;
-* props = {
-*   username: String,  &#x5728;&#x683C;&#x5F0F;&#x5316;&#x65F6;  &#x4F1A;&#x5904;&#x7406;&#x6210; =&gt; {type: String} 
-*   userinfo: {
-*     type: [String] | String,
-*     default: &apos;chunmu.zhang&apos;
-*   }
-* }
-* */</span>
-
-<span class="hljs-comment">// 3. &#x683C;&#x5F0F;&#x5316;inject  normalizeInject  &#x4F9D;&#x8D56;&#x6CE8;&#x5165;  &#x53EF;&#x4EE5;&#x770B;&#x6210;&#x662F;&#x591A;&#x7EA7;&#x7684;props&#x4F20;&#x9012;</span>
-<span class="hljs-comment">/**
-* props&#x53EF;&#x4EE5;&#x662F;&#x6570;&#x7EC4;  &#x5982;&#x679C;&#x662F;&#x6570;&#x7EC4;  &#x5143;&#x7D20;&#x5FC5;&#x987B;&#x4E3A;string&#x7C7B;&#x578B;  inject = [&apos;username&apos;, userinfo&apos;]
-* &#x683C;&#x5F0F;&#x5316;&#x540E; &#x4F1A;&#x6210;&#x4E3A; inject = {
-*   username: {
-*     from: &apos;username&apos;
-*   }
-* }
-* */</span>
-
-<span class="hljs-comment">/**
-* props&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;
-* props = {
-*   userinfo: {
-*     from: &apos;userinfo&apos;
-*   }
-* }
-* */</span>
-
-<span class="hljs-comment">// &#x683C;&#x5F0F;&#x5316;&#x6307;&#x4EE4;  normalizeDirectives</span>
-<span class="hljs-comment">/**
-* &#x5982;&#x679C;&#x662F;
-* directives = {
-*   &apos;v-haha&apos;: function xx() {}
-* }
-* 
-* &#x5219; directives = {
-*   &apos;v-haha&apos;: {
-*     bind: function xx() {},
-*     update: function xx() {}
-*   }
-* }
-* */</span>
-</code></pre>
-<ul>
-<li>&#x5408;&#x5E76;&#x8FC7;&#x7A0B;&#x548C;&#x7B56;&#x7565; mergeOptions 2. &#x5F00;&#x59CB;&#x6309;&#x7167;&#x5404;&#x81EA;&#x5408;&#x5E76;&#x7B56;&#x7565;&#x5408;&#x5E76;</li>
-</ul>
-<pre><code class="lang-javascript">
-<span class="hljs-comment">// 1. &#x9ED8;&#x8BA4;&#x7684;&#x5408;&#x5E76;&#x7B56;&#x7565;  &#x4EE5;&#x5B50;&#x7EA7;&#x7684;&#x503C;&#x4E3A;&#x51C6; &#x5982;&#x679C;&#x662F;undefined&#x624D;&#x53BB;&#x62FF;&#x7236;&#x7EA7;</span>
-
-<span class="hljs-comment">/**
-* childVal === undefined
-      ? parentVal
-      : childVal
-*/</span>
-
-
-<span class="hljs-comment">// 2. data&#x7684;&#x5408;&#x5E76;&#x7B56;&#x7565;  </span>
-<span class="hljs-comment">/**
-* &#x5173;&#x4E8E;data&#x7684;&#x4E00;&#x4E2A;&#x5C0F;&#x77E5;&#x8BC6;&#x70B9;  &#x7406;&#x8BBA;&#x4E0A;&#x53EF;&#x4EE5;&#x5728;&#x7EC4;&#x4EF6;&#x5185;&#x8FD9;&#x6837;&#x5199;
-* {
-*   data: {
-*     appLang: &apos;zh&apos;
-*   }
-* }
-* &#x8FD9;&#x6837;data&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61; &#x5E76;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570; &#x8FD9;&#x6837;&#x662F;ok&#x7684;  &#x4F46;&#x662F;&#x8FD9;&#x6837;&#x7684;&#x5199;&#x6CD5;&#x5728;&#x5176;&#x5B83;&#x573A;&#x666F;  &#x6BD4;&#x5982;&#x8BF4;mixins &#x6216;&#x8005;extends&#x91CC;&#x9762;&#x4F1A;&#x88AB;vue&#x62E6;&#x622A;&#x5E76;&#x544A;&#x8B66;
-* &#x63D0;&#x793A;data&#x5FC5;&#x987B;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;
-* &#x539F;&#x56E0;:
-* &#x5982;&#x679C;&#x6211;&#x9876;&#x4E00;&#x4E2A;&#x8FD9;&#x6837;&#x4E00;&#x4E2A;&#x914D;&#x7F6E;&#x6765;&#x751F;&#x6210;vue&#x5B9E;&#x4F8B;  &#x5219;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x751F;&#x6210;&#x7684;&#x6240;&#x6709;vue&#x5B9E;&#x4F8B;&#x90FD;&#x4F1A;&#x5171;&#x7528;&#x8FD9;&#x9879;&#x914D;&#x7F6E;&#x7684;&#x6570;&#x636E;  &#x4E5F;&#x5305;&#x62EC;data
-* &#x5982;&#x679C;data&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;  &#x5219;&#x4ED6;&#x4EEC;&#x5171;&#x4EAB;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;  &#x4F1A;&#x6709;&#x4E32;&#x503C;&#x5F97;&#x60C5;&#x51B5;
-* &#x5982;&#x679C;&#x662F;&#x51FD;&#x6570;  &#x8FD4;&#x56DE;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x65B0;&#x5BF9;&#x8C61;  &#x6BCF;&#x4E2A;vue&#x5B9E;&#x4F8B;&#x7528;&#x7684;&#x90FD;&#x662F;&#x5C5E;&#x4E8E;&#x81EA;&#x5DF1;&#x7684;data  &#x4E0D;&#x4F1A;&#x76F8;&#x4E92;&#x5F71;&#x54CD; 666&#x554A;
-* 
-* data&#x5408;&#x5E76;&#x7B56;&#x7565;&#xFF1A;
-* &#x5728;&#x6CA1;&#x6709;vue&#x5B9E;&#x4F8B;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x5B50;&#x7EA7;data&#x5219;&#x8FD4;&#x56DE;&#x7236;&#x7EA7;  &#x6CA1;&#x6709;&#x7236;&#x7EA7;&#x5219;&#x8FD4;&#x56DE;&#x5B50;&#x7EA7;  &#x5982;&#x679C;&#x90FD;&#x5B58;&#x5728;
-* &#x5219;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x65B0;&#x51FD;&#x6570; data&#x51FD;&#x6570;&#x5DF2;&#x6267;&#x884C; &#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x51FD;&#x6570;  &#x5728;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019; &#x8FD4;&#x56DE;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;
-* &#x5728;&#x6709;vue&#x5B9E;&#x4F8B;&#x7684;&#x60C5;&#x51B5;&#x4E0B;
-* data&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x666E;&#x901A;&#x5BF9;&#x8C61;
-* */</span>
-
-<span class="hljs-comment">// &#x5B50;&#x7EA7;&#x4F18;&#x5148;</span>
-childData () {
-   <span class="hljs-keyword">return</span> {
-     name: <span class="hljs-string">&apos;child&apos;</span>,
-     obj: {
-       objName: <span class="hljs-string">&apos;childObj&apos;</span>
-     }
-   }
- },
-parentData () {
-   <span class="hljs-keyword">return</span> {
-     name: <span class="hljs-string">&apos;parent&apos;</span>,
-     obj: {
-       objName: <span class="hljs-string">&apos;parentObj&apos;</span>
-     },
-     otherObj: {
-       name: <span class="hljs-string">&apos;otherObj&apos;</span>
-     },
-     age: <span class="hljs-number">12</span>
-   }
- }
-<span class="hljs-comment">//  &#x5408;&#x5E76;&#x7ED3;&#x679C;</span>
-data = {
-  name: <span class="hljs-string">&apos;child&apos;</span>,
-  obj: {
-    objName: <span class="hljs-string">&apos;childObj&apos;</span>
-  },
-  otherObj: {
-    name: <span class="hljs-string">&apos;otherObj&apos;</span>
-  },
-  age: <span class="hljs-number">12</span>
+<pre><code class="lang-javascript"><span class="hljs-comment">// extends&#x662F;&#x5355;&#x4E2A;&#x5BF9;&#x8C61;  mixins&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4; extends&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;mixins&#x7684;&#x5143;&#x7D20;</span>
+<span class="hljs-comment">// &#x4ECE;&#x4E0B;&#x9762;&#x8FD9;&#x6BB5;&#x4EE3;&#x7801;&#x987A;&#x5E8F;&#x53EF;&#x4EE5;&#x770B;&#x51FA;  extends&#x7684;&#x6743;&#x91CD;&#x4F4E;&#x4E8E;mixins</span>
+<span class="hljs-keyword">if</span> (!child._base) {
+  <span class="hljs-keyword">if</span> (child.extends) {
+    parent = mergeOptions(parent, child.extends, vm)
+  }
+  <span class="hljs-keyword">if</span> (child.mixins) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>, l = child.mixins.length; i &lt; l; i++) {
+      parent = mergeOptions(parent, child.mixins[i], vm)
+    }
+  }
 }
-
-<span class="hljs-comment">// 3.0 el, propsData&#x7684;&#x5408;&#x5E76;&#x7B56;&#x7565;</span>
-
-<span class="hljs-comment">/**
-* &#x8FD9;&#x4E2A;&#x662F;&#x521B;&#x5EFA;&#x65B0;&#x5BF9;&#x8C61;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x7528;&#x5230;&#x7684;&#x7EE7;&#x627F; &#x6240;&#x4EE5;&#x4E0D;&#x4F1A;&#x4E5F;&#x4E0D;&#x5E94;&#x8BE5;&#x548C;&#x5B50;&#x7EA7;&#x51B2;&#x7A81;  &#x6240;&#x4EE5;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x5408;&#x5E76;&#x7B56;&#x7565;
-* */</span>
-
-
-<span class="hljs-comment">// 4.0 watch&#x5408;&#x5E76;&#x7B56;&#x7565;</span>
-
-<span class="hljs-comment">/**
-* parent.concat(child)
-* &#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;childVal  &#x5219;&#x4F7F;&#x7528;parentVal
-* &#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;parentVal, &#x5219;&#x7528;childVal
-* &#x5982;&#x679C;&#x90FD;&#x5B58;&#x5728;  &#x5219;&#x91C7;&#x7528;concat&#x7684;&#x7B56;&#x7565;  &#x56E0;&#x4E3A;&#x76D1;&#x542C;&#x51FD;&#x6570;&#x90FD;&#x9700;&#x8981;&#x751F;&#x6548; &#x5E76;&#x4E0D;&#x80FD;&#x4E22;&#x5F03;
-* &#x5BF9;&#x5E94;&#x540C;&#x540D;&#x7684;key&#x8F6C;&#x6362;&#x6210;&#x6570;&#x7EC4;&#x7C7B;
-* watch: {
-*   value1: [{}, {}, {}]
-* }
-* */</span>
-
-<span class="hljs-comment">// 5.0 props, methods, inject, computed&#x7684;&#x5408;&#x5E76;&#x7B56;&#x7565;</span>
-
-  <span class="hljs-comment">/**
-  * &#x5F88;&#x660E;&#x663E;&#x662F;&#x5B50;&#x4F1A;&#x8986;&#x76D6;&#x7236;
-  * */</span>
-  <span class="hljs-keyword">if</span> (!parentVal) <span class="hljs-keyword">return</span> childVal
-  <span class="hljs-keyword">const</span> ret = <span class="hljs-built_in">Object</span>.create(<span class="hljs-literal">null</span>)
-  extend(ret, parentVal)
-  <span class="hljs-keyword">if</span> (childVal) extend(ret, childVal)
-  <span class="hljs-keyword">return</span> ret
-
-<span class="hljs-comment">// 6.0 provide&#x7684;&#x5408;&#x5E76;&#x7B56;&#x7565;  parentVal&#x4F18;&#x5148;&#x3002;&#x3002;</span>
-
-<span class="hljs-comment">// 7.0 hook&#x7684;&#x5408;&#x5E76;&#x7B56;&#x7565;</span>
-parentVal.concat(childVal) <span class="hljs-comment">// &#x770B;&#x51FA;&#x6765;&#x4E86;&#x5417;  &#x5982;&#x679C;&#x90FD;&#x6709;  &#x5148;&#x6267;&#x884C;parentVal,&#x540E;&#x6267;&#x884C;childVal</span>
-
-<span class="hljs-comment">// 8.0 assets&#x7684;&#x5408;&#x5E76;&#x7B56;&#x7565;  directives, components&#x7B49;</span>
-<span class="hljs-comment">// &#x7B80;&#x5355;&#x7C97;&#x66B4;&#x7684;&#x5B50;&#x8986;&#x76D6;&#x7236;</span>
 </code></pre>
-<h5 id="initextend-coreglobal-apiextend">initExtend core/global-api/extend</h5>
+<h4 id="19-mergeoptions-&#x5408;&#x5E76;options">1.9 mergeOptions &#x5408;&#x5E76;options</h4>
+<blockquote>
+<p>&#x8FD9;&#x5757;&#x5355;&#x72EC;&#x62CE;&#x51FA;&#x6765;&#x8BB2;  <a href="mergeOptions">mergeOptions</a></p>
+</blockquote>
+<h4 id="initextend-coreglobal-apiextend">initExtend core/global-api/extend</h4>
 <ul>
 <li>&#x6302;&#x8F7D;extend cid&#x8BA1;&#x6570;  ???????? &#x9700;&#x8981;&#x8865;&#x5145;extend()&#x65B9;&#x6CD5;&#x7684;&#x7528;&#x4F8B;</li>
 </ul>
 <pre><code class="lang-javascript">
 Vue.extend
 </code></pre>
-<h5 id="initassetregisters--coreglobal-apiassets">initAssetRegisters  core/global-api/assets</h5>
+<h4 id="initassetregisters--coreglobal-apiassets">initAssetRegisters  core/global-api/assets</h4>
 <ul>
 <li>&#x6CE8;&#x518C;&#x5168;&#x5C40;api  Vue.filter()  Vue.component() Vue.directive()  ???????? &#x9700;&#x8981;&#x8865;&#x5145;&#x7528;&#x4F8B;</li>
 </ul>
-<h5 id="&#x5B9A;&#x4E49;ssr&#x76F8;&#x5173;&#x53D8;&#x91CF;--coreindex">&#x5B9A;&#x4E49;ssr&#x76F8;&#x5173;&#x53D8;&#x91CF;  core/index</h5>
+<h4 id="&#x5B9A;&#x4E49;ssr&#x76F8;&#x5173;&#x53D8;&#x91CF;--coreindex">&#x5B9A;&#x4E49;ssr&#x76F8;&#x5173;&#x53D8;&#x91CF;  core/index</h4>
 <pre><code class="lang-javascript">
 <span class="hljs-built_in">Object</span>.defineProperty(Vue.prototype, <span class="hljs-string">&apos;$isServer&apos;</span>, {
   get: isServerRendering
@@ -1027,6 +925,33 @@ Vue.extend
     <span class="hljs-keyword">return</span> <span class="hljs-keyword">this</span>.$vnode &amp;&amp; <span class="hljs-keyword">this</span>.$vnode.ssrContext
   }
 })
+</code></pre>
+<h4 id="config&#x914D;&#x7F6E;options&#x6269;&#x5C55;patch">config&#x914D;&#x7F6E;&amp;options&#x6269;&#x5C55;&amp;patch</h4>
+<pre><code class="lang-javascript">
+<span class="hljs-comment">// install platform specific utils</span>
+Vue.config.mustUseProp = mustUseProp
+Vue.config.isReservedTag = isReservedTag
+Vue.config.isReservedAttr = isReservedAttr
+Vue.config.getTagNamespace = getTagNamespace
+Vue.config.isUnknownElement = isUnknownElement
+
+<span class="hljs-comment">// install platform runtime directives &amp; components</span>
+extend(Vue.options.directives, platformDirectives)
+extend(Vue.options.components, platformComponents)
+
+<span class="hljs-comment">// install platform patch function</span>
+Vue.prototype.__patch__ = inBrowser ? patch : noop
+</code></pre>
+<h4 id="mount-&#x65B9;&#x6CD5;&#x5B9A;&#x4E49;&#x6302;&#x8F7D;">$mount &#x65B9;&#x6CD5;&#x5B9A;&#x4E49;&#x6302;&#x8F7D;</h4>
+<pre><code class="lang-javascript">
+<span class="hljs-comment">// public mount method</span>
+Vue.prototype.$mount = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">
+  el?: string | Element,
+  hydrating?: boolean
+</span>): <span class="hljs-title">Component</span> </span>{
+  el = el &amp;&amp; inBrowser ? query(el) : <span class="hljs-literal">undefined</span>
+  <span class="hljs-keyword">return</span> mountComponent(<span class="hljs-keyword">this</span>, el, hydrating)
+}
 </code></pre>
 
                                 
@@ -1060,7 +985,7 @@ Vue.extend
                 </a>
                 
                 
-                <a href="../compiler/" class="navigation navigation-next " aria-label="Next page: compiler">
+                <a href="mergeOptions.html" class="navigation navigation-next " aria-label="Next page: mergeOptions的用法扩展">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1071,7 +996,7 @@ Vue.extend
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"初始化Vue","level":"1.4.1","depth":2,"next":{"title":"compiler","level":"1.5","depth":1,"path":"compiler/index.md","ref":"compiler/index.md","articles":[{"title":"parser","level":"1.5.1","depth":2,"path":"compiler/parser/index.md","ref":"compiler/parser/index.md","articles":[{"title":"index","level":"1.5.1.1","depth":3,"path":"compiler/parser/index.md","ref":"compiler/parser/index.md","articles":[]},{"title":"html-parser","level":"1.5.1.2","depth":3,"path":"compiler/parser/html-parser.md","ref":"compiler/parser/html-parser.md","articles":[]},{"title":"filter-parser","level":"1.5.1.3","depth":3,"path":"compiler/parser/filter-parser.md","ref":"compiler/parser/filter-parser.md","articles":[]}]},{"title":"directives","level":"1.5.2","depth":2,"path":"compiler/directives/index.md","ref":"compiler/directives/index.md","articles":[{"title":"model","level":"1.5.2.1","depth":3,"path":"compiler/directives/model.md","ref":"compiler/directives/model.md","articles":[]}]},{"title":"helpers","level":"1.5.3","depth":2,"path":"compiler/helpers.md","ref":"compiler/helpers.md","articles":[]}]},"previous":{"title":"实例演示","level":"1.4","depth":1,"path":"example/index.md","ref":"example/index.md","articles":[{"title":"初始化Vue","level":"1.4.1","depth":2,"path":"example/initVue.md","ref":"example/initVue.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Blankj","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Blankj's Glory","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"example/initVue.md","mtime":"2019-10-23T03:45:27.865Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-23T10:05:39.904Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"初始化Vue","level":"1.4.1","depth":2,"next":{"title":"mergeOptions的用法扩展","level":"1.4.2","depth":2,"path":"example/mergeOptions.md","ref":"example/mergeOptions.md","articles":[]},"previous":{"title":"实例演示","level":"1.4","depth":1,"path":"example/index.md","ref":"example/index.md","articles":[{"title":"初始化Vue","level":"1.4.1","depth":2,"path":"example/initVue.md","ref":"example/initVue.md","articles":[]},{"title":"mergeOptions的用法扩展","level":"1.4.2","depth":2,"path":"example/mergeOptions.md","ref":"example/mergeOptions.md","articles":[]},{"title":"模板编译部分","level":"1.4.3","depth":2,"path":"example/compiler.md","ref":"example/compiler.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters","favicon"],"styles":{"website":"./styles/website.css"},"pluginsConfig":{"favicon":{"shortcut":"./source/images/favicon.jpg","bookmark":"./source/images/favicon.jpg","appleTouch":"./source/images/apple-touch-icon.jpg","appleTouchMore":{"120x120":"./source/images/apple-touch-icon.jpg","180x180":"./source/images/apple-touch-icon.jpg"}},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Blankj","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Blankj's Glory","language":"zh-hans","gitbook":"3.2.3","description":"select * from learn"},"file":{"path":"example/initVue.md","mtime":"2019-10-25T09:07:39.194Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-10-25T09:07:58.735Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

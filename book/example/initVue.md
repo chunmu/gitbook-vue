@@ -1,7 +1,7 @@
 #  initVue
 
 
-##### Vue构造函数定义  core/instance/index
+#### 1.0 Vue构造函数定义  core/instance/index
 
 
 ```javascript
@@ -19,12 +19,12 @@ function Vue (options) {
 ```
 
 
-##### initMixin  core/instance/init
+#### 1.1 initMixin  core/instance/init
 
 - 挂载_init方法  Vue.prototype._init
 
 
-##### stateMixin core/instance/state
+#### 1.2 stateMixin core/instance/state
 
 - $data & $props
 
@@ -69,7 +69,7 @@ function Vue (options) {
 
 ```
 
-##### eventsMixin  core/instance/events
+#### 1.3 eventsMixin  core/instance/events
 
 - 挂载$on, $off, $once, $emit
 
@@ -82,7 +82,7 @@ Vue.prototype.$emit
 
 ```
 
-##### lifecycleMixin core/instance/lifecycle
+#### 1.4 lifecycleMixin core/instance/lifecycle
 
 - 挂载_update，$forceUpdate，$destroy
 
@@ -93,7 +93,7 @@ Vue.prototype.$destroy
 
 ```
 
-##### renderMixin core/instance/render
+#### 1.5 renderMixin core/instance/render
 
 - installRenderHelpers  
 
@@ -134,7 +134,7 @@ Vue.prototype.render
 ```
 
 
-##### initGlobalAPI  core/global-api/index
+#### 1.6 initGlobalAPI  core/global-api/index
 
 - config
 
@@ -220,9 +220,11 @@ Vue.options._base = Vue // _base指向Vue构造函数
 
 ```
 
-##### initUse  core/global-api/use
+#### 1.7 initUse  core/global-api/use
 
 - 挂载use  插件安装api
+
+![插件安装示例](/example/app-example-install-plugin.html)
 
 ```javascript
 
@@ -238,203 +240,69 @@ Vue.use({
   install: function () {}
 }, arg1, arg2, arg3)
 
+// 源码
+
+  Vue.use = function (plugin: Function | Object) {
+    const installedPlugins = (this._installedPlugins || (this._installedPlugins = []))
+    if (installedPlugins.indexOf(plugin) > -1) {
+      return this
+    }
+
+    // additional parameters
+    const args = toArray(arguments, 1)
+    args.unshift(this)
+    if (typeof plugin.install === 'function') {
+      // 如果是对象配置的插件  执行install方法 且把plugin整个对象作为this执行  可以拿到plugin配置的内容
+      plugin.install.apply(plugin, args)
+    } else if (typeof plugin === 'function') {
+      // 直接执行plugin  改变作用域为null
+      plugin.apply(null, args)
+    }
+    installedPlugins.push(plugin)
+    return this
+  }
+  
 ```
 
-##### initMixin core/global-api/mixin
+#### 1.8 initMixin core/global-api/mixin
 
-- 挂载mixin  混入api
+- 挂载mixin  混入api  涉及到[mergeOptions](/example/mergeOptions)的调用
+
 
 > 主要功能是合并 data&props&method以及各种生命周期钩子
 
 ```javascript
 // 全局调用的mixin是对象  组件放入的是数组 
+// mixins元素放的位置也有权重关系  后面的覆盖前面的内容
 Vue.mixin({})
 mixins: [mixin1, mixin2]
 
 ```
 
-- 合并过程和策略 mergeOptions 1. 格式化 为合并做准备
-
-
+- extends和mixins的区别
 
 ```javascript
-
-/**
-* 定义一下  this.options 是childVal   mixins或者extends是parentVal 父
-* */
-
-// 1. 校验components  checkComponents 检查组件名称 不能是保留标签 内建标签  然后符合unicode编码就行
-
-// 2. 格式化props处理  normalizeProps
-/**
-* props可以是数组  如果是数组  元素必须为string类型  props = ['username', userinfo']
-* 格式化后 会成为 props = {
-*   username: {
-*     type: null
-*   }
-* }
-* */
-
-/**
-* props可以是一个对象
-* props = {
-*   username: String,  在格式化时  会处理成 => {type: String} 
-*   userinfo: {
-*     type: [String] | String,
-*     default: 'chunmu.zhang'
-*   }
-* }
-* */
-
-// 3. 格式化inject  normalizeInject  依赖注入  可以看成是多级的props传递
-/**
-* props可以是数组  如果是数组  元素必须为string类型  inject = ['username', userinfo']
-* 格式化后 会成为 inject = {
-*   username: {
-*     from: 'username'
-*   }
-* }
-* */
-
-/**
-* props可以是一个对象
-* props = {
-*   userinfo: {
-*     from: 'userinfo'
-*   }
-* }
-* */
-
-// 格式化指令  normalizeDirectives
-/**
-* 如果是
-* directives = {
-*   'v-haha': function xx() {}
-* }
-* 
-* 则 directives = {
-*   'v-haha': {
-*     bind: function xx() {},
-*     update: function xx() {}
-*   }
-* }
-* */
-
-
-```
-
-- 合并过程和策略 mergeOptions 2. 开始按照各自合并策略合并
-
-```javascript
-
-// 1. 默认的合并策略  以子级的值为准 如果是undefined才去拿父级
-
-/**
-* childVal === undefined
-      ? parentVal
-      : childVal
-*/
-
-
-// 2. data的合并策略  
-/**
-* 关于data的一个小知识点  理论上可以在组件内这样写
-* {
-*   data: {
-*     appLang: 'zh'
-*   }
-* }
-* 这样data是一个对象 并不是一个函数 这样是ok的  但是这样的写法在其它场景  比如说mixins 或者extends里面会被vue拦截并告警
-* 提示data必须是一个函数
-* 原因:
-* 如果我顶一个这样一个配置来生成vue实例  则通过这个配置生成的所有vue实例都会共用这项配置的数据  也包括data
-* 如果data是一个对象  则他们共享这个对象  会有串值得情况
-* 如果是函数  返回的是一个新对象  每个vue实例用的都是属于自己的data  不会相互影响 666啊
-* 
-* data合并策略：
-* 在没有vue实例的情况下，如果没有子级data则返回父级  没有父级则返回子级  如果都存在
-* 则返回一个新函数 data函数已执行 构建一个新函数  在执行的时候 返回计算结果
-* 在有vue实例的情况下
-* data可以使用普通对象
-* */
-
-// 子级优先
-childData () {
-   return {
-     name: 'child',
-     obj: {
-       objName: 'childObj'
-     }
-   }
- },
-parentData () {
-   return {
-     name: 'parent',
-     obj: {
-       objName: 'parentObj'
-     },
-     otherObj: {
-       name: 'otherObj'
-     },
-     age: 12
-   }
- }
-//  合并结果
-data = {
-  name: 'child',
-  obj: {
-    objName: 'childObj'
-  },
-  otherObj: {
-    name: 'otherObj'
-  },
-  age: 12
+// extends是单个对象  mixins是一个数组 extends相当于一个mixins的元素
+// 从下面这段代码顺序可以看出  extends的权重低于mixins
+if (!child._base) {
+  if (child.extends) {
+    parent = mergeOptions(parent, child.extends, vm)
+  }
+  if (child.mixins) {
+    for (let i = 0, l = child.mixins.length; i < l; i++) {
+      parent = mergeOptions(parent, child.mixins[i], vm)
+    }
+  }
 }
 
-// 3.0 el, propsData的合并策略
-
-/**
-* 这个是创建新对象的时候会用到的继承 所以不会也不应该和子级冲突  所以用默认的合并策略
-* */
-
-
-// 4.0 watch合并策略
-
-/**
-* parent.concat(child)
-* 如果不存在childVal  则使用parentVal
-* 如果不存在parentVal, 则用childVal
-* 如果都存在  则采用concat的策略  因为监听函数都需要生效 并不能丢弃
-* 对应同名的key转换成数组类
-* watch: {
-*   value1: [{}, {}, {}]
-* }
-* */
-
-// 5.0 props, methods, inject, computed的合并策略
-
-  /**
-  * 很明显是子会覆盖父
-  * */
-  if (!parentVal) return childVal
-  const ret = Object.create(null)
-  extend(ret, parentVal)
-  if (childVal) extend(ret, childVal)
-  return ret
-  
-// 6.0 provide的合并策略  parentVal优先。。
-
-// 7.0 hook的合并策略
-parentVal.concat(childVal) // 看出来了吗  如果都有  先执行parentVal,后执行childVal
-
-// 8.0 assets的合并策略  directives, components等
-// 简单粗暴的子覆盖父
-
-
 ```
 
+#### 1.9 mergeOptions 合并options
 
-##### initExtend core/global-api/extend
+> 这块单独拎出来讲  [mergeOptions](/example/mergeOptions)
+
+
+#### initExtend core/global-api/extend
 
 - 挂载extend cid计数  ???????? 需要补充extend()方法的用例
 
@@ -444,12 +312,12 @@ Vue.extend
 
 ```
 
-##### initAssetRegisters  core/global-api/assets
+#### initAssetRegisters  core/global-api/assets
 
 - 注册全局api  Vue.filter()  Vue.component() Vue.directive()  ???????? 需要补充用例
 
 
-##### 定义ssr相关变量  core/index
+#### 定义ssr相关变量  core/index
 
 ```javascript
 
@@ -466,3 +334,38 @@ Object.defineProperty(Vue.prototype, '$ssrContext', {
 
 ```
 
+#### config配置&options扩展&patch
+
+```javascript
+
+// install platform specific utils
+Vue.config.mustUseProp = mustUseProp
+Vue.config.isReservedTag = isReservedTag
+Vue.config.isReservedAttr = isReservedAttr
+Vue.config.getTagNamespace = getTagNamespace
+Vue.config.isUnknownElement = isUnknownElement
+
+// install platform runtime directives & components
+extend(Vue.options.directives, platformDirectives)
+extend(Vue.options.components, platformComponents)
+
+// install platform patch function
+Vue.prototype.__patch__ = inBrowser ? patch : noop
+
+```
+
+
+#### $mount 方法定义挂载
+
+```javascript
+
+// public mount method
+Vue.prototype.$mount = function (
+  el?: string | Element,
+  hydrating?: boolean
+): Component {
+  el = el && inBrowser ? query(el) : undefined
+  return mountComponent(this, el, hydrating)
+}
+
+```

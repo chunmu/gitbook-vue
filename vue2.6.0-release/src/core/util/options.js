@@ -20,6 +20,7 @@ import {
   isBuiltInTag,
   isPlainObject
 } from 'shared/util'
+import {resolveConstructorOptions} from "../instance/init";
 
 /**
  * Option overwriting strategies are functions that handle
@@ -57,16 +58,19 @@ function mergeData (to: Object, from: ?Object): Object {
   for (let i = 0; i < keys.length; i++) {
     key = keys[i]
     // in case the object is already observed...
+    // 如果这个对象已经被观测  会有__ob__这个key  忽略这个key
     if (key === '__ob__') continue
     toVal = to[key]
     fromVal = from[key]
     if (!hasOwn(to, key)) {
+      // 设置观测机制 这个后面会讲到
       set(to, key, fromVal)
     } else if (
       toVal !== fromVal &&
       isPlainObject(toVal) &&
       isPlainObject(fromVal)
     ) {
+      // 循环处理
       mergeData(toVal, fromVal)
     }
   }
@@ -95,6 +99,7 @@ export function mergeDataOrFn (
     // check if parentVal is a function here because
     // it has to be a function to pass previous merges.
     return function mergedDataFn () {
+      // 调用mergeData  完成数据合并
       return mergeData(
         typeof childVal === 'function' ? childVal.call(this, this) : childVal,
         typeof parentVal === 'function' ? parentVal.call(this, this) : parentVal
@@ -102,7 +107,16 @@ export function mergeDataOrFn (
     }
   } else {
     return function mergedInstanceDataFn () {
+      // ??????????  这边还需要具体查看
       // instance merge
+      // 这边区分了有child和没有child数据的情况
+      // 没有child 且有child的情况
+      // vm.$options = mergeOptions(
+      //   resolveConstructorOptions(vm.constructor),
+      //   options || {},
+      //   vm
+      // )
+      // 这种调用情况 所以此时的data都没有被observer处理
       const instanceData = typeof childVal === 'function'
         ? childVal.call(vm, vm)
         : childVal
@@ -124,6 +138,8 @@ strats.data = function (
   vm?: Component
 ): ?Function {
   if (!vm) {
+    // 关于这里 data为什么必须是一个function  因为通过data方法执行获取到的对象是一个新的对象副本
+    // 如果data为一个对象 则可能出现多个vue实例共享这个data对象 则可能出现不可控的问题 不同实例修改数据会反映在这一个data对象
     if (childVal && typeof childVal !== 'function') {
       process.env.NODE_ENV !== 'production' && warn(
         'The "data" option should be a function ' +
@@ -393,10 +409,12 @@ export function mergeOptions (
   child: Object,
   vm?: Component
 ): Object {
+  // 检查组件名称的合法性
   if (process.env.NODE_ENV !== 'production') {
     checkComponents(child)
   }
 
+  // 这个搜了mergeOptions(的执行语句  并没有发现child是function的case
   if (typeof child === 'function') {
     child = child.options
   }
@@ -424,14 +442,17 @@ export function mergeOptions (
   // 合并策略处理
   const options = {}
   let key // key = data, props, method, hooks, etc
+  // 合并parent中并没有的数据
   for (key in parent) {
     mergeField(key)
   }
+  // 合并parent中没有 child中有的数据
   for (key in child) {
     if (!hasOwn(parent, key)) {
       mergeField(key)
     }
   }
+  // 合并策略
   function mergeField (key) {
     const strat = strats[key] || defaultStrat
     options[key] = strat(parent[key], child[key], vm, key)

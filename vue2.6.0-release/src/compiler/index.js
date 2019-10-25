@@ -17,7 +17,6 @@ export const createCompiler = createCompilerCreator(function baseCompile (
     optimize(ast, options)
   }
   const code = generate(ast, options)
-  console.log(code.render, 'code.render')
   return {
     ast,
     render: code.render,

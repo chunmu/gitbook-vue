@@ -5,100 +5,115 @@
   <title>Vue Example</title>
 </head>
 <body>
+<section class="example1">
+  {{title}}
+</section>
+
+
+<section class="example2">
+  <child2></child2>
+</section>
+
+
 <section class="example">
-  <child></child>
+</section>
+<section class="example">
 </section>
 
 <script src="../vue2.6.0-release/dist/vue.js"></script>
 <script>
-
-  var child1 = {
-    template: `<span>child1</span>`,
-    data () {
-      return {
-        name: 'child1'
+  var showExample1 = false
+</script>
+<script>
+    // 测试data合并策略
+var mixin1 = {
+  data () {
+    return {
+      title: 'mixin title',
+      user: {
+        username: 'mixin username'
       }
-    },
-    created () {
-      console.log('created child1')
     }
   }
+}
 
-  var child2 = {
-    template: `<span>child2</span>`,
-    props: [],
-    data () {
-      return {
-        name: 'child2'
+var options1 = {
+  data () {
+    return {
+      title: 'options title',
+      title1: 'options title1',
+      user: {
+        username: 'options username',
+        userpassword: 'userpassword'
       }
-    },
-    created () {
-      console.log('created child2')
     }
   }
+}
 
-  var options = {
-    data () {
-      return {
-        mixinData: 'mixinData',
-        value1: 'value1-child',
-        value3: 'value3'
+if (showExample1) {
+  Vue.mixin(options1)
+}
+
+var app1 = new Vue({
+  el: '.example1',
+  mixins: [mixin1],
+  data () {
+    return {
+      title: 'Vue example1',
+      user: {
+        username: 'Vue username'
       }
-    },
-    methods: {
-      mixinMethod: function () {}
-    },
-    components: {
-      child: child2
-    },
-    watch: {
-      value1: function () {
-      },
-      value3: function () {
-      }
-    },
-    created () {
-      console.log('options created')
     }
+  },
+  created () {
+    console.log('Vue created', this)
   }
+})
 
-  Vue.mixin(options)
 
-  // var app = new Vue({
-  //   el: '.example',
-  //   components: {
-  //     child: child1
-  //   },
-  //   data: {
-  //     appLang: 'zh'
-  //   },
-  //   methods: {
-  //     mainMethod: function () {}
-  //   }
-  // })
+</script>
+<script>
 
-  var app = new Vue({
-    el: '.example',
-    mixins: [options],
-    data () {
-      return {
-        mixinData: 'main',
-        value1: 'value1',
-        value2: 'value2'
-      }
-    },
-    watch: {
-      value1: function () {},
-      value2: function () {}
-    },
-    created () {
-      console.log('Vue created')
-    },
-    methods: {
-      mainMethod: function () {}
+// 测试data合并策略
+var child2 = {
+  template: '<span>child get parent title = {{title}}</span>',
+  inject: ['xxx'],
+  computed: {
+    title: function () {
+      return this.xxx
     }
-  })
+  },
+  created () {
+    let self = this
+    setTimeout(() => {
+      this.xxx = 'ooooooo'
+    }, 1000)
+  }
+}
 
+
+var app2 = new Vue({
+  el: '.example2',
+  components: {
+    child2
+  },
+  provide: {
+    getTitle () {
+      return 'xxx'
+    },
+    xxx: 'ffff'
+  },
+  data () {
+    return {
+      title: 'Vue example1'
+    }
+  },
+  created () {
+    console.log('Vue created', this)
+    let self = this
+    console.log(this.xxx, 'xxx')
+  },
+})
 </script>
 </body>
 </html>

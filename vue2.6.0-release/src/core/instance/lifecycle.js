@@ -188,7 +188,6 @@ export function mountComponent (
     }
   } else {
     updateComponent = () => {
-      console.log(vm._render, vm._render(), 'vm._render()')
       vm._update(vm._render(), hydrating)
     }
   }
